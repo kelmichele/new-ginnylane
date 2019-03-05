@@ -1,0 +1,50 @@
+<% content_for :title do %>
+Our Menus
+<% end %>
+<% content_for :description do %>
+Take a look at Ginny Lane's menus delicious menus! Order for delivery, or stop by and see us!
+<% end %>
+
+<div id="page-title" class="pt-bkg-image image-menu">
+	<div class="overlay">
+		<div class="title-container">
+	        <h1>Ginny Lane's Menus</h1>
+	    </div>
+	</div>
+</div>
+<div class="clearfix"></div>
+
+<div class="page-content menus-list">
+	<div class="container">
+		<div class="menu-list">
+			<%= link_to 'Lunch Menu', lunch_menu_path %>
+		</div>
+
+		<div class="menu-list">
+			<%= link_to 'Dinner Menu', dinner_menu_path %>
+		</div>
+
+		<div class="menu-list">
+			<%= link_to 'Brunch Menu', brunch_menu_path %>
+		</div>
+
+		<div class="menu-list">
+			<%= link_to 'Drink Menu', drink_menu_path %>
+		</div>
+
+		<div class="menu-list">
+			<%= link_to 'Wine List', wine_list_path %>
+		</div>
+
+		<div class="menu-list">
+			<%= link_to 'Special Events', events_path %>
+		</div>
+
+		<div class="menu-list">
+			<%= link_to 'Catering Menus', catering_path %>
+		</div>
+
+	</div>
+</div>
+
+<div class="col-xs-12"><div class="hr-png-6"></div></div>

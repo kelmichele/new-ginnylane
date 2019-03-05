@@ -1,0 +1,68 @@
+<div id="h-wrap">
+  <header class="header">
+    <div id="top-bar-wrapper" class="clearfix">
+          <div class="col-md-4 xs-l">
+              <i class="fa fa-phone"></i>
+              <%= number_to_phone(2512246500, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", class: 'tel') %>
+          </div>
+
+          <!-- <div class="col-md-4 xs-r">
+            Catering: <%= number_to_phone(2515976651, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", class: 'tel') %>
+          </div> -->
+
+          <div class="col-md-4 col-md-offset-4 xs-f">
+            <ul id="social-links">
+                <li>
+                  <%= link_to 'https://www.facebook.com/pages/Ginny-Lane-Bar-Grill/159850265732', target: '_blank' do %>
+                    <i class="fa fa-facebook"></i>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to 'https://plus.google.com/117900168660588676207/about?hl=en', target: '_blank' do %>
+                    <i class="fa fa-google-plus"></i>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to 'https://twitter.com/GinnyLaneWharf', target: '_blank' do %>
+                    <i class="fa fa-twitter"></i>
+                  <% end %>
+                </li>
+            </ul>
+          </div>
+    </div>
+
+    <div class="main-header">
+      <div class="col-md-3 logo-block">
+        <%= link_to(image_tag('gl-logo.jpg', alt: 'Ginny Lane Bar and Grill Logo', class: 'img-responsive logo-img'), root_path ) %>
+      </div>
+
+      <div class="col-md-9 mega-tab">
+        <ul class="megamenu-parent menu-zoom hidden-xs">
+          <%= render 'shared/nav' %>
+        </ul>
+      </div>
+
+        <%= link_to 'http://www.opentable.com/ginny-lane-bar-and-grill-reservations-orange-beach?restref=144784', target: '_blank', class: 'header-mobtn one' do %>
+            Book A Table
+        <% end %>
+
+        <%= link_to 'https://www.gulftogo.com/r/151/restaurants/delivery/Southern-Cuisine/Ginny-Lane-Orange-Beach', target: '_blank', class: 'header-mobtn two' do %>
+            Order for Delivery
+        <% end %>
+
+      <!-- <div> -->
+        <a href="#" id="offcanvas-toggler">
+          <span>
+            <div></div>
+            <div></div>
+            <div></div>
+          </span>
+
+          <h5>Main Menu</h5>
+        </a>
+      <!-- </div> -->
+    </div>
+  </header>
+</div>

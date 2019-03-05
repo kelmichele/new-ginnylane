@@ -1,0 +1,813 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+@import "mixins";
+
+.rest-week {
+	@include sec-default();padding:40px;
+	.arw-logo{display: inline-block;float: left; width: 15%;}
+	.arw-menu{display: inline-block; width: 84%; padding-left: 30px;}
+	p{color: $black; font-size: 17px;}
+	h3 {font-weight: bold; margin-bottom: 25px;}
+
+	@include bp(md) {
+		h3 {margin-bottom: 15px;}
+		p {font-size: 15px;}
+		.arw-logo{@include center-block(); width: 20%; margin-bottom: 15px;}
+		.arw-menu{@include center-block(); width: 90%; padding-left: 0px;}
+	}
+}
+
+
+/*****************SPECIAL**********************/
+.page-title-bar {
+	@include sec-default ();
+	background-color: $lt-blue;
+	padding: 25px 0;
+	text-align:center;
+	@include sec-bgimage ();
+	background-image: url(image_path('stage-dining.jpg'));
+
+	.heading-box { background-color: rgba($white, 0.8); padding:10px 0;
+		h2 { color:  $burg; margin-bottom:0; font-size: 22px; letter-spacing: 4px; }
+		h1 { color:$navy; font-size: 40px; font-weight: bold; }
+	}
+}
+
+ul.barspecials { list-style-type: none; padding-left: 0;
+	li { color: $navy; font-size: 16px; padding-left: 0; margin-bottom: 20px;line-height: 1.3em; font-family:$raleway;}
+	li span { color: $burg; font-size: 18px; line-height: 1.2em; font-weight: bold; font-family:$raleway;}
+}
+#happyhour-box { @include sec-default (); background-color: $navy; padding: 20px; margin-bottom:10px;
+	h3, p, p span { color: $white; font-family: $raleway; }
+	h3 {color: $lt-blue;}
+	ul.hh-specials { padding-top:15px;
+		li { color: $lt-blue; font-weight: bold; font-family: $raleway; font-size: 16px; line-height: 1.3em; margin-bottom: 10px;
+			span{color: $white;}
+		}
+	}
+}
+/***************************************/
+.cbp-item {
+	@include sec-default ();
+	.cbp-caption {border-bottom: none;}
+	.cbp-caption-activeWrap { background-color: $white; padding-top: 20px;}
+	.cbp-caption-defaultWrap {
+		background-color: #f6f6f6; padding-bottom: 5px; margin-bottom: 2px;
+
+		h4 {margin-bottom: 0px; padding-left: 30px;}
+	}
+	.cbp-caption-defaultWrap::before {
+	    position: absolute;
+	    display: block;
+	    content: '';
+	    background-color: #e6e6e6;
+	    background-image: url(image_path('accordion-closed.png'));
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    width: 42px;
+	    height: 45.5px;
+	    top: 0;
+	    left: 0;
+	    -webkit-transition: all 0.2s ease 0s;
+	    -moz-transition: all 0.2s ease 0s;
+	    -o-transition: all 0.2s ease 0s;
+	    -ms-transition: all 0.2s ease 0s;
+	    transition: all 0.2s ease 0s;
+	}
+	.cbp-caption-defaultWrap.active::before,
+	.cbp-caption-defaultWrap.active:hover::before {
+	   	background-image: url(image_path('accordion-opened.png'));
+	}
+	.cbp-caption-defaultWrap:hover::before {
+	    background-image: url(image_path('accordion-closed-hover.png'));
+	}
+
+	.menu-item {
+		padding-bottom: 10px; padding-right: 10px; text-align: center; text-transform: capitalize;
+		h4 {margin-bottom: 3px; font-size: 20px;}
+		p {padding-bottom: 0;}
+		.menu-price p { font-weight: bold; margin-bottom: 10px;}
+	}
+}
+/***************************************/
+
+.home {
+	.intro-title {@include sec-default ();}
+	.boxes {
+		ul {@include sec-default (); margin-top:30px; margin-bottom: 20px;}
+	}
+	.delivery {
+		@include sec-default ();
+		background-color: $navy;
+		color: $white;
+		padding: 15px;
+		margin-top: 0;
+		margin-bottom:15px;
+		text-align: center;
+		h3 {color: $white;}
+	}
+	.tp-banner-container.fullwidthbanner { margin-bottom: 0; }
+	.delivery a, .delivery span { color: $white; }
+	.delivery:hover span { color: $burg; }
+
+	.service-box-3 {
+		.newcon {@include center-block ();}
+	}
+
+	@include bp(md) {
+		.intro-title h3, .delivery h3 { font-size: 18px; line-height: 1.3em; margin-bottom: 0;}
+		.service-box-3 {padding: 10px;
+			.newcon {width: 60px; height: 60px;}
+			h4 {margin-top: 5px; margin-bottom: 5px;}
+			p {margin-bottom: 0; padding: 0 20px;}
+		}
+		.menus .service-box-3 {margin-bottom: 20px;}
+	}
+	@include bp(iv) {
+		.intro-title .image-center { width: 20%; padding-bottom: 10px;}
+		.boxes {
+			ul {padding-left: 0;}
+		}
+		.service-box-3 p {padding: 0 10px;}
+	}
+}
+
+.about {
+	.page-content { border-top: 30px solid $navy; }
+
+	@include bp(md) {
+		.page-content {
+			@include sec-bgimage ();
+			background-image: url(image_path('gl-sm.jpg'));
+			position: relative;
+			z-index: 1;
+			padding-bottom: 0;
+
+			&::before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				background: rgba($white, .7);
+				position: absolute;
+				top:0;
+				left: 0;
+				z-index: 0;
+			}
+		}
+		.fancy-heading.left {margin-bottom: 10px;}
+	}
+	@include bp(sm) {
+		.page-content {background-image: url(image_path('gl-xs.jpg')); padding-top: 15px;}
+		h1 {font-size: 25px;}
+		.fancy-heading.left {padding-top:15px;}
+	}
+}
+
+.bar-specials {
+	.page-content {padding-bottom: 0;}
+	ul { padding-left: 0;}
+	.fancy-heading.center p { margin-bottom: 0; padding-bottom: 0;}
+	.section-gray { @include sec-default(); background-color: $offwhite; padding:35px 0 20px 15px; margin-top: 20px;}
+	.lunch-mart {
+		h3 { color: $lt-blue; font-weight: bold;  }
+		p { color: $navy; font-size:15px; text-align: center; }
+		p.food-menus { font-size: 14px; font-style: italic;}
+		h4 { font-size: 18px; text-align: center; font-weight: bold; line-height:1.2em; margin-bottom:5px; color: $burg; }
+	}
+	.x-padding{ padding: 0 50px;}
+
+	@include bp(md) {
+		.page-content {padding-top: 20px;}
+		.x-padding{ padding: 0 15px;}
+		h3.fancy-heading.center { margin-bottom: 10px; font-size: 20px; }
+
+		ul.barspecials { @include center-block (); text-align: center;
+			li { font-size: 15px; display: inline-block; width: 48%; margin-bottom: 15px;}
+			li span {font-size: 16px;}
+		}
+		#happyhour-box { padding: 10px;
+			ul.hh-specials { padding-top:5px;
+				li { font-size: 15px; display: inline-block;}
+			}
+		}
+		.section-gray { padding:20px 0 0; margin-top: 10px;}
+		.lunch-mart {
+			h4 { font-size: 16px; }
+			p {padding-bottom: 0;}
+		}
+	}
+
+	@include bp(sm) {
+		.page-title-bar {
+			padding:15px;
+			.heading-box {
+				padding: 0;
+			 	h1 {font-size: 30px; line-height: 1.3em;}
+			}
+		}
+		ul.barspecials { li { display: block; width: 100%;} }
+		#happyhour-box { padding: 10px;
+			.fancy-heading {margin-bottom: 15px;}
+			ul.hh-specials { padding-top:0px;
+				li{display: block;}}
+		}
+	}
+	@include bp(iv) {
+		#happyhour-box { text-align: center;}
+		.page-title-bar {
+			padding:15px;
+			.heading-box {
+				padding: 0;
+			 	h1 {font-size: 25px; line-height: 1.3em;}
+			}
+		}
+	}
+}
+
+.food-specials {
+	.page-content {text-align: center;}
+
+	h3{color: $burg; font-weight: bold; margin-bottom:0px;}
+
+	@include bp(sm) {
+		.page-title-bar {
+			padding:15px;
+			.heading-box {
+				padding: 0;
+			 	h1 {font-size: 30px; line-height: 1.3em;}
+			}
+		}
+	}
+	@include bp(iv) {
+		.page-title-bar {
+			padding:15px;
+			.heading-box {
+				h2 {font-size: 18px;}
+			 	h1 {font-size: 22px; line-height: 1.3em;}
+			}
+		}
+	}
+
+	.specials-box { @include sec-default (); background-color: $navy; padding: 20px; padding-bottom: 0px; text-align:center; margin-bottom:10px;
+		h4 { color: $white }
+		p { color: $lt-blue; font-size: 15px; }
+		p strong { font-weight: bold; }
+
+		@include bp(md) {
+			padding:10px 0 0;
+		}
+	}
+}
+
+.events {
+ 	#page-title .title-container { text-align: center;
+		.title {background: rgba($black, 0.5); padding-top: 30px; padding-bottom:30px;}
+		h4 { color: $white;text-shadow: 0px 3px 2px $black;font-size: 25px; }
+		@include bp(md) {
+			padding:0;
+			.title{padding: 10px 0;}
+		}
+		@include bp(iv) {
+			#page-title .title-container {
+				h1 {font-size: 20px;}
+			}
+		}
+
+	}
+	.pairing-list { padding-bottom:0;
+		h3.header {text-align: center; padding-bottom: 20px;}
+		a.pairing-box { @include sec-default (); background-color: $navy; padding: 25px; text-align:center;
+		 	h3 { font-size: 22px }
+		 	h4 { color: $white; font-size: 18px;}
+		}
+
+		.light-sbox { @include sec-default (); background-color: $light;
+			padding: 20px;
+			text-align: center;
+
+		 	h3 { font-size: 18px; font-weight: bold; }
+		 	h4 {color: $navy; margin-bottom:5px;}
+		 	p { color: $black; margin-bottom:10px; padding-bottom: 10px;}
+		 	p b {font-weight: bold; }
+		 	span { font-size: 13px; color: $black; }
+		 	a { background-color: $lt-blue; padding: 10px 15px; font-weight: bold; }
+			.title h1.background-op { background-color: rgba($navy, 0.8); padding-top:10px; padding-bottom:10px; }
+		}
+
+		@include bp(sm) {
+			.light-sbox {margin-bottom: 15px;}
+		}
+	}
+
+	.recipe-sidebar {
+		@include sec-default (); background-color: $navy; padding:25px 20px; margin-top:30px;
+		.recipe-title { @include sec-default (); text-align: center;
+			a {color: $white;}
+			p { color: $lt-burg; font-style: italic; font-size: 15px;}
+		}
+
+		ul {padding-left: 0;}
+		h5 { color: $white; margin-bottom:0; line-height: 1.4em;
+			span{ color: $lt-blue; font-weight: bold;}
+		}
+		h4 { color: $lt-blue; margin-top:0; line-height: 1.3em; padding-top:5px; font-weight: bold; }
+
+		.recipe-content { @include sec-default (); text-transform: uppercase;
+			p{color: $white;}
+		}
+
+		.recipe-direct { @include sec-default (); margin-top: 15px;
+			p { color:$white;}
+			a { color:$lt-burg; font-style: italic; font-weight: bold; font-size: 15px;}
+		}
+
+		@include bp(md) { display: none;}
+	}
+}
+
+.brunch-menu {
+	.page-content {padding-bottom: 15px;}
+	#page-title .title-container { position: relative; z-index: 5; padding: 70px 0; margin-bottom: 0;
+	    h1, h2 { text-shadow: 0px 1px 2px $black; }
+	    h2 {color: white;}
+
+   	}
+   .btn.red { width: 50%; @include center-block (); color: $white; font-size: 16px; padding: 20px 0;
+   		&:hover {background-color: darken($burg, 10%);}
+   }
+
+   @include bp(md) {
+   	.page-content {padding-bottom: 0;}
+	   	#page-title .title-container {padding: 20px 0 0px;
+		    h1 { font-size: 25px; }
+	   	}
+	   	.btn.red { width: 70%; }
+	   	.service-box-2 {margin-bottom: 15px;
+	   		h4{ margin-bottom: 4px;}
+	   		p {padding-bottom: 0; margin-bottom: 0px;}
+	   	}
+   	}
+   	@include bp(sm) {
+	   	.btn.red { width: 100%; padding: 15px 5px; font-size: 14px;}
+	   	.service-box-2 {
+	    	p {margin-bottom: 15px; }
+	    	h4 {margin-bottom: 5px; padding-top: 5px;}
+	    }
+   	}
+}
+
+.lunch-menu, .event-lunch-menu, .event-dinner-menu, .dinner-menu, .drink-menu, .wine-list {
+	.title-container { position: relative; z-index: 5; padding: 30px 0;
+	    h1 { text-shadow: 0px 1px 2px $black; }
+	    h4 { font-weight: bold; color: $white; text-align: center;text-shadow: 0px 1px 2px $black;}
+	    h3 {text-shadow: 0px 1px 2px $black;}
+	    a { font-weight: bold; color: $lt-blue;}
+   	}
+		.menu-item {
+	  	h4 {color: $burg; font-weight: bold;}
+	  	p {color: $black;}
+	  	.menu-price p {color: $font-color;margin-bottom:0;}
+	  }
+
+   	#menus a {
+   		@include sec-default();
+   		background-color: $light; padding: 20px;
+   	}
+   	@include bp(md) {
+	    .menu-item {
+				padding-bottom: 10px; padding-right: 0px;
+				h4 {margin-bottom: 3px;}
+				p {padding-bottom: 0;}
+				.menu-price p { margin-bottom: 0px;}
+	    }
+	}
+	@include bp(sm) {
+		.cbp-l-caption-body {padding-left: 0;}
+	}
+	@include bp(iv) {
+		.title-container h4 {font-size: 17px;}
+	}
+}
+
+.wine-list {
+    #page-title .title-container { padding: 30px 0;}
+    h3.fancy-heading.center { color: $lt-blue; }
+    .cbp-l-caption-body .menu-item {text-align: left; padding-left: 7%;}
+	.wine-det { text-align: center; color: $blue; font-size: 14px; }
+	.page-content { padding: 40px 15px;}
+
+	@include bp(md) {
+		.page-content {padding-left: 0; padding-right: 0;}
+	    .cbp-l-caption-body .menu-item {
+    		h4 { font-size: 15px;}
+	    }
+	    .wine-det { text-align: left; padding-left: 5%; margin-bottom:4px;}
+		.cbp-caption-expand .cbp-l-caption-body {padding-left:0;}
+	}
+
+	@include bp(sm) {
+	    .cbp-l-caption-body .menu-item{ padding-left: 5px;}
+	}
+}
+
+.contact {
+	.page-content {
+		border-top: 30px solid $navy;
+		padding-top: 0px;
+	}
+
+	.signup { background-color: $light; padding-left: 10%;}
+    #mc_embed_signup .button { background-color: $burg; }
+			#mc_embed_signup input.email {width: 85%;}
+
+    .mobile-row {display: none;}
+
+	@include bp(md) {
+		.page-content {padding-bottom: 5px;}
+		.signup { width:70%; @include center-block (); padding-left: 20px;}
+	    .mobile-row {display: block;
+	    	.btn {
+	        text-transform: uppercase;
+	        font-weight: 600;
+	        position: relative;
+	        overflow: hidden;
+	        display: inline-block;
+	        background-color: $burg;
+	        font-size: 14px;
+	        color: $white;
+		    }
+
+		    .btn:hover {
+		        background-color: lighten($burg, 15%);
+		        -webkit-transition: all 0.4s ease 0s;
+		        -moz-transition: all 0.4s ease 0s;
+		        -o-transition: all 0.4s ease 0s;
+		        -ms-transition: all 0.4s ease 0s;
+		        transition: all 0.4s ease 0s;
+		    }
+		}
+    }
+}
+
+.new {
+	#page-title .title-container {
+		h3, a {
+			color: $white;
+			text-shadow: 2px 2px 2px $black;
+			font-size: 35px;
+		}
+	}
+	.required {
+	    font-weight: bold;
+	    color: $burg !important;
+	}
+
+	p.xs-m { margin-bottom: 10px; padding-bottom: 0;}
+
+	.form-group {
+	    width: 100%;
+	    margin-bottom: 15px;
+	    color: $black;
+	    position: relative;
+	    display: block;
+	}
+	input,
+ 	textarea {
+	    background-color: $white;
+	    border: 1px solid #ddd;
+	    border-radius: 3px;
+	    padding: 6px 10px 6px 40px;
+	    width: 90%;
+	}
+	input.text {min-height: 36px;}
+	textarea { height: 80px; }
+	.form-group.email, .form-group.phone, .form-group.date, .form-group.guest {width: 45%; display: inline-block;
+		input {width: 95%;}
+	}
+	.form-group::before {
+	    font-family: 'FontAwesome';
+	    position: absolute;
+	    display: block;
+	    font-size: 13px;
+	    top: 23px;
+	    left: 1px;
+	    width: 32px;
+	    height: 33px;
+	    padding-left: 10px;
+	    background-color: #f6fcfe;
+	    padding-top: 7px;
+	    border-radius: 3px;
+	}
+	.form-group.submit {
+		width: 30%;
+		input { text-align: center; padding:10px 0; background-color: $blue; text-transform: uppercase;color: $white;font-size: 12px;}
+	    font-weight: 700;
+	    position: relative;
+	    -webkit-transition: all 0.2s ease 0s;
+	    -moz-transition: all 0.2s ease 0s;
+	    -o-transition: all 0.2s ease 0s;
+	    -ms-transition: all 0.2s ease 0s;
+	    transition: all 0.2s ease 0s;
+	    border: none;
+	    float: left;
+	}
+	.form-group.name::before { content: '\f040'; }
+	.form-group.email::before { content: "\f0ac"; }
+	.form-group.phone::before { content: "\f095"; }
+	.form-group.message::before { content: "\f003"; z-index: 1; margin-bottom: 0;}
+	.form-group.date::before { content: "\f073"; }
+	.form-group.guest::before { content: "\f2c0"; }
+
+	input:focus,
+	textarea:focus {
+	    border-color: #ccc;
+	    outline: none;
+	}
+
+	@include bp(md) {
+		input, textarea { width: 100%; }
+		.form-group.email, .form-group.phone, .form-group.date, .form-group.guest  {width: 100%; display: block;
+			input {width: 100%;}
+		}
+		.form-group.message {margin-bottom: 0;}
+		.form-group::before {height:30px; top:25px;}
+	}
+
+	.cater-menus.tabs {
+		padding-top: 50px;
+		font-family: $raleway;
+		.fancy-heading p {font-size: 15px; color: $black; margin-bottom: 0; padding-bottom: 5px;}
+	}
+	h3.menu-head { margin-bottom: 0; padding-left:20px; font-weight: 700; }
+	.cater-menus .menu-info{
+		color: $black;
+		font-size: 15px;
+		padding-bottom: 20px;
+		margin-left: 20px;
+	}
+	.cater-menus .menu-info span {
+		font-weight: bold;
+		color: $navy;
+	}
+	.cater-menus .menu-items {
+		font-weight: normal;
+		font-size: 15px;
+		color: $burg;
+		font-weight: bold;
+		padding-left: 20px;
+	}
+	.cater-menus .menu-items span {
+		color: $black;
+		font-weight: normal;
+	}
+	ul.items {
+		list-style-type: none;
+		padding-left: 0;
+		li {padding-bottom: 10px;}
+	}
+
+	.hdv-items {
+		font-weight: normal;
+		font-size: 14px;
+		color: $burg;
+		font-weight: bold;
+		span {
+			color: $black;
+			font-weight: normal;
+		}
+		.fancy-heading {
+			margin-top: 20px;
+			margin-bottom: 10px;
+
+			h4 {font-size: 18px}
+		}
+	}
+	.mobile-menu-link {display: none;}
+	@include bp(md) {
+		.mobile-menu-link {display: block; width:25%; font-weight: bold; background-color: $burg; color:$white; @include center-block (); padding: 10px 0; text-align: center; border: 1px solid $lt-burg;}
+		.cater-menus.tabs { padding-top: 20px;
+			.container {padding-left: 0; padding-right: 0;}
+			.fancy-heading p { line-height: 1.3em;}
+		}
+		.cbp-l-caption-body {padding-left: 0;}
+	}
+	@include bp(sm) {
+		.mobile-menu-link {width:50%;}
+	}
+}
+
+.pairing, .special-event {
+	h3.burg-text {color: $burg;text-align: center; margin-top: 30px; margin-bottom: 5px;}
+	h3.tmargin0 { margin-top: 0; }
+
+	.pairing-1 {
+		border-bottom: 5px solid $lt-blue;
+		.food-menus {
+			h4, h5, p { margin-bottom: 0}
+		}
+	}
+
+	.service-box-2 {
+		p {margin-top:10px; padding-bottom: 0; font-weight: bold;}
+		h5 { font-size: 15px;}
+		h4 { font-size: 17px;}
+	}
+}
+
+.pairing {
+	#page-title {
+		position: relative;
+		z-index: 0;
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background: rgba($black, .3);
+			position: absolute;
+			top:0;
+			left: 0;
+			z-index: -1;
+		}
+	}
+	p {margin-top:0px;}
+	h4 {margin-bottom: 0; line-height: 1.6em; font-size: 20px; color: white;}
+	#page-title .title-container h1.shadow-mod,h4.shadow-mod, h3.shadow-mod {text-shadow: 0px 1px 2px rgba($black, .9);}
+
+	h3.burg-text.text-center{font-weight: bold; }
+	.page-content .hr-png-6 {margin: 15px 0;}
+
+	.h2s {text-align: center; @include sec-default();
+		h2{font-size: 19px;}
+	}
+}
+
+.bnb {
+	#pairing-custom1 {
+		@include sec-default ();
+		padding:15px 0;
+		background-image: url(image_path('nyd2.jpg'));
+		background-position: top left;
+	    background-repeat: no-repeat;
+	    background-size: 35%;
+
+	    &.page-content.food-menus {background-color: #f1f2f4;}
+	}
+
+	#pairing-custom1 .title {
+		@include sec-default ();
+		text-align: center;
+		padding: 30px 10px;
+		position: relative;z-index: 5;
+	}
+
+	#pairing-custom1 .title h1, #pairing-custom1 .title h5, #pairing-custom1 .title h4 { font-weight: bold; }
+
+	#pairing-custom1 .title:before {
+		background: $white;
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	    content: "";
+	    height: 100%;
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	    opacity: .5;
+	    z-index: -1;
+	}
+
+	#pairing-custom1 h3.burg-text {
+		margin-bottom: 2px;
+		margin-top:25px;
+		font-weight: 700;
+	}
+
+	#pairing-custom1 .service-box-2 { margin-bottom:15px; }
+	#pairing-custom1 .service-box-2 h4,
+	#pairing-custom1 .service-box-2 h5,
+	#pairing-custom1 .service-box-2 p,
+	#pairing-custom1 .service-box-2 h4 strong {margin-bottom: 5px;}
+
+	#pairing-custom1 .service-box-2 p {padding-bottom: 5px;}
+	#pairing-custom1 .service-box-2 h5 {font-size: 16px;}
+	#pairing-custom1 .service-box-2 h4 {font-size: 18px;}
+
+	@media (max-width: 768px) {
+		#pairing-custom1 {
+			padding:0;
+			padding-top:20px;
+		    background-image: url('../img/nyd2-mob.jpg');
+		    background-size: 100%;
+		    background-repeat: no-repeat;
+		}
+		#pairing-custom1 h3.burg-text { margin-bottom: 5px;}
+		#pairing-custom1 .service-box-2 { margin-bottom:5px; }
+		#pairing-custom1 .hr-png-6 {margin-bottom: 0;}
+	}
+}
+
+.menus {
+	#page-title {
+		.overlay {
+			@include sec-default ();
+			background: rgba($silver, .7);
+		}
+		.title-container {padding: 40px 0 0px;
+			// h1 { color: $lt-blue; }
+		}
+	}
+
+	.page-content.menus-list {
+		text-align: center;
+		.menu-list { width: 20%; display: inline-block; margin-right: 40px; padding: 30px 0; text-align: center; margin-bottom: 30px; margin-top: 20px; box-shadow: 0px 5px 5px rgba($black, .6);
+			@include sec-bgimage ();
+			background-image: url(image_path('menus.jpg'));
+			&:nth-child(4n+4) {margin-right: 0;}
+			a {font-size: 25px;  color: $dark; font-weight: 800; font-family: $raleway; text-shadow: 0px 1px $gray;}
+
+			&:hover a {@include ease (); text-decoration: none; color: $white; text-shadow: 1px 2px $dark}
+
+
+			@include bp(tb) {
+				width: 30%; margin-right: 20px;
+				background-position: center center;
+				&:nth-child(4n+4) {margin-right: 20px;}
+			}
+			@include bp(md) { width: 45%; }
+			@include bp(sm) {width: 80%; @include center-block ();
+				&:nth-child(4n+4) {@include center-block (); }
+			}
+		}
+	}
+}
+
+.pairing{
+	#page-title {
+		position: relative; z-index: 0;
+		// background-position: bottom right;
+		&::before {@include before(); background-color: rgba(black,.4)}
+
+		.title-container {
+			margin-bottom: 0;
+			.custom-tbx{@include sec-default(); }
+			// .custom-tbx{width: 60%; float: right;}
+			h1.shadow-mod {line-height: 1.3em; margin-bottom: 15px;}
+			h1.shadow-mod, h3.shadow-mod{text-shadow: 0px 2px 2px rgba($black, .9);}
+			h2, h4, h3 {font-weight: bold; }
+			h3 {font-size: 22px; padding-top:0; text-transform: none;
+				span{ text-shadow: none; color: white;}}
+			h4 {line-height: 1.1em; margin-top: 20px;}
+		}
+	}
+
+	.solo {width: 80%; @include center-block();}
+	.sidebar, .pair-menu {display: inline-block; float: left; width: 30%;}
+	.sidebar {margin-left: 5%;}
+	.pair-menu {float: right;width: 65%;}
+	.food-menus {
+		hr {border-bottom: 1px dotted rgba($dark, .2); width: 80%; margin: 15px auto;}
+		h3 {color: $blue; text-shadow: 0px 1px 1px rgba(black, .2);}
+		h4 strong {color: $burg; font-weight: bold;}
+		p{color: black;}
+	}
+	.pixely_widget_contact {
+		h3 {font-size: 22px; line-height: 1em; margin-bottom: 5px;}
+		h4{color: $dark;}
+		p {color:black; padding-bottom: 0; margin-bottom: 0;}
+		h5 {font-weight: bold; margin-bottom:5px; margin-top:20px;}
+	}
+
+	@include bp(xl) {
+		#page-title {
+			&::before { background-color: rgba(black,.5)}
+			.title-container.less { text-align: center; padding:60px 0; margin-bottom: 0;
+				.custom-tbx{@include sec-default(); text-align: center;}
+				h1 {font-size: 30px;}
+			}
+		}
+
+		.page-content.pairing-1 {padding-top:20px;}
+		.sidebar, .pair-menu {@include center-block(); width:85%;}
+		.pair-menu {margin-top: 20px;}
+	}
+
+	@include bp(md) {
+		.sidebar,.pair-menu, .solo{width:99%; text-align: center;}
+	}
+
+	@media (max-width: 740px) {
+		#page-title {
+			.title-container.less { padding:30px 0;
+				h1 {font-size: 25px;}
+				h3, h4 {font-size: 19px}
+			}
+		}
+
+	}
+}
+
+

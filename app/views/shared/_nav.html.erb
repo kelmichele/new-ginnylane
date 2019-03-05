@@ -1,0 +1,66 @@
+    <li class="menu-item"><%= link_to "Home", root_path %></li>
+
+    <li class="menu-item has-child"><a class="mom" href="#">Menus</a>
+        <div class="dropdown">
+            <div class="dropdown-inner">
+                <ul class="dropdown-items">
+                    <li class="menu-item"><%= link_to "Lunch", lunch_menu_path %></li>
+                    <li class="menu-item"><%= link_to "Dinner", dinner_menu_path %></li>
+                    <li class="menu-item"><%= link_to "Brunch", brunch_menu_path %></li>
+                    <li class="menu-item"><%= link_to "Drink Menu", drink_menu_path %></li>
+                    <li class="menu-item"><%= link_to "Wine List", wine_list_path %></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+
+    <li class="menu-item"><%= link_to "Specials", bar_specials_path %></li>
+    <!-- <li class="menu-item has-child"><a class="mom" href="#">Specials</a>
+        <div class="dropdown">
+            <div class="dropdown-inner">
+                <ul class="dropdown-items">
+                    <li class="menu-item"><%= link_to "Bar Specials", bar_specials_path %></li>
+                    <li class="menu-item"><%= link_to "Food Specials", food_specials_path %></li>
+                </ul>
+            </div>
+        </div>
+    </li> -->
+
+    <li class="menu-item"><%= link_to "Events", pairing_path %></li>
+    <!-- <li class="menu-item has-child"><a class="mom" href="#">Events</a>
+        <div class="dropdown">
+            <div class="dropdown-inner">
+                <ul class="dropdown-items">
+                    <li class="menu-item"><%= link_to "April Wine Dinner", pairing_path %></li>
+                    <li class="menu-item"><%= link_to "May Beer Dinner", special_event_path %></li>
+                </ul>
+            </div>
+        </div>
+    </li> -->
+
+    <li class="menu-item"><%= link_to "Catering", catering_path %></li>
+
+    <li class="menu-item">
+        <%= link_to "https://www.gulftogo.com/r/151/restaurants/delivery/Southern-Cuisine/Ginny-Lane-Orange-Beach", target: '_blank' do %>
+            Delivery
+        <% end %>
+    </li>
+
+    <li class="menu-item">
+        <%= link_to "http://www.opentable.com/ginny-lane-bar-and-grill-reservations-orange-beach?restref=144784", target: '_blank' do %>
+            Book a Table
+        <% end %>
+    </li>
+
+    <li class="menu-item has-child"><a class="mom" href="#">More</a>
+        <div class="dropdown">
+            <div class="dropdown-inner">
+                <ul class="dropdown-items">
+                    <li class="menu-item"><%= link_to "Entertainment", entertainment_path %></li>
+                    <li class="menu-item"><%= link_to "About", about_path %></li>
+                    <li class="menu-item"><%= link_to "Contact", contact_path %></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+<!-- <div><a href="#" id="offcanvas-toggler"><i class="uk-icon-bars"></i></a></div> -->

@@ -1,0 +1,88 @@
+<% content_for :title do %>
+    Ginny Lane Bar & Grill | Orange Beach, Al
+<% end %>
+<% content_for :description do %>
+Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating at Ginny Lane Bar &amp; Grill in Orange Beach. The best food with the best view at The Wharf!
+<% end %>
+        <div class="tp-banner-container fullwidthbanner">
+            <div id="rev-slider" class="tp-banner">
+                <ul>
+
+                    <!-- <li data-transition="fade" data-slotamount="5" data-masterspeed="700">
+                        <%= link_to '/pairing' do %>
+                            <%=image_tag( 'musical-slide.jpg', alt: 'Ginny Lane Bar and Grill, Orange Beach', class: 'img-responsive', :data => { bgposition:'center center', bgfit: 'cover', bgrepeat: 'no-repeat'}) %>
+                        <% end %>
+                    </li> -->
+
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="700">
+                        <%= link_to '/bar-specials' do %>
+                            <%=image_tag('happy.jpg', alt: 'Ginny Lane Bar and Grill, Orange Beach', class: 'img-responsive', :data => { bgposition:'center center', bgfit: 'cover', bgrepeat: 'no-repeat'})%>
+                        <% end %>
+                    </li>
+
+                    <!-- GENERIC SLIDE - USE WHEN NOT FULL -->
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="700" data-thumb="img/delivery-sm.jpg" data-title="Upcoming Wine Dinner">
+                        <a href="https://www.gulftogo.com/r/151/restaurants/delivery/Southern-Cuisine/Ginny-Lane-Orange-Beach" target="_blank"><%=image_tag( 'delivery.jpg', alt: 'Ginny Lane Bar and Grill, Orange Beach', class: 'img-responsive', :data => { bgposition:'center center', bgfit: 'cover', bgrepeat: 'no-repeat'}) %></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-content none">
+            <div class="delivery">
+                <%= link_to 'https://www.gulftogo.com/r/151/restaurants/delivery/Southern-Cuisine/Ginny-Lane-Orange-Beach', target: '_blank' do %>
+                    <h3>Ginny Lane is Now Available for Delivery! <span>Click Here to Order.</span></h3>
+                <% end %>
+            </div>
+
+            <div class="container">
+                <div class="intro-title centered">
+                    <h2>
+						<%= image_tag( 'dinerschoice.png', alt: 'Ginny Lane Diners Choice Award', class: 'img-responsive image-center') %>
+                        Welcome to GinnyLane Bar &amp; Grill
+                    </h2>
+                    <h3> Your appetite might lead you here. But our <strong>sensational food</strong>, <strong>breathtaking view</strong>, and <strong>exciting atmosphere</strong> will keep you coming back!</h3>
+                </div>
+                <hr><div class="clearfix"></div>
+                <hr><div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="container boxes">
+                <div class="row">
+                    <div class="col-md-12 clearfix">
+                        <ul>
+                            <div class="col-md-4 col-md-offset-2 menus">
+                                <li class="service-box-3">
+                                    <%= image_tag( 'book.png', alt: 'Ginny Lane Menus', class: 'img-responsive newcon') %>
+                                    <a><h4>Our Menus</h4></a>
+                                    <p>
+                                        Fresh local seafood, Black Angus beef and much more. Check out our menus!
+                                    </p>
+                                    <br>
+
+                                    <%= link_to '/menus', class: 'btn btn-small red' do %>
+                                        <span>View Menus</span>
+                                    <% end %>
+                                </li>
+                            </div>
+
+                            <div class="col-md-4">
+                                <li class="service-box-3">
+                                    <%= image_tag( 'book2.png', alt: 'Ginny Lane Entertainment', class: 'img-responsive newcon') %>
+                                    <a><h4>Live Entertainment</h4></a>
+                                    <p>
+                                        Enjoy live music performed by local artists while you drink and dine with us.
+                                    </p>
+                                    <br>
+                                    <%= link_to '/entertainment', class: 'btn btn-small red' do %>
+                                        <span>View Schedule</span>
+                                    <% end %>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="clearfix"></div><div class="col-xs-12"><div class="hr-png-6"></div></div>
