@@ -17,6 +17,11 @@
 /storage/*
 !/storage/.keep
 
+/config/storage.yml
+/config/database.yml
+/config/secret_token.rb
+
+
 /node_modules
 /yarn-error.log
 
