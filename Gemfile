@@ -18,6 +18,7 @@ gem 'metamagic'
 
 gem 'font-awesome-rails'
 gem 'rails-assets-tether'
+gem 'rack-rewrite'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
