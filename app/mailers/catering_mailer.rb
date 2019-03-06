@@ -7,8 +7,8 @@ class CateringMailer < ApplicationMailer
   def new_catering(catering)
     @catering = catering
 
-    # mail to: "ginnycateringdirector@gmail.com"
-    mail(to: "kelli@hsdesignhouse.com", subject: "Catering Inquiry from the Ginny Lane site") do |format|
+    # kelli@hsdesignhouse.com
+    mail(to: "ginnycateringdirector@gmail.com", subject: "Catering Inquiry from the Ginny Lane site") do |format|
       format.html
       format.text
     end
