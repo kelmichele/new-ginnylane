@@ -18,7 +18,7 @@
 		.arw-menu{@include center-block(); width: 90%; padding-left: 0px;}
 	}
 }
-
+hr.half{ width:50%;@include center-block();}
 
 /*****************SPECIAL**********************/
 .page-title-bar {
@@ -616,7 +616,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
-.pairing {
+.pairing, .special-event {
 	#page-title {
 		position: relative;
 		z-index: 0;
@@ -745,7 +745,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
-.pairing{
+.pairing, .special-event{
 	#page-title {
 		position: relative; z-index: 0;
 		// background-position: bottom right;
