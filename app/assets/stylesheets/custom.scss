@@ -145,15 +145,16 @@ ul { list-style-type: none; }
 
 
 .vil-gil { @include sec-default(); background-color: $white; text-align: center; padding: 30px 0;
-    .txt, .logo {display: inline-block; width: 45%; margin-top:25px;}
-    .logo {float: right; margin-top:0;}
-    .logo img {width: 250px; height: auto;}
+    .partner-logo {display: inline-block; width: 250px; float:none; margin:10px 2% 0; vertical-align: top;
+        // &.two {width:145px;}
+    }
 
-    @include bp(pl) {
-        .txt, .logo {@include center-block(); margin-top: 5px; margin-bottom: 10px; width: 80%;}
-        .txt {width: 100%;}
-        h3 {font-size: 18px;}
-        .logo img {width: 204px; height: auto; @include center-block();}
+    @include bp(pl) {padding:15px 0;
+        .partner-logo {@include sec-default(); margin:15px 0;
+            img{@include center-block(); width: 230px;}
+        }
+
+        h3 {font-size: 16px;}
     }
 
 }
@@ -221,13 +222,14 @@ ul { list-style-type: none; }
     }
 }
 
-@include bp(md) {
+@include bp(xl) {
     #footer-wrapper{ padding: 15px 0;
         .footer-widget-container {width: 65%; @include center-block (); }
         .hours {margin-bottom: 20px;}
-        .footer-widget-container.fb {@include center-block (); margin-bottom: 20px;}
+        .footer-widget-container.fb {@include center-block (); }
         .signup { width: 100%; @include center-block ();}
-        .btn.first { margin: 0 20px 0 5px; }
+        .btn {margin-top:20px 0;}
+        .btn.first { margin: 20px 20px 20px 5px; }
     }
     #copyright-container {text-align: center; .footer-breadcrumb {  float: none; } }
 
