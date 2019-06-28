@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/lunch-menu', to: 'static_pages#lunch-menu'
   get '/event-dinner-menu', to: 'static_pages#event-dinner-menu'
   get '/dinner-menu', to: 'static_pages#dinner-menu'
+  get '/kids-menu', to: 'static_pages#kids-menu'
   get '/brunch-menu', to: 'static_pages#brunch-menu'
   get '/drink-menu', to: 'static_pages#drink-menu'
   get '/wine-list', to: 'static_pages#wine-list'
