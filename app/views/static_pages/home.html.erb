@@ -9,8 +9,14 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
                 <ul>
 
                     <li data-transition="fade" data-slotamount="5" data-masterspeed="700">
-                        <%= link_to '/special-event' do %>
-                            <%=image_tag( 'moonshine.png', alt: 'Ginny Lane Bar and Grill, Orange Beach', class: 'img-responsive', :data => { bgposition:'center center', bgfit: 'cover', bgrepeat: 'no-repeat'}) %>
+                        <%= link_to 'https://alwharf.com/calendar/60ABA3217C~Sparks+After+Dark+Fireworks+Show.htm', target: "_blank" do %>
+                            <%=image_tag('fire.jpg', alt: 'Monday night fireworks at The Wharf', class: 'img-responsive') %>
+                        <% end %>
+                    </li>
+
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="700">
+                        <%= link_to 'https://alwharf.com/calendar', target: "_blank" do %>
+                            <%=image_tag('wharfvents.jpg', alt: 'Upcoming events at The Wharf', class: 'img-responsive') %>
                         <% end %>
                     </li>
 
@@ -31,7 +37,7 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
         <div class="page-content none">
             <div class="delivery">
                 <%= link_to 'https://www.gulftogo.com/r/151/restaurants/delivery/Southern-Cuisine/Ginny-Lane-Orange-Beach', target: '_blank' do %>
-                    <h3>Ginny Lane is Now Available for Delivery! <span>Click Here to Order.</span></h3>
+                    <h3>Ginny Lane is Now Available for Delivery!<br> <span>Click Here to Order.</span></h3>
                 <% end %>
             </div>
 

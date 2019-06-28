@@ -100,20 +100,25 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 	.delivery {
 		@include sec-default ();
-		background-color: $navy;
+		background-color: $burg;
 		color: $white;
 		padding: 15px;
 		margin-top: 0;
 		margin-bottom:15px;
 		text-align: center;
-		h3 {color: $white;}
+		h3 {color: $white; font-weight: bold; letter-spacing: .4px; text-shadow:0px 1px 2px rgba($black,.5); margin:0;}
+		br{display: none;}
 	}
 	.tp-banner-container.fullwidthbanner { margin-bottom: 0; }
-	.delivery a, .delivery span { color: $white; }
-	.delivery:hover span { color: $burg; }
+	.delivery a, .delivery span { color: $nygold; }
+	.delivery:hover span {text-decoration: underline; }
 
 	.service-box-3 {
 		.newcon {@include center-block ();}
+	}
+
+	@include bp(xl) {
+		.delivery br{display: block;}
 	}
 
 	@include bp(md) {
@@ -262,6 +267,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .events {
+	.borderImg{border:1px solid rgba($black,.2);}
  	#page-title .title-container { text-align: center;
 		.title {background: rgba($black, 0.5); padding-top: 30px; padding-bottom:30px;}
 		h4 { color: $white;text-shadow: 0px 3px 2px $black;font-size: 25px; }
