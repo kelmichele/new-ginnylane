@@ -43,11 +43,12 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
 
             <div class="container">
                 <div class="intro-title centered">
-                    <h2>
-						<%= image_tag( 'dinerschoice.png', alt: 'Ginny Lane Diners Choice Award', class: 'img-responsive image-center') %>
-                        Welcome to GinnyLane Bar &amp; Grill
-                    </h2>
-                    <h3> Your appetite might lead you here. But our <strong>sensational food</strong>, <strong>breathtaking view</strong>, and <strong>exciting atmosphere</strong> will keep you coming back!</h3>
+                    <h2>Welcome to Ginny Lane Bar &amp; Grill</h2>
+                    <h3>Your appetite might lead you here. But our <strong>sensational food</strong>, <strong>breathtaking view</strong>, and <strong>exciting atmosphere</strong> will keep you coming back!</h3>
+
+                    <%= link_to "https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1", target: "_blank", class: 'resImg' do %>
+                        <%= image_tag('yelpRes.png', alt: 'Ginny Lane Yelp reservations link', class: 'img-responsive image-center') %> <span>Reservations</span>
+                    <% end %>
                 </div>
                 <hr><div class="clearfix"></div>
                 <hr><div class="clearfix"></div>
@@ -73,7 +74,7 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
                                 </li>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4 ent">
                                 <li class="service-box-3">
                                     <%= image_tag( 'book2.png', alt: 'Ginny Lane Entertainment', class: 'img-responsive newcon') %>
                                     <a><h4>Live Entertainment</h4></a>

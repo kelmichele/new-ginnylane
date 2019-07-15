@@ -94,7 +94,10 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 /***************************************/
 
 .home {
-	.intro-title {@include sec-default ();}
+	.intro-title {@include sec-default(); margin:20px 0;
+		h2{font-weight: bold;}
+		h3{width:75%; @include center-block();}
+	}
 	.boxes {
 		ul {@include sec-default (); margin-top:30px; margin-bottom: 20px;}
 	}
@@ -117,18 +120,57 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		.newcon {@include center-block ();}
 	}
 
+	.resImg {@include sec-default(); text-align:center; padding-top:20px;
+		img, span {display: inline-block;}
+		img{width:120px; margin-top:-20px;}
+		span{color: $black;font-size: 26px; font-weight:bold;}
+	}
+
 	@include bp(xl) {
 		.delivery br{display: block;}
+
+		.intro-title {
+			h2{font-size:28px; line-height: 1.5em; margin-bottom: 5px;}
+			h3{width:95%; font-size:20px; line-height: 1.5em;}
+		}
+
+		.resImg { padding-top:20px;
+			img{width:100px;}
+			span{font-size: 22px;}
+		}
+
+		.col-md-4.col-md-offset-2.menus, .col-md-4.ent{width:45% !important; margin-left:0 !important; float:left;}
+	}
+
+	@media (max-width: 823px) {
+		.intro-title {
+			h2{font-size:25px; }
+			h3{width:95%; font-size:18px;}
+		}
+
+		.resImg { padding-top:20px;
+			img{width:90px;}
+			span{font-size: 20px;}
+		}
+
+		.col-md-4.col-md-offset-2.menus, .col-md-4.ent{width:100% !important; margin-left:0 !important; float:left;}
+		.col-md-4.col-md-offset-2.menus{margin-bottom: 20px;}
+		.service-box-3 {padding: 10px;
+			.newcon {width: 50px; height: 50px;}
+			h4 {margin-top: 5px; margin-bottom: 0px;}
+			p {margin-bottom: 0; padding: 0 20px;}
+		}
 	}
 
 	@include bp(md) {
-		.intro-title h3, .delivery h3 { font-size: 18px; line-height: 1.3em; margin-bottom: 0;}
-		.service-box-3 {padding: 10px;
-			.newcon {width: 60px; height: 60px;}
-			h4 {margin-top: 5px; margin-bottom: 5px;}
-			p {margin-bottom: 0; padding: 0 20px;}
+		.delivery h3 { font-size: 18px; line-height: 1.3em; margin-bottom: 0;}
+		.intro-title {margin-bottom: 0;
+			h2{font-size:21px; }
+			h3{width:95%; font-size:16px;}
 		}
-		.menus .service-box-3 {margin-bottom: 20px;}
+
+		.resImg {margin-top:10px;}
+
 	}
 	@include bp(iv) {
 		.intro-title .image-center { width: 20%; padding-bottom: 10px;}
