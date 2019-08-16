@@ -4,6 +4,8 @@
 @import "variables";
 @import "mixins";
 
+.center-block {@include center-block();}
+
 .rest-week {
 	@include sec-default();padding:40px;
 	.arw-logo{display: inline-block;float: left; width: 15%;}
