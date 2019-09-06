@@ -264,7 +264,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 	@include bp(xl) {
 		.fb-specials {
-			.page-content{
+			.page-content{border-bottom:1px solid rgba($black,.1); padding-bottom: 15px;
 				&::before{display: none;}
 			}
 
@@ -277,7 +277,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 	@media screen and (max-width:823px){
 		.fb-specials {
-			.page-content{padding-bottom: 0;}
 
 			.fb-hlf, .daily-hlf{width:95%;}
 			.daily-hlf{
@@ -319,7 +318,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		}
 
 		.fb-specials {
-			.page-content{border-bottom:1px solid rgba($black,.1); padding-bottom: 15px;}
 			.fb-hlf {margin-bottom: 60px;
 				.sched br{display: block}
 			}
