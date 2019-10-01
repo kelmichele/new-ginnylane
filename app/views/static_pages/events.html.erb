@@ -23,21 +23,33 @@ The first Thursday of every month, Ginny Lane hosts a different vineyard &amp; c
 
 
 <div class="page-content pairing-list">
-    <div class="container-fluid">
+    <div class="container">
         <!-- <h3 class="header">Dont miss out on our upcoming events! <br>
         	Click on one of the events below for more information.
       	</h3> -->
 
-        <div class="row">
-			    <div class="col-md-5 col-xs-12 center-block">
-			      <%= link_to 'https://alwharf.com/calendar', target: "_blank" do %>
+        <div class="row xpad">
+        	<div class="pbox-cst">
+			      <div class="halloWine">
+		          <h3>Halloween Wine Dinner</h3>
+							<h4>Wednesday, October 30th, 6pm<br> $40 per guest
+							<br>
+							Raffle and Costume Contest!<br>Costumes Encouraged!</h4>
+							<div class="clearfix"></div>
+				      <%= link_to "Learn More", pairing_path, class: 'gl-link' %>
+			      </div>
+			    </div>
+
+			    <!-- <div class="col-md-5 col-xs-12"> -->
+        	<div class="pbox-cst two">
+			      <%= link_to 'https://alwharf.com/calendar', target: "_blank", class: 'mobile-cst' do %>
 		          <%=image_tag('wharfvents.jpg', alt: 'Upcoming events at The Wharf', class: 'img-responsive borderImg') %>
 			      <% end %>
 			    </div>
         </div>
 
 		<div class="row">
-            <div class="recipe-sidebar">
+      <div class="recipe-sidebar">
 				<div class="col-md-6 col-xs-12">
 					<div class="recipe-title">
 						<h5>As Seen On Studio 10</h5>

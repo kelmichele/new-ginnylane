@@ -398,7 +398,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		h3.header {text-align: center; padding-bottom: 20px;}
 		a.pairing-box { @include sec-default (); background-color: $navy; padding: 25px; text-align:center;
 		 	h3 { font-size: 22px }
-		 	h4 { color: $white; font-size: 18px;}
+		 	h4 { color: $white; font-size: 18px; }
 		}
 
 		.light-sbox { @include sec-default (); background-color: $light;
@@ -412,6 +412,45 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		 	span { font-size: 13px; color: $black; }
 		 	a { background-color: $lt-blue; padding: 10px 15px; font-weight: bold; }
 			.title h1.background-op { background-color: rgba($navy, 0.8); padding-top:10px; padding-bottom:10px; }
+		}
+
+
+		.row.xpad{padding:40px 0;}
+		.pbox-cst{display: inline-block; float: none; vertical-align: top; width:45%; margin-left: 3%;}
+
+		.halloWine{@include sec-default(); @include sec-bgimage(); background-image: url(image_path('halloBg4.jpg')); background-size: cover;
+			padding:30px 15px 35px 25px;  
+			position: relative; z-index: 0;
+			&::before{@include before(); background-color: rgba($black,.2); height:100%; z-index: -1;}
+
+			h3, h4{color:$white; text-shadow: 0px 1px 1px rgba($black,.7); font-weight: bold;}
+			h3 {font-style: italic; letter-spacing: 1px; text-transform: uppercase;}
+			h4{font-size: 18px; line-height: 1.45em; margin-bottom: 25px;}
+			.gl-link {text-align: center; background-color: $black; color: $white; border:1px solid rgba($white,.5);
+				font-weight:bold; font-size:14px; box-shadow: 0px 5px 8px rgba($black,.4); padding:7px 20px; letter-spacing: .5px;
+				&:hover{background-color: rgba($black,.8); color:$orange;}
+			}
+		}
+
+		@media (max-width:1200px) {
+			.halloWine{padding:20px 15px 30px 25px;  
+				h3 {font-size: 20px;}
+				h4{font-size: 17px; }
+				.gl-link{font-size:13px;}
+			}
+		}
+
+		@include bp(xl) {
+			.row.xpad{padding:10px 0 20px;}
+			.pbox-cst{@include sec-default();margin-left:0;
+				&.two{margin-top:30px;}
+			}
+
+			.halloWine, .mobile-cst{@include center-block(); width:75%; }
+		}
+
+		@include bp(pl) {
+			.halloWine, .mobile-cst{width:90%; }
 		}
 
 		@include bp(sm) {
@@ -927,5 +966,29 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 	}
 }
+
+
+.pairing .halloween-dinner {
+	.pt-bkg-image.image-hallo{background-image: url(image_path('halloBg.jpg')); background-position: center center;
+		&::before{display: none;}
+	}
+
+	.food-menus {
+		h3{color:$orange;}
+		h4 strong {color:$orange2; text-shadow: 0px 1px 1px rgba($black,.15);}
+		p{font-size: 14px;}
+	}
+	.h2s h2{font-size: 23px; font-weight: bold; line-height: 1.3em;}
+
+	@include bp(tb) {
+		.h2s h2{font-size: 19px;}
+	}
+
+	@include bp(md) {
+		.h2s h2{font-size: 17px;}
+	}
+}
+
+
 
 
