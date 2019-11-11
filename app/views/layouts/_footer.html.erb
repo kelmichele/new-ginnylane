@@ -102,9 +102,9 @@
                                 <%= link_to 'About', about_path %>
                             </li>
 
-                            <li>
-                                <%= link_to 'Menus', menus_path %>
-                            </li>
+                            <!-- <li>
+                                <= link_to 'Menus', menus_path %>
+                            </li> -->
 
                             <li>
                                 <%= link_to 'Contact', contact_path %>
@@ -127,8 +127,7 @@
 
                     <li class="deeper parent"><a href="#">Menus <span class="toggle-icon fa fa-angle-down"></span></a>
                         <ul style="display: none;" class="nav-child unstyled small">
-                            <li><%= link_to "Lunch", lunch_menu_path %></li>
-                            <li><%= link_to "Dinner", dinner_menu_path %></li>
+                            <li><%= link_to "Daily Menu", daily_menu_path %></li>
                             <li><%= link_to "Kids", kids_menu_path %></li>
                             <li><%= link_to "Brunch", brunch_menu_path %></li>
                             <li><%= link_to "Drink Menu", drink_menu_path %></li>
