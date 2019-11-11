@@ -515,7 +515,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
    	}
 }
 
-.lunch-menu, .event-lunch-menu, .event-dinner-menu, .dinner-menu, .drink-menu, .wine-list {
+.lunch-menu, .event-lunch-menu, .event-dinner-menu, .dinner-menu, .drink-menu, .wine-list, .daily-menu {
 	.title-container { position: relative; z-index: 5; padding: 30px 0;
 	    h1 { text-shadow: 0px 1px 2px $black; }
 	    h4 { font-weight: bold; color: $white; text-align: center;text-shadow: 0px 1px 2px $black;}
@@ -992,5 +992,17 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	.food-menus .service-box-2{padding-bottom: 10px;}
 }
 
+
+
+.daily-menu{
+	.fancy-heading span{text-transform: inherit; font-size: inherit; color: $blue;}
+	
+
+	.menu-item {
+		h4 img { width: 25px; display: inline-block; padding-top: 4px; padding-right: 1px; vertical-align: top;}
+		.menu-price p {color:#424242;}
+	}
+
+}
 
 

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/menus', to: 'static_pages#menus'
   get '/event-lunch-menu', to: 'static_pages#event-lunch-menu'
   get '/lunch-menu', to: 'static_pages#lunch-menu'
+  get '/daily-menu', to: 'static_pages#daily-menu'
   get '/event-dinner-menu', to: 'static_pages#event-dinner-menu'
   get '/dinner-menu', to: 'static_pages#dinner-menu'
   get '/kids-menu', to: 'static_pages#kids-menu'

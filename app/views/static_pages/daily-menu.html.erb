@@ -1,0 +1,219 @@
+<% content_for :title do %>
+Daily Menu
+<% end %>
+<% content_for :description do %>
+Join us for a lunch, dinner, or just a snack. You'll love our great food with a great view!
+<% end %>
+
+<div id="menupage">
+    <div id="page-title" class="pt-bkg-image image-lunch">
+        <div class="title-container">
+            <section class="fancy-heading center">
+                <h1>Daily Menu</h1>
+                <%= link_to '/bar-specials#penny' do %>
+                    <h4>Ask your server about our <span>Penny Cocktails</span>!</h4>
+                <% end %>
+            </section>
+        </div>
+    </div>
+
+
+    <div class="tabs">
+        <div class="page-content container">
+            <div class="col-md-10 col-md-offset-1 col-xs-12">
+                <div id="accordeon">
+                    <div class="cbp-item">
+                        <%= render "shared/starters" %>
+
+                        <div class="cbp-caption sandwich">
+                            <div class="cbp-caption-defaultWrap">
+                                <h4>Sandwiches</h4>
+                            </div>
+
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-body">
+                                    <div class="menu-item text-center"><p>*All sandwiches served with fries or coleslaw</p></div>
+
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4>Ginny Lane Burger</h4>
+                                            <div class="menu-price"><p>$10</p></div>
+                                            <p>Grilled to Order. Topped with Lettuce, Tomato, Onion and Mayonnaise on a Brioche Bun. Cheddar, mozzarella, or goat cheese.</p>
+                                        </div>
+
+                                        <div class="menu-item">
+                                            <h4>Shrimp BLT</h4>
+                                            <div class="menu-price"><p>$12</p></div>
+                                            <p>Grilled Shrimp, with Spinach, Tomato, Applewood Smoked Bacon, Mozzarella Cheese, and Creole Remolade on Ciabatta bread.</p>
+                                        </div>
+
+                                        <div class="menu-item">
+                                            <h4>Fish Sandwich</h4>
+                                            <div class="menu-price"><p>$10</p></div>
+                                            <p>Pan Seared Fish of the Day, Lettuce, Onion, Tomato, and Tartar Sauce, on Ciabatta Bread </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4>Buffalo Shrimp Wrap</h4>
+                                            <div class="menu-price"><p>$12</p></div>
+                                            <p>Buffalo Shrimp with Lettuce and Tomatoes. Served with a side of Ranch for Dipping.</p>
+                                        </div>
+
+                                        <div class="menu-item">
+                                            <h4>Shrimp PoBoy</h4>
+                                            <div class="menu-price"><p>$10</p></div>
+                                            <p>Gulf Fried Shrimp, Lettuce, Tomato, and Tartar Sauce. Served on a French Baguette.</p>
+                                        </div>                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="cbp-caption stkchx">
+                            <div class="cbp-caption-defaultWrap">
+                                <h4>Steaks &amp; Chicken</h4>
+                            </div>
+
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-body">
+                                    <div class="menu-item">
+                                        <p>Add Snow Crab Cluster - $12 &nbsp; | &nbsp; Add Crab Meat - $8</p>
+                                        <p>Add Crab Cake - $8 &nbsp; | &nbsp; Add Gorgonzola Cream Sauce - $2</p>
+                                    </div>
+
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4><%= image_tag( 'gluten.jpg', alt: 'Ginny Lane Gluten Free Option', class: 'img-responsive') %> New York Strip </h4>
+                                            <div class="menu-price"><p>6oz - $14</p></div>
+                                            <p>Served with Mashed Potatoes and Asparagus. Topped with Red Wine Demi Glace.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4><%= image_tag( 'gluten.jpg', alt: 'Ginny Lane Gluten Free Option', class: 'img-responsive') %> Grilled Sirloin</h4>
+                                            <div class="menu-price"><p>8oz - $16</p></div>
+                                            <p>Served with gouda smashed potatoes and Asparagus. Topped with Red Wine Demi Glace.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-md-offset-3 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4>Pecan Encrusted Chicken</h4>
+                                            <div class="menu-price"><p>$14</p></div>
+                                            <p>Chicken breast, breaded in candied pecans and lightly fried. Served with gouda smashed potatoes and brussel sprouts. Topped with lemon beurre blanc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cbp-caption seafood">
+                            <div class="cbp-caption-defaultWrap">
+                                <h4>Seafood</h4>
+                            </div>
+
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-body">
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4>Seared Crab Cake</h4>
+                                            <div class="menu-price"><p>$12</p></div>
+                                            <p>Served with white Rice, Green Beans, and Tartar Sauce</p>
+                                        </div>
+                                   
+                                        <div class="menu-item">
+                                            <h4>Grilled Salmon</h4>
+                                            <div class="menu-price"><p>$16</p></div>
+                                            <p>Served with spinach risotto, asparagus, and dill caper cream sauce.</p>
+                                        </div>
+                                   
+                                        <div class="menu-item">
+                                            <h4><%= image_tag( 'gluten.jpg', alt: 'Ginny Lane Gluten Free Option', class: 'img-responsive') %> Bayou Grouper</h4>
+                                            <div class="menu-price"><p>$22</p></div>
+                                            <p>Grouper topped with crab and lemon beurre blanc. Served with mushroom risotto and glazed carrots.</p>
+                                        </div>
+
+                                        <div class="menu-item">
+                                            <h4><%= image_tag( 'gluten.jpg', alt: 'Ginny Lane Gluten Free Option', class: 'img-responsive') %> Bacon Wrapped Gulf Shrimp</h4>
+                                            <div class="menu-price"><p>$16</p></div>
+                                            <p>Bacon Wrapped Shrimp Topped With Cherry BBQ Sauce. Served With Gouda Smashed potatoes And Green Beans.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4>Fried Shrimp Platter</h4>
+                                            <div class="menu-price"><p>$16</p></div>
+                                            <p>Jumbo Gulf Shrimp, Lightly Dusted And Fried. Served With french Fries and Cole Slaw.</p>
+                                        </div>
+
+                                        <div class="menu-item">
+                                            <h4>Fried Seafood Platter</h4>
+                                            <div class="menu-price"><p>$18</p></div>
+                                            <p>Fried Gulf Shrimp, Grouper, And Oysters. Served With french Fries and Cole Slaw.</p>
+                                        </div>
+
+                                        <div class="menu-item">
+                                            <h4><%= image_tag( 'gluten.jpg', alt: 'Ginny Lane Gluten Free Option', class: 'img-responsive') %> Shrimp &amp; Grits</h4>
+                                            <div class="menu-price"><p>$14</p></div>
+                                            <p>Sauteed Gulf Shrimp, Tomatoes, Bacon, Thyme, Rosemary, Green Onions, Shallots, Garlic, Chardonnay Cream Sauce. Served Over Cheddar Grits</p>
+                                        </div>
+
+                                        <div class="menu-item">
+                                            <h4><%= image_tag( 'gluten.jpg', alt: 'Ginny Lane Gluten Free Option', class: 'img-responsive') %> Classic Steamer Pot</h4>
+                                            <div class="menu-price"><p>$28</p></div>
+                                            <p>Gulf Shrimp, Snow Crab Legs, andouille Sausage, Corn, and New Potatoes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cbp-caption pasta">
+                            <div class="cbp-caption-defaultWrap">
+                                <h4>Pasta</h4>
+                            </div>
+
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-body">
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4>Shrimp Scampi</h4>
+                                            <div class="menu-price"><p>$12</p></div>
+                                            <p>Sautéed Gulf Shrimp White Wine, Butter &amp; Garlic Sauce, with Asparagus &amp; Tomatoes. Served over Linguini.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4>Chicken Alfredo</h4>
+                                            <div class="menu-price"><p>$14</p></div>
+                                            <p>Grilled Chicken Breast, Spinach, and Peas in a Creamy Alfredo Sauce. Served over Linguini.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-md-offset-3 col-xs-12">
+                                        <div class="menu-item">
+                                            <h4>Seafood Pasta</h4>
+                                            <div class="menu-price"><p>$16</p></div>
+                                            <p>Gulf Shrimp, Crab, Spinach, and Peas in a Creamy Alfredo Sauce. Served over Linguini.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <%= render "shared/extras" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div><div class="col-xs-12"><div class="hr-png-6"></div></div>
+
