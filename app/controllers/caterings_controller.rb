@@ -7,7 +7,7 @@ class CateringsController < ApplicationController
   def create
     @catering = Catering.new(catering_params)
 
-    if @catering.valid?
+    if @catering.valid? && @catering.save
       CateringMailer.new_catering(@catering).deliver unless catering_params[:honey].present?
       redirect_to catering_path, notice: "Your message has been sent."
     else
