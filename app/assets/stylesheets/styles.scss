@@ -108,7 +108,7 @@ body {
     @include sec-bgimage ();
     background-size: cover;
 
-    &.image-2 {background-image: url(image_path('entertainment.jpg'));}
+    &.image-2 {background-image: url(image_path('band.jpg'));}
     &.image-3 {background-image: url(image_path('wine-din.png'));}
     &.image-4 {background-image: url(image_path('wine-table.jpg'));background-position: center center;}
     &.image-5 {

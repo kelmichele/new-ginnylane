@@ -971,7 +971,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 .special-event .service-box-2{padding-bottom: 15px;}
 
-
 .pairing .halloween-dinner {
 	.pt-bkg-image.image-hallo{background-image: url(image_path('halloBg.jpg')); background-position: center center;
 		&::before{display: none;}
@@ -992,11 +991,10 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		.h2s h2{font-size: 17px;}
 	}
 }
+
 .pairing {
 	.food-menus .service-box-2{padding-bottom: 10px;}
 }
-
-
 
 .daily-menu{
 	.fancy-heading span{text-transform: inherit; font-size: inherit; color: $blue;}
@@ -1033,5 +1031,31 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		}
 	}
 }
+
+.entertainment {
+	.pt-bkg-image {background-position: center center; position: relative; z-index: 0;
+		&::before{@include before(); height:100%; background-color: rgba($black,.5);}
+	}
+	#page-title .title-container {padding: 30px 0;margin-bottom: 0px;}
+	h2{color: $burg; font-weight: bold;}
+
+	@include bp(xl) {
+		#page-title .title-container h1{font-size: 2.8em;}
+		h2{font-size:2em;}
+		h4{font-size: 1.3em;}
+	}
+
+	@media screen and (max-width: 823px) {
+		#page-title .title-container h1{font-size: 2.5em;}
+		h2{font-size:1.7em;}
+		h4{font-size: 16px;}
+	}
+
+	@include bp(sm) {
+		#page-title .title-container h1{font-size: 2.2em;}
+	}
+}
+
+
 
 
