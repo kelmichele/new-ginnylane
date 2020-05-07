@@ -6,6 +6,34 @@
 
 .center-block {@include center-block();}
 
+
+.family-meals {
+    @include sec-default(); text-align: center; padding: 60px 0;
+    @include sec-bgimage(); background-image: url(image_path('GL-LARGE-3180.jpg')); position: relative; z-index: 0;
+    &::before{@include before(); background-color: rgba($white, .8); height:100%; z-index: -2;}
+    &::after{@include before(); background-color: rgba($blue, .5); height:100%; z-index: -1;}
+
+    h1{color: $burg; font-weight: bold; text-transform: uppercase; margin-bottom:40px;}
+    h2{color: $navy; font-weight: bold; margin-bottom:0px; text-decoration: underline;}
+    h3{margin:0 0 15px; font-size: 18px;}
+    h4{color: $burg; font-weight: bold; margin-bottom:0px;}
+    p{margin:0; font-size:17px; color:$black;}
+
+    .item{@include sec-default(); margin-top:20px;}
+
+
+
+    @include bp(lg) {
+    }
+    @include bp(tn) {
+    }
+}
+
+
+
+
+
+
 .rest-week {
 	@include sec-default();padding:40px;
 	.arw-logo{display: inline-block;float: left; width: 15%;}
