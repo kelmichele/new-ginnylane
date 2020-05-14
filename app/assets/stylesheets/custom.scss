@@ -199,7 +199,7 @@ ul { list-style-type: none; }
         // &.two {width:145px;}
     }
 
-    @include bp(pl) {padding:15px 0;
+    @media screen and (max-width:1150px) {padding:15px 0;
         .partner-logo {@include sec-default(); margin:15px 0;
             img{@include center-block(); width: 230px;}
         }
