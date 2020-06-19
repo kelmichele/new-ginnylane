@@ -70,13 +70,7 @@
     	h1{font-size: 21px;}
     	h2{font-size:19px;}
     }
-
-
 }
-
-
-
-
 
 
 .rest-week {
@@ -288,131 +282,48 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .bar-specials {
-	.page-content {padding-bottom: 0;}
-	ul { padding-left: 0;}
-	.fancy-heading.center p { margin-bottom: 0; padding-bottom: 0;}
-	.section-gray { @include sec-default(); background-color: $offwhite; padding:35px 0 20px 15px; margin-top: 20px;}
+	h1, h2, h3{text-transform: uppercase;}
+	h2.dev{letter-spacing: 2px; font-weight: bold;}
+	h1{margin-bottom: 5px;}
+	h3{color: $burg; font-weight: bold; letter-spacing: .5px;}
+	h4{font-weight: bold; color: $burg; font-size: 24px;}
+	ul {padding-left: 0;}
+	
+	.page-content {padding: 0;}
+	.specialsList{@include sec-default(); text-align: center; margin-top:30px;
+		li {color: $navy; font-size: 19px; margin-bottom: 20px; line-height: 1.3em; font-family:'Raleway', sans-serif;}
+	}
+
+
+
+
 	.lunch-mart {
 		h3 { color: $lt-blue; font-weight: bold;  }
 		p { color: $navy; font-size:15px; text-align: center; }
 		p.food-menus { font-size: 14px; font-style: italic;}
 		h4 { font-size: 18px; text-align: center; font-weight: bold; line-height:1.2em; margin-bottom:5px; color: $burg; }
 	}
-	.x-padding{ padding: 0 50px;}
-
-
-	// FOOTBALL SEASON STYLE DIV. DELETE class from page for reset.
-	.fb-specials {
-		h1, h2{text-transform: uppercase;}
-		h2{letter-spacing: 2px; font-weight: bold;}
-
-		.page-content{@include sec-default(); padding-bottom: 30px;
- 			position: relative;z-index: 0;
-			&::before{@include before();z-index: -2; height:100%; width:64%; 
-				@include sec-bgimage(); background-image:url(image_path('football.jpg')); background-size:cover;
-			}
-			&::after{@include before(); background-color: rgba($white,.93); z-index: -1; height:100%;}
-		}
-
-		.fb-hlf, .daily-hlf{display: inline-block; float: left; width:60%;}
-		.daily-hlf{width:33%; float:right;}
-
-		.fb-hlf{padding-bottom: 40px;
-			h3{color:$burg; margin-bottom:0px; font-weight:bold; text-transform: uppercase;}
-
-			.sched{@include sec-default(); margin-bottom:15px;
-				p{font-size:16px; color:$black; margin:3px 0 10px; padding:0; font-weight: bold; letter-spacing: .3px; font-family: $raleway;}
-				p span {color: $burg;}
-				br{display: none;}
-			}
-
-			.cbp-item .cbp-caption-activeWrap{background-color: rgba($white,.6);}
-		}
-
-		.daily-hlf{
-			.lunch-mart {
-				h3{color:$navy;}
-				h4,p{text-align: left;}
-			}
-		}
-	}
-
-	@include bp(xl) {
-		.fb-specials {
-			.page-content{border-bottom:1px solid rgba($black,.1); padding-bottom: 15px;
-				&::before{display: none;}
-			}
-
-			.fb-hlf, .daily-hlf{@include center-block(); width:80%;}
-			.daily-hlf{margin-top:50px;
-				.fancy-heading{margin-bottom:10px;}
-			}
-		}
-	}
-
-	@media screen and (max-width:823px){
-		.fb-specials {
-
-			.fb-hlf, .daily-hlf{width:95%;}
-			.daily-hlf{
-				.fancy-heading p{padding-bottom:0;}
-			}
-		}
-	}
 
 	@include bp(md) {
 		.page-content {padding-top: 20px;}
-		.x-padding{ padding: 0 15px;}
-		h3.fancy-heading.center { margin-bottom: 10px; font-size: 20px; }
-
-		ul.barspecials { @include center-block (); text-align: center;
-			li { font-size: 15px; display: inline-block; width: 48%; margin-bottom: 15px;}
-			li span {font-size: 16px;}
-		}
-
-		#happyhour-box { padding: 10px;
-			ul.hh-specials { padding-top:5px;
-				li { font-size: 15px; display: inline-block;}
-			}
-		}
-
-		.section-gray { padding:20px 0 0; margin-top: 10px;}
 		.lunch-mart {
-			h4 { font-size: 16px; }
+			h4 {font-size: 16px;}
 			p {padding-bottom: 0;}
 		}
 	}
 
 	@include bp(sm) {
-		.page-title-bar {
-			padding:15px;
-			.heading-box {
-				padding: 0;
+		.page-title-bar {padding:15px;
+			.heading-box {padding: 0;
 			 	h1 {font-size: 30px; line-height: 1.3em;}
 			}
-		}
-
-		.fb-specials {
-			.fb-hlf {margin-bottom: 60px;
-				.sched br{display: block}
-			}
-		}
-
-		ul.barspecials { li { display: block; width: 100%;} }
-		#happyhour-box { padding: 10px;
-			.fancy-heading {margin-bottom: 15px;}
-			ul.hh-specials { padding-top:0px;
-				li{display: block;}}
 		}
 	}
 
 	@include bp(iv) {
-		#happyhour-box { text-align: center;}
 		.page-title-bar {
-			padding:15px;
 			.heading-box {
-				padding: 0;
-			 	h1 {font-size: 25px; line-height: 1.3em;}
+			 	h1 {font-size: 25px;}
 			}
 		}
 	}
