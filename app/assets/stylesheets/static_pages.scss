@@ -286,47 +286,67 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	h2.dev{letter-spacing: 2px; font-weight: bold;}
 	h1{margin-bottom: 5px;}
 	h3{color: $burg; font-weight: bold; letter-spacing: .5px;}
-	h4{font-weight: bold; color: $burg; font-size: 24px;}
 	ul {padding-left: 0;}
+	span{color: inherit;}
 	
 	.page-content {padding: 0;}
 	.specialsList{@include sec-default(); text-align: center; margin-top:30px;
-		li {color: $navy; font-size: 19px; margin-bottom: 20px; line-height: 1.3em; font-family:'Raleway', sans-serif;}
+		h4{font-weight: bold; color: $burg; font-size: 24px;
+			position: relative; z-index: 0; 
+			&::before{content: ""; position: absolute; top: 49%; width: 70%; left:15%; z-index: -1; height:2px; background-color: $lt-blue;}
+
+			span{background-color: $white; padding: 0 15px;}
+		}
+		li {color: $navy; font-size: 19px; margin-bottom: 20px; line-height: 1.3em; font-family:'Raleway', sans-serif; font-weight: 500;}
 	}
-
-
+	.border{@include sec-default(); height:15px; border-bottom: 2px dotted rgba($navy,.3);}
 
 
 	.lunch-mart {
 		h3 { color: $lt-blue; font-weight: bold;  }
 		p { color: $navy; font-size:15px; text-align: center; }
 		p.food-menus { font-size: 14px; font-style: italic;}
-		h4 { font-size: 18px; text-align: center; font-weight: bold; line-height:1.2em; margin-bottom:5px; color: $burg; }
+		h4 {font-size: 18px; text-align: center; font-weight: bold; line-height:1.2em; margin-bottom:5px; color: $burg;}
+	}
+
+
+	@include bp(xl) {
+		.page-title-bar {padding:25px 0 15px;
+			.col-md-6.col-md-offset-3.col-sm-12{width:80%; margin-left:10%;}
+			.heading-box {padding: 0;
+			 	h1 {font-size: 30px; line-height: 1.1em;}
+			 	h2{letter-spacing: 1px;}
+			}
+		}
+
+		.specialsList{
+			h4{font-size: 21px;}
+			li{font-size: 17px; margin-bottom: 15px;}
+		}
 	}
 
 	@include bp(md) {
-		.page-content {padding-top: 20px;}
+		.page-title-bar {padding:25px 0 10px;
+			.col-md-6.col-md-offset-3.col-sm-12{width:90%; margin-left:5%;}
+			.heading-box {padding: 0;
+			 	h1 {font-size: 25px;}
+			 	h2{letter-spacing: .4px; font-size:19px}
+			 	h3{font-size: 19px;}
+			}
+		}
+
+		.specialsList{margin-top:20px;
+			h4{font-size: 20px;}
+			li{font-size: 16px;}
+		}
+
 		.lunch-mart {
 			h4 {font-size: 16px;}
 			p {padding-bottom: 0;}
 		}
 	}
 
-	@include bp(sm) {
-		.page-title-bar {padding:15px;
-			.heading-box {padding: 0;
-			 	h1 {font-size: 30px; line-height: 1.3em;}
-			}
-		}
-	}
-
-	@include bp(iv) {
-		.page-title-bar {
-			.heading-box {
-			 	h1 {font-size: 25px;}
-			}
-		}
-	}
+	@include bp(sm) {}
 }
 
 .food-specials {
