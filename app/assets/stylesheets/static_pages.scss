@@ -5,71 +5,69 @@
 @import "mixins";
 
 .center-block {@include center-block();}
-
+.page-content{@include center-block();}
 
 .family-meals {
-    @include sec-default(); text-align: center; padding: 60px 0;
-    @include sec-bgimage(); background-image: url(image_path('GL-LARGE-3180.jpg')); 
-    background-size:cover;
-    position: relative; z-index: 0;
-    &::before{@include before(); background-color: rgba($white, .8); height:100%; z-index: -2;}
-    &::after{@include before(); background-color: rgba($blue, .5); height:100%; z-index: -1;}
+  @include sec-default(); text-align: center; padding: 60px 0;
+  @include sec-bgimage(); background-image: url(image_path('GL-LARGE-3180.jpg')); 
+  background-size:cover;
+  position: relative; z-index: 0;
+  &::before{@include before(); background-color: rgba($white, .8); height:100%; z-index: -2;}
+  &::after{@include before(); background-color: rgba($blue, .5); height:100%; z-index: -1;}
 
-    h1{color: $burg; font-weight: bold; text-transform: uppercase; margin-bottom:0px;
-    	a.tel{color: $navy;}
-    }
-    h2{color: $navy; font-weight: bold; margin-bottom:0px; text-decoration: underline;}
-    h3{margin:0 0 15px; font-size: 18px;}
-    h4{color: $burg; font-weight: bold; margin-bottom:0px;}
-    p{margin:0; font-size:17px; color:$black;}
+  h1{color: $burg; font-weight: bold; text-transform: uppercase; margin-bottom:0px;
+  	a.tel{color: $navy;}
+  }
+  h2{color: $navy; font-weight: bold; margin-bottom:0px; text-decoration: underline;}
+  h3{margin:0 0 15px; font-size: 18px;}
+  h4{color: $burg; font-weight: bold; margin-bottom:0px;}
+  p{margin:0; font-size:17px; color:$black;}
 
-    .item{@include sec-default(); margin-top:20px;}
+  .item{@include sec-default(); margin-top:20px;}
 
-    .deliverySec{@include sec-default(); text-align: center; padding: 15px 0 20px;
+  .deliverySec{@include sec-default(); text-align: center; padding: 15px 0 20px;
 		hr{width: 30%; @include center-block(); margin: 20px auto; border-color: rgba($black,.15); }
 		.deliveryLogo{display:inline-block; width:30%; max-width:175px; margin: 0 1%;
-	      &.narrow{margin-bottom: 20px;}
-	      &.tall{max-width: 150px}
-	    }
+      &.narrow{margin-bottom: 20px;}
+      &.tall{max-width: 150px}
+    }
 	}
 
+  @include bp(xl) {padding:25px 0 20px;
+  	h1{font-size:26px;}
+  	h2{font-size:23px;}
+  	h3{font-size:17px; margin-bottom: 0px;}// width:85%; @include center-block();}
+  	h4{font-size:18px;}
+  	p{font-size: 16px;}//width:85%; @include center-block();}
+  	.item{margin-top:12px;}
 
+  	.deliverySec{padding:15px 0;
+  		hr{margin: 15px auto;}
+  		.deliveryLogo{max-width: 160px;
+	      &.tall{max-width: 130px;}
+	  }
+  	}
+  }
 
-    @include bp(xl) {padding:25px 0 20px;
-    	h1{font-size:26px;}
-    	h2{font-size:23px;}
-    	h3{font-size:17px; margin-bottom: 0px;}// width:85%; @include center-block();}
-    	h4{font-size:18px;}
-    	p{font-size: 16px;}//width:85%; @include center-block();}
-    	.item{margin-top:12px;}
+  @media screen and (max-width: 823px){
+  	h1{font-size:24px; line-height: 1.5em;}
+  	h2{font-size:21px;}
+  	h4{font-size:17px;}
+  	p{font-size: 15px; padding-bottom: 5px;}
+  	.deliverySec{padding:5px 0;}
+  }
 
-    	.deliverySec{padding:15px 0;
-    		hr{margin: 15px auto;}
-    		.deliveryLogo{max-width: 160px;
-		      &.tall{max-width: 130px;}
-		  }
-    	}
-    }
+  @media screen and (max-width: 767px){
+  	.container{padding:0; max-width:90%;}
+  	h1{font-size:22px;}
+  	h2{font-size:20px;}
+  }
 
-    @media screen and (max-width: 823px){
-    	h1{font-size:24px; line-height: 1.5em;}
-    	h2{font-size:21px;}
-    	h4{font-size:17px;}
-    	p{font-size: 15px; padding-bottom: 5px;}
-    	.deliverySec{padding:5px 0;}
-    }
-
-    @media screen and (max-width: 767px){
-    	.container{padding:0; max-width:90%;}
-    	h1{font-size:22px;}
-    	h2{font-size:20px;}
-    }
-
-    @media screen and (max-width: 500px){
-    	hr.top, br.large{display:none;}
-    	h1{font-size: 21px;}
-    	h2{font-size:19px;}
-    }
+  @media screen and (max-width: 500px){
+  	hr.top, br.large{display:none;}
+  	h1{font-size: 21px;}
+  	h2{font-size:19px;}
+  }
 }
 
 
@@ -531,28 +529,28 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 .lunch-menu, .event-lunch-menu, .event-dinner-menu, .dinner-menu, .drink-menu, .wine-list, .daily-menu {
 	.title-container { position: relative; z-index: 5; padding: 30px 0;
-	    h1 { text-shadow: 0px 1px 2px $black; }
-	    h4 { font-weight: bold; color: $white; text-align: center;text-shadow: 0px 1px 2px $black;}
-	    h3 {text-shadow: 0px 1px 2px $black;}
-	    a { font-weight: bold; color: $lt-blue;}
-   	}
-		.menu-item {
-	  	h4 {color: $burg; font-weight: bold;}
-	  	p {color: $black;}
-	  	.menu-price p {color: $font-color;margin-bottom:0;}
-	  }
+    h1 { text-shadow: 0px 1px 2px $black; }
+    h4 { font-weight: bold; color: $white; text-align: center;text-shadow: 0px 1px 2px $black;}
+    h3 {text-shadow: 0px 1px 2px $black;}
+    a { font-weight: bold; color: $lt-blue;}
+ 	}
+	.menu-item {
+  	h4 {color: $burg; font-weight: bold;}
+  	p {color: $black;}
+  	.menu-price p {color: $font-color;margin-bottom:0;}
+  }
 
-   	#menus a {
-   		@include sec-default();
-   		background-color: $light; padding: 20px;
-   	}
-   	@include bp(md) {
-	    .menu-item {
-				padding-bottom: 10px; padding-right: 0px;
-				h4 {margin-bottom: 3px;}
-				p {padding-bottom: 0;}
-				.menu-price p { margin-bottom: 0px;}
-	    }
+ 	#menus a {
+ 		@include sec-default();
+ 		background-color: $light; padding: 20px;
+ 	}
+ 	@include bp(md) {
+    .menu-item {
+			padding-bottom: 10px; padding-right: 0px;
+			h4 {margin-bottom: 3px;}
+			p {padding-bottom: 0;}
+			.menu-price p { margin-bottom: 0px;}
+    }
 	}
 	@include bp(sm) {
 		.cbp-l-caption-body {padding-left: 0;}
@@ -1009,7 +1007,12 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .daily-menu{
-	.fancy-heading span{text-transform: inherit; font-size: inherit; color: $blue;}
+	hr.noTop{margin-top:0;}
+
+	.fancy-heading {
+		h2{color: $white; text-shadow: 0px 1px 2px rgba($black,.85); font-weight:bold; margin-top:5px;}
+		span{text-transform: inherit; font-size: inherit; color: $blue;}
+	}
 
 	.menu-key{@include sec-default(); text-align: center;
 		h5{font-size: 16px; color:#424242;}

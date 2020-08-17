@@ -45,7 +45,9 @@ body {
 }
 .main-wrapper {@include sec-default (); background-color: $white; }
 .wrapper {padding: 0;}
-.page-content { @include sec-default; padding:40px 0;
+.page-content {padding:40px 0;
+    // @include sec-default;
+    width:100%; float:none; margin: auto; display:block; clear: both;
     &.less { padding:15px 0}
     &.none { padding: 0}
 }
