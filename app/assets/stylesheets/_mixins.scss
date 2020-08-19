@@ -61,6 +61,10 @@
     @else if $point == sm {
         @media (max-width: 640px)  { @content ; }
     }
+
+    @else if $point == oc {
+        @media (max-width: 639px)  { @content ; }
+    }
     
     @else if $point == ph {
         @media (max-width: 570px)  { @content ; }

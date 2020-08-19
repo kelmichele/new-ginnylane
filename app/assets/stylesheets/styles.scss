@@ -119,10 +119,10 @@ body {
     }
     &.image-6 {background-image: url(image_path('bar-seat.jpg'));}
     &.image-8 { background-image: url(image_path('table-set.jpg'));}
-    &.image-9 {background-image: url(image_path('wine-table.jpg')); background-position: center center; }
+    &.image-9 {background-image: url(image_path('wine-table.jpg')); background-position: center center;}
     &.image-11 {background-image: url(image_path('beerdin-bg.jpg'));}
     &.image-12 {background-image: url(image_path('gl-entry.jpg'));}
-    &.image-wine { background-image: url(image_path('bar-seat.jpg'));}
+    &.image-wine {background-image: url(image_path('bar-seat.jpg'));background-position: center center;}
     &.image-cater { background-image: url(image_path('starfish.jpg'));}
     &.image-menu { background-image: url(image_path('menu-bg.jpg'));}
     &.image-nyd { background-image: url(image_path('nyd.jpg')); background-position: center center;}
@@ -131,17 +131,18 @@ body {
     // &.image-wp{background-image: url(image_path('winter-bg.jpg'));}
     &.image-mp:before{display: none;}
 
-    &.image-lunch {background-image: url(image_path('dining-room.jpg')); position: relative; z-index: 0;
-        &::before {
-            background: rgba($dark, .4);
-            content: "";
-            position: absolute;
-            width:100%;
-            height:100%;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
+    &.image-lunch {background-image: url(image_path('dining-room.jpg')); 
+        // position: relative; z-index: 0;
+        // &::before {
+        //     background: rgba($dark, .4);
+        //     content: "";
+        //     position: absolute;
+        //     width:100%;
+        //     height:100%;
+        //     top: 0;
+        //     left: 0;
+        //     z-index: 2;
+        // }
     }
 }
 #page-title {
