@@ -6,6 +6,7 @@
 
 .center-block {@include center-block();}
 .page-content{@include center-block();}
+p{font-size:16px;}
 
 .family-meals {
   @include sec-default(); text-align: center; padding: 60px 0;
@@ -122,7 +123,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	.cbp-caption-activeWrap { background-color: $white; padding-top: 20px;}
 	.cbp-caption-defaultWrap {
 		background-color: #f6f6f6; padding-bottom: 5px; margin-bottom: 2px;
-
 		h4 {margin-bottom: 0px; padding-left: 30px;}
 	}
 	.cbp-caption-defaultWrap::before {
@@ -154,8 +154,21 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	.menu-item {
 		padding-bottom: 10px; padding-right: 10px; text-align: center; text-transform: capitalize;
 		h4 {margin-bottom: 3px; font-size: 20px;}
-		p {padding-bottom: 0;}
+		p {padding-bottom: 0; font-size:16px;}
 		.menu-price p { font-weight: bold; margin-bottom: 10px;}
+	}
+
+ 	@include bp(xl) {
+ 		.menu-item{
+ 			h4{font-size:18px;}
+ 			p{font-size: 15px;}
+ 		}
+ 	}
+	
+	@media (max-width: 1023px) {
+		.menu-item{
+ 			h4{font-size:17px;}
+		}
 	}
 }
 /***************************************/
@@ -529,12 +542,14 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 .lunch-menu, .event-lunch-menu, .event-dinner-menu, .dinner-menu, .drink-menu, .wine-list, .daily-menu, .brunch-menu {
 	.title-container { position: relative; z-index: 5; padding: 30px 0;
-    h1 { text-shadow: 0px 1px 2px $black; }
-    h4 { font-weight: bold; color: $white; text-align: center;text-shadow: 0px 1px 2px $black;}
+    h1 {text-shadow: 0px 1px 2px $black;}
+    h4 {font-weight: bold; color: $white; text-align: center;text-shadow: 0px 1px 2px $black;}
     h3 {text-shadow: 0px 1px 2px $black;}
-    a { font-weight: bold; color: $lt-blue;}
+    a {font-weight: bold; color: $lt-blue;}
  	}
- 	p{font-size: 16px;}
+ 	
+ 	// p{font-size: 16px;}
+
 	.menu-item {
   	h4 {color: $burg; font-weight: bold;}
   	p {color: $black;}
@@ -545,6 +560,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
  		@include sec-default();
  		background-color: $light; padding: 20px;
  	}
+
  	@include bp(md) {
     .menu-item {
 			padding-bottom: 10px; padding-right: 0px;
@@ -1019,7 +1035,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 	
 	.menu-item {
-		h4 img { width: 25px; display: inline-block; padding-top: 4px; padding-right: 1px; vertical-align: top;}
+		h4 img {width: 25px; display: inline-block; padding-top: 4px; padding-right: 1px; vertical-align: top;}
 		p{line-height: 1.6em;}
 
 		&.dets p{font-weight: bold;}
