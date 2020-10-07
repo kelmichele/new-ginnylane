@@ -1077,10 +1077,14 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 
 	@include bp(xl) {
-		.menu-opt{
-			h5{font-size:22px; margin-bottom: 20px;}
-		}
-		.menu-link{margin: 20px 2%; width:40%; font-size:20px;}
+		.menu-opt h5{font-size:22px; margin-bottom: 20px;}
+		.menu-link{font-size:20px;}
+	}
+	
+	@include bp(sm) {
+		.menu-opt h5{font-size:20px; margin-bottom: 10px;}
+		.menu-link{margin: 20px 0 0px; width:47%; font-size:18px; float:left;}	
+		.menu-link.two{float:right;}
 	}
 	
 
