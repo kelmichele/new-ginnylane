@@ -1066,6 +1066,17 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 .daily-menu{
 	hr.noTop{margin-top:0;}
 
+	.menu-opt{@include sec-default(); text-align:center;
+		h5{font-size:25px; margin-bottom: 40px;}
+	}
+	.menu-link{display: inline-block; margin: 20px 2%; width:40%;
+		font-size:22px; color: $burg; font-weight:bold;font-family:$raleway;
+
+		img{border:1px solid rgba($black,.1); margin-top:10px;}
+	}
+	// .menu-btn{font-size:20px; color: $burg; font-weight:bold;font-family:$raleway;}
+
+
 	.fancy-heading {
 		h2{color: $white; text-shadow: 0px 1px 2px rgba($black,.85); font-weight:bold; margin-top:5px;}
 		span{text-transform: inherit; font-size: inherit; color: $blue;}
