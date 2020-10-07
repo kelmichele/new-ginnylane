@@ -1082,11 +1082,18 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 	
 	@include bp(sm) {
+		.page-content.spec{padding:30px 0;}
 		.menu-opt h5{font-size:20px; margin-bottom: 10px;}
 		.menu-link{margin: 20px 0 0px; width:47%; font-size:18px; float:left;}	
 		.menu-link.two{float:right;}
 	}
 	
+	@media screen and (max-width:500px) {
+		.page-content.spec{padding:20px 0;}
+		.page-content.container{max-width: 95% !important;}
+		.menu-opt h5{font-size:18px; margin-bottom: 0; width: 95%; @include center-block();}
+		.menu-link{margin: 20px 0 0px; width:48%; font-size:17px;}	
+	}
 
 	/////// all except pdf sec. /////////
 
