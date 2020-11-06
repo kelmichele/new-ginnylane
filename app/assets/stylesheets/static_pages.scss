@@ -294,7 +294,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
-.bar-specials {
+.bar-specials, .specials {
 	h1, h2, h3{text-transform: uppercase;}
 	h2.dev{letter-spacing: 2px; font-weight: bold;}
 	h1{margin-bottom: 5px;}
@@ -302,7 +302,11 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	ul {padding-left: 0;}
 	span{color: inherit;}
 	
-	.page-content {padding: 0;}
+	// .page-content {padding: 0;}
+	.daily, .evening{display:inline-block; vertical-align: top; width:48%;
+		h3{color:$black; text-align: center;}
+	}
+	.evening{float:right;}
 	.specialsList{@include sec-default(); text-align: center; margin-top:30px;
 		h4{font-weight: bold; color: $burg; font-size: 24px;
 			position: relative; z-index: 0; 
@@ -316,7 +320,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 
 	.lunch-mart {
-		h3 { color: $lt-blue; font-weight: bold;  }
+		h3 { color: $lt-blue; font-weight: bold;}
 		p { color: $navy; font-size:15px; text-align: center; }
 		p.food-menus { font-size: 14px; font-style: italic;}
 		h4 {font-size: 18px; text-align: center; font-weight: bold; line-height:1.2em; margin-bottom:5px; color: $burg;}
@@ -338,6 +342,17 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		}
 	}
 
+	@include bp(tn) {
+		.page-content{padding-top:25px;}
+		h3{font-size:20px;}
+		.daily, .evening{width:90%; @include center-block();}
+		.evening h3{@include sec-default(); display:block;margin-top:30px;}
+		.specialsList{margin-top:5px;
+			h4{font-size: 20px;}
+			li{font-size: 16px;}
+		}
+	}
+
 	@include bp(md) {
 		.page-title-bar {padding:25px 0 10px;
 			.col-md-6.col-md-offset-3.col-sm-12{width:90%; margin-left:5%;}
@@ -348,10 +363,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 			}
 		}
 
-		.specialsList{margin-top:20px;
-			h4{font-size: 20px;}
-			li{font-size: 16px;}
-		}
+		// .specialsList{margin-top:20px;}
 
 		.lunch-mart {
 			h4 {font-size: 16px;}

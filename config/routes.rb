@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/events', to: 'static_pages#events'
   get '/bar-specials', to: 'static_pages#bar-specials'
+  get '/specials', to: 'static_pages#specials'
   get '/food-specials', to: 'static_pages#food-specials'
 
   get '/bnb', to: 'static_pages#bnb'

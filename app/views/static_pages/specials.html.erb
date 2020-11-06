@@ -1,0 +1,54 @@
+<% content_for :title do %>
+Specials
+<% end %>
+<% content_for :description do %>
+Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
+<% end %>
+
+
+<!-- FOOTBALL SEASON STYLE DIV. DELETE class AFTER SEASON FOR RESET -->
+<div class="specialsPage">
+  <section class="page-title-bar">
+  	<div class="col-md-6 col-md-offset-3 col-sm-12">
+  		<div class="heading-box">
+  			<h2 class="dev">Ginny Lane</h2>
+        <h1>Specials</h1>
+	    </div>
+    </div>
+  </section>
+
+  <div class="page-content">
+    <div class="container">
+      <div class="daily">
+        <h3>Daily Specials<br><span>3pm-6pm</span></h3>
+        <div class="specialsList bar">
+          <h4><span>Bar Specials</span></h4>
+          <ul>
+            <li>Well Liquor ... <b>$4</b></li>
+            <li>Lagunitas IPA Bottle ... <b>$4</b></li>
+            <li>Leinenkugel's Summer Shandy ... <b>$4</b></li>
+            <li>The Coastal Cocktail ... <b>$5</b><br/>Cruzan Mango Rum and Red Bull Coconut Edition</li>
+            <li>House Wine ... <b>$4</b></li>
+          </ul>
+        </div>
+              
+        <div class="specialsList food">
+          <h4><span>Food Specials</span></h4>
+          <ul>
+            <li>Half Order of Nachos ... <b>$5</b></li>
+            <li>Ginny Lane Cheeseburger ... <b>$8</b><br/>Lettuce, Tomato, Onion, Cheddar Cheese</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="evening">
+        <h3>Evening Specials</h3>
+        <%= link_to "GinnyLane-Fall-Evening-Specials.pdf", target: '_blank', class: 'menu-link' do %>
+          <%= image_tag('new-specials2020.png', class: 'img-responsive') %>
+          <% end %>
+
+      </div>
+      <div class="border" />
+    </div>
+  </div>
+</div>
