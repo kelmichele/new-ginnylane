@@ -141,7 +141,11 @@ h3.module-title{color: $white;}
 
 @include bp(sm) {
     // .logo-img {width: 65%; @include center-block();}
-    #offcanvas-toggler { width: 50%; display:block; margin-right: 25%; margin-top: 20px; h5 {float:none; text-align: center;}}
+    #offcanvas-toggler { //width: 50%; display:block; margin-right: 25%; 
+        width:90%;@include center-block(); text-align:center;margin-top: 15px; 
+        span, h5 {float:none;}//line-height: 1em;}
+        h5{vertical-align: top;}
+    }
     #top-bar-wrapper {
         .xs-l, .xs-r, .xs-f { width: 100%; float: left; text-align: center; }
         .xs-l, .xs-r {margin-bottom: 5px;}
@@ -154,7 +158,8 @@ h3.module-title{color: $white;}
     }
      .header-mobtn {width:45%; }
 }
-@include bp(xs) {
+// @include bp(xs) {
+@media (max-width:400px){
     .header-mobtn {width:90%; @include center-block(); margin-bottom: 0; &.one{margin-bottom: 10px;}}
 }
 

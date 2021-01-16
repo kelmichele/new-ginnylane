@@ -7,7 +7,7 @@ $(window).load(function(){
                   dottedOverlay: "none",
                   delay: 9000,
                   startwidth: 1170,
-                  startheight: 700,
+                  //startheight: 700,
                   hideThumbs: 200,
                   thumbWidth: 100,
                   thumbHeight: 50,
