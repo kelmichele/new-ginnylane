@@ -9,7 +9,6 @@ Join us for a lunch, dinner, or just a snack. You'll love our great food with a 
   <div id="page-title" class="pt-bkg-image image-lunch small-box over20">
     <div class="title-container">
       <h1>Daily Menu</h1>
-      <!-- <h2>Served daily: 11am - 4pm</h2> -->
     </div>
   </div>
 
@@ -17,14 +16,12 @@ Join us for a lunch, dinner, or just a snack. You'll love our great food with a 
     <div class="page-content container spec"> <!-- may dlt spec class if switched back -->
       <div class="menu-opt">
         <h5>Select one of the items below to view the full menu.</h5>
-          <%= link_to "fall-lunch2020.pdf", target: '_blank', class: 'menu-link' do %>
-            Lunch Specials
-            <%= image_tag('fall-lunch2020.jpg', class: 'img-responsive') %>
+          <%= link_to "GL2021-1.pdf", target: '_blank', class: 'menu-link' do %>
+            <%= image_tag('menu2021.png', class: 'img-responsive', alt: "Ginny Lane 2021 small plates") %>
           <% end %>
 
-          <%= link_to "fall-menu2020.pdf", target: '_blank', class: 'menu-link two' do %>
-            Daily Menu
-            <%= image_tag('fall-menu2020.jpg', class: 'img-responsive') %>
+          <%= link_to "GL2021-2.pdf", target: '_blank', class: 'menu-link two' do %>
+            <%= image_tag('menu2021b.png', class: 'img-responsive', alt: 'Ginny Lane 2021 entrees, sides and desserts') %>
           <% end %>
       </div>
     </div>

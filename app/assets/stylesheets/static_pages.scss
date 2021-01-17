@@ -1104,7 +1104,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	.menu-opt{@include sec-default(); text-align:center;
 		h5{font-size:25px; margin-bottom: 40px; font-weight: bold;}
 	}
-	.menu-link{display: inline-block; margin: 20px 2%; width:40%;
+	.menu-link{display: inline-block; margin: 0px 2%; width:40%;
 		font-size:22px; color: $burg; font-weight:bold;font-family:$raleway;
 
 		img{border:1px solid rgba($black,.1); margin-top:10px;}

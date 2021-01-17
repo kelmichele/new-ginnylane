@@ -31,5 +31,5 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /INFO
-
-# /public/GinnyLaneSummer.pdf
+# /public/GL2021-1.pdf
+# /public/GL2021-2.pdf
