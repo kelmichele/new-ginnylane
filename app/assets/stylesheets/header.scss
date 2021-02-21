@@ -95,20 +95,19 @@ header {
 .offcanvas-menu{width:280px; height:100%; background:darken($navy, 10%); color:$white; position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll;
     .offcanvas-inner{padding:20px;}
     .module{margin-top:20px;
+        ul.menu{padding-left:25px;}
         ul{margin:0 -20px;width: 100%; float: left;
-            li { width: 100%; float: left; margin-bottom:15px; padding-bottom:5px; padding-left: 15px; border-bottom:1px solid rgba($white, .4);display: block;
-                a { -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:7px 0; padding-left:0px; color: $white; font-size: 14px; line-height: 1.5em;}
+            li {width: 100%; float: left; margin-bottom:20px; padding-bottom:3px; padding-left: 0; border-bottom:1px solid rgba($white, .1);display: block;
+                a { -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:0; color: $white; font-size: 16px; line-height: 1.5em;}
                 a:hover{background:transparent;}
-                &:first-child{margin-top:0}
-                // &.has-child{border-bottom: none; padding-bottom: 0;
-                //     .mom {color: $lt-blue}
-                // }
+                // &:first-child{margin-top:0;}
             }
 
             li ul{padding-left:20px; margin-top:15px;
                 li {padding-left:0;}
             }
         }
+        p.nav-cat{margin:10px 0 10px -5px; color: $yellow; font-size:16px; padding:0;}
     }
 }
 

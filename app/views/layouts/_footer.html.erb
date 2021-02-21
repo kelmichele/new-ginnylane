@@ -96,7 +96,7 @@
       <div class="container">
           <div class="row">
               <div class="col-md-6 col-xs-12">
-                  <p>&copy; 2015 All rights reserved. Web Design by <%= link_to 'http://hsdesignhouse.comginny-lane-bar-and-grill-reservations-orange-beach?restref=144784', target: '_blank' do %>High Seas Design House.<% end %></p>
+                  <p>&copy; 2021 All rights reserved. Web Design by <%= link_to 'https://hsdesignhouse.com', target: '_blank' do %>High Seas Design House.<% end %></p>
               </div>
               <div class="col-md-6 col-xs-12">
                   <ul class="breadcrumb footer-breadcrumb">
@@ -107,10 +107,6 @@
                       <li>
                           <%= link_to 'About', about_path %>
                       </li>
-
-                      <!-- <li>
-                          <= link_to 'Menus', menus_path %>
-                      </li> -->
 
                       <li>
                           <%= link_to 'Contact', contact_path %>
@@ -129,47 +125,36 @@
             <h3 class="module-title">Main Menu</h3>
             <div class="module-content">
               <ul class=" menu">
-                    <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "Home", root_path %></li>
 
-                    <li class="deeper parent"><a href="#">Menus <span class="toggle-icon fa fa-angle-down"></span></a>
-                        <ul style="display: none;" class="nav-child unstyled small">
-                          <li><%= link_to "Daily Menu", daily_menu_path %></li>
-                          <li><%= link_to "Kids", kids_menu_path %></li>
-                          <li><%= link_to "Brunch", brunch_menu_path %></li>
-                          <li><%= link_to "Drink Menu", drink_menu_path %></li>
-                          <li><%= link_to "Wine List", wine_list_path %></li>
-                        </ul>
-                    </li>
+                <p class="nav-cat">Menus</p>
+                <li><%= link_to "Daily Menus", daily_menu_path %></li>
+                <li><%= link_to "Kids", kids_menu_path %></li>
+                <li><%= link_to "Brunch", brunch_menu_path %></li>
+                <li><%= link_to "Spirits", drink_menu_path %></li>
+                <li><%= link_to "Specials", specials_path %></li>
 
-                    <li><%= link_to "Specials", specials_path %></li>
 
-                    <li><%= link_to "Mother-Son Valentine's Dinner", mother_son_dinner_path %></li>
-                    <!-- <li class="deeper parent"><a href="#">Events <span class="toggle-icon fa fa-angle-down"></span></a>
-                        <ul style="display: none;" class="nav-child unstyled small">
-                            <li><= link_to "November Wine Dinner", pairing_path %></li>
-                            <li><= link_to "Holiday Brunch", special_event_path %></li>
-                        </ul>
-                    </li> -->
+                <p class="nav-cat">Order/Reservations</p>
+                <li>
+                  <%= link_to "https://www.ubereats.com/mobile-al/food-delivery/ginny-lane-bar-%26-grill/Fm9W7NsyTWGHRil1dAD1Wg", target: '_blank' do %>
+                    Delivery
+                  <% end %>
+                </li>
 
-                    <li><%= link_to "Catering", "https://wharfcateringgroup.com/", target: '_blank' %></li>
+                <li>
+                  <%= link_to "https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1", target: '_blank' do %>
+                    Book a Table
+                  <% end %>
+                </li>
 
-                    <li>
-                        <%= link_to "https://www.gulftogo.com/r/151/restaurants/delivery/Southern-Cuisine/Ginny-Lane-Orange-Beach", target: '_blank' do %>
-                            Delivery
-                        <% end %>
-                    </li>
-
-                    <li>
-                        <%= link_to "https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1", target: '_blank' do %>
-                            Book a Table
-                        <% end %>
-                    </li>
-
-                    <li><%= link_to "Entertainment", entertainment_path %></li>
-                    <li><%= link_to "About", about_path %></li>
-                    <li><%= link_to "Contact", contact_path %></li>
-                    <li><a href="https://alwharf.com/calendar/" target="_blank">Events At The Wharf</a></li>
-                </ul>
+                <p class="nav-cat">More to See</p>
+                <li><%= link_to "Catering", "https://wharfcateringgroup.com/", target: '_blank' %></li>
+                <li><%= link_to "Entertainment", entertainment_path %></li>
+                <li><%= link_to "About", about_path %></li>
+                <li><%= link_to "Contact", contact_path %></li>
+                <li><a href="https://alwharf.com/calendar/" target="_blank">Events At The Wharf</a></li>
+              </ul>
             </div>
         </div>
     </div>

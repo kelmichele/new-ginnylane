@@ -1145,7 +1145,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 
 	@media (max-width:420px) {
-		p.menu-name{padding:8px 5px 6px; margin-bottom:5px;}
+		p.menu-name{padding:6px 5px 7px; margin-bottom:5px;}
 	}
 
 	@media (max-width:320px) {
@@ -1225,6 +1225,13 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		h4{font-size:25px; color: $black; margin:0; font-weight: bold;}
 		p{margin:0 0 15px;color:$black;}
 	}
+
+	.menu-item.wine-list{text-align:left;
+		h4{margin-bottom:0;}
+		p{font-style: italic;}
+	}
+	.menu-item.beer-list, .mi-cocktails .menu-item{text-align:left;}
+	
 	@media (max-width: 1023px)  {
 		h6{font-size:15px;}
 		.spec25 h4{font-size:20px;}
