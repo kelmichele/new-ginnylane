@@ -973,7 +973,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
-.menus {
+.Xmenus {
 	#page-title {
 		.overlay {
 			@include sec-default ();
@@ -1115,29 +1115,41 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		h5{font-size:25px; margin-bottom: 40px; font-weight: bold;}
 	}
 	.menu-link{display: inline-block; margin: 0px 2%; width:40%;
-		font-size:22px; color: $burg; font-weight:bold;font-family:$raleway;
-
 		img{border:1px solid rgba($black,.1); margin-top:10px;}
 		&:hover{opacity: .85;}
 	}
+	p.menu-name{font-size:19px; color: $white; font-weight:bold;font-family:$raleway; margin:0px 0 10px; padding:15px 0;
+	 @include sec-bgimage(); background-image:url(image_path("mt-bg.png")); background-position:center center;
+	}
 
 	@include bp(xl) {
-		.menu-opt h5{font-size:22px; margin-bottom: 20px;}
-		.menu-link{font-size:20px;}
+		.menu-opt h5{font-size:21px; margin-bottom: 20px;}
+		p.menu-name{font-size:18px;}
+	}
+
+	@include bp(md) {
+		.page-content.spec{padding:30px 0; width:90%;}
+		.menu-opt h5{font-size:20px; margin-bottom: 5px;}
+
+		.menu-link{margin: 10px 0 0px; width:48%; float:left;}
+		.menu-link.two{float:right;}
+		p.menu-name{font-size:17px;padding:10px 0;}
 	}
 	
 	@include bp(sm) {
-		.page-content.spec{padding:30px 0;}
-		.menu-opt h5{font-size:20px; margin-bottom: 10px;}
-		.menu-link{margin: 20px 0 0px; width:47%; font-size:18px; float:left;}	
-		.menu-link.two{float:right;}
-	}
-	
-	@media screen and (max-width:500px) {
 		.page-content.spec{padding:20px 0;}
-		.page-content.container{max-width: 95% !important;}
-		.menu-opt h5{font-size:18px; margin-bottom: 0; width: 95%; @include center-block();}
-		.menu-link{margin: 20px 0 0px; width:48%; font-size:17px;}	
+		.page-content.container{max-width: 97% !important;}
+		.menu-opt h5{font-size:17px; margin-bottom: 0; width: 95%; @include center-block();}
+		p.menu-name{font-size:16px;}
+		.menu-link img{margin-top:0;}
+	}
+
+	@media (max-width:420px) {
+		p.menu-name{padding:8px 5px 6px; margin-bottom:5px;}
+	}
+
+	@media (max-width:320px) {
+		p.menu-name{background-image:none; background-color: #509bb0;}
 	}
 
 	/////// all except pdf sec. /////////

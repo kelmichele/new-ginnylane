@@ -8,7 +8,7 @@ Join us for a lunch, dinner, or just a snack. You'll love our great food with a 
 <div id="menupage">
   <div id="page-title" class="pt-bkg-image image-lunch small-box over20">
     <div class="title-container">
-      <h1>Daily Menu</h1>
+      <h1>Daily Menus</h1>
     </div>
   </div>
 
@@ -16,12 +16,14 @@ Join us for a lunch, dinner, or just a snack. You'll love our great food with a 
     <div class="page-content container spec"> <!-- may dlt spec class if switched back -->
       <div class="menu-opt">
         <h5>Select one of the items below to view the full menu.</h5>
-          <%= link_to "GL2021-1.pdf", target: '_blank', class: 'menu-link' do %>
-            <%= image_tag('menu2021.png', class: 'img-responsive', alt: "Ginny Lane 2021 small plates") %>
+          <%= link_to "Lunch-Menu2021.pdf", target: '_blank', class: 'menu-link menuBg' do %>
+            <p class="menu-name">Lunch Menu</p>
+            <%= image_tag('lunch-menu.png', class: 'img-responsive', alt: "Ginny Lane Lunch Menu") %>
           <% end %>
 
-          <%= link_to "GL2021-2.pdf", target: '_blank', class: 'menu-link two' do %>
-            <%= image_tag('menu2021b.png', class: 'img-responsive', alt: 'Ginny Lane 2021 entrees, sides and desserts') %>
+          <%= link_to "Dinner-Menu2021.pdf", target: '_blank', class: 'menu-link menuBg two' do %>
+            <p class="menu-name">Dinner Menu</p>
+            <%= image_tag('dinner-menu.png', class: 'img-responsive', alt: 'Ginny Lane Dinner Menu') %>
           <% end %>
       </div>
     </div>

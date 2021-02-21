@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/pairing', to: 'static_pages#pairing'
   get '/special-event', to: 'static_pages#special-event'
 
-  get '/menus', to: 'static_pages#menus'
+  get '/menus', to: 'static_pages#daily-menu'
   get '/event-lunch-menu', to: 'static_pages#event-lunch-menu'
   get '/lunch-menu', to: 'static_pages#daily-menu'
   get '/daily-menu', to: 'static_pages#daily-menu'
