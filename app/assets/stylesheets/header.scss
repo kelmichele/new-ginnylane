@@ -29,6 +29,60 @@ header {
 }
 
 
+
+
+#top-bar-wrap {@include sec-default (); background-color: $navy; padding:10px; padding-bottom: 0;
+  a {color: $white;font-size: 15px;}
+  li a.tel {font-family: $raleway;}
+  #social-links {
+    li {float: right; margin-left: 20px;}
+  }
+
+  .tb-col{display:inline-block;font-size: 16px; color: $white;}
+  .tbc1, .tbc3{width:19%;}
+  .tbc1{float:left;}
+  .tbc3{float:right;}
+
+  .tbc2{width:62%;text-align: center;
+    form{text-align: center;padding:0; background-color: transparent;}
+    #mc_embed_signup{width:100%;}
+    label,input.email,.sub-btn{display:inline-block;}
+    label{color:$white; font-size:15px;}
+    input.email{width:300px; margin:0 10px; font-size: 14px;}
+    .sub-btn input{background-color: $white; color: $dark; width:auto;font-size: 14px;}
+  }
+}
+
+@media (max-width:1200px) {
+  #top-bar-wrap{
+    .tbc1{width:170px; margin-bottom:10px;}
+    .tbc3{float:left; width:130px; text-align: left; margin-bottom:10px;}
+    .tbc2{float:right; width:510px;}
+    .tbc2, .tbc2 form{text-align: right;}
+
+    .tbc2 input.email{width:250px; margin-right: 0;}
+    #social-links li{float:left; margin: 0 15px 0 0;}
+  }
+}
+
+@media (max-width:960px) {
+  #top-bar-wrap{text-align: center;
+    .tbc1, .tbc2, .tbc3{@include sec-default(); text-align: center;}
+    .tbc3{margin-bottom:0;}
+    .tbc2 form, #social-links{text-align: center;}
+    .tbc2 {
+      label{font-size: 14px;padding-bottom:0;}
+      .sub-btn input, input.email{font-size:13px;}
+      input.email{margin-left:5px;margin-bottom:4px;}
+    }
+    #social-links li{display:inline-block; float:none; margin: 0 6px;}
+  }
+}
+
+
+
+
+
 .megamenu-parent {list-style:none;padding:0;margin:0;z-index:9;display:block;float:right;
     li{display:inline-block;position:relative;padding:0;border-top: 3px solid transparent; margin: 0 15px;
         &:last-child{margin-right: 5px;}
