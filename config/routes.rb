@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   get '/events', to: 'static_pages#events'
   get '/bar-specials', to: 'static_pages#bar-specials'
-  get '/specials', to: 'static_pages#specials'
-  get '/food-specials', to: 'static_pages#food-specials'
+  get '/specials', to: 'static_pages#daily-menu'
+  get '/food-specials', to: 'static_pages#daily-menu'
+  # get '/specials', to: 'static_pages#specials'
+  # get '/food-specials', to: 'static_pages#food-specials' # this should be hidden anyway.
 
   get '/bnb', to: 'static_pages#bnb'
   get '/pairing', to: 'static_pages#pairing'
@@ -21,7 +23,6 @@ Rails.application.routes.draw do
   get '/brunch-menu', to: 'static_pages#brunch-menu'
   get '/drink-menu', to: 'static_pages#drink-menu'
   get '/wine-list', to: 'static_pages#drink-menu'
-  # get '/wine-list', to: 'static_pages#wine-list'
   get '/mother-son-dinner', to: 'static_pages#mother-son-dinner'
 
   get '/about', to: 'static_pages#about'
