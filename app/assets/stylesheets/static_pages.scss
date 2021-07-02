@@ -1172,7 +1172,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		img{border:1px solid rgba($black,.1); margin-top:10px;}
 		&:hover{opacity: .85;}
 	}
-	p.menu-name{font-size:17px;font-style: italic; font-weight:500;color: $white; font-family:$raleway; margin:0px 0 10px; padding:15px 0;line-height:1.4em;
+	p.menu-name{font-size:17px;font-style: italic;color: $white; font-family:$raleway; margin:0px 0 10px; padding:15px 0;line-height:1.4em;
 	 @include sec-bgimage(); background-image:url(image_path("mt-bg2.png")); background-position:center center;
 
 	 b{font-size:20px;font-style: normal;}
@@ -1180,7 +1180,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 	@include bp(xl) {
 		.menu-opt h5{font-size:21px; margin-bottom: 20px;}
-		p.menu-name {font-size:16px;line-height:1.3em;
+		p.menu-name {font-size:16px;line-height:1.3em;font-weight:500;
 			b{font-size:18px;}
 		}
 	}
@@ -1194,6 +1194,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 
 	@media (max-width:767px){
+		p.menu-name{font-weight: 600;}
 		p.menu-name b{font-size:17px;padding:10px 0;}
 	}
 	
