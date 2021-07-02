@@ -197,13 +197,12 @@ ul { list-style-type: none; }
 
 
 .vil-gil { @include sec-default(); background-color: $white; text-align: center; padding: 30px 0;
-    .partner-logo {display: inline-block; width: 250px; float:none; margin:10px 2% 0; vertical-align: top;
-        // &.two {width:145px;}
-    }
-
+    .partner-logo {display: inline-block; width: 250px; float:none; margin:10px 2% 0; vertical-align: top;}
     @media screen and (max-width:1150px) {padding:15px 0;
         .partner-logo {@include sec-default(); margin:15px 0;
-            img{@include center-block(); width: 230px;}
+            .pl-link{@include center-block;max-width:230px;}
+            
+            // img{@include center-block(); width: 230px;}
         }
 
         h3 {font-size: 16px;}
