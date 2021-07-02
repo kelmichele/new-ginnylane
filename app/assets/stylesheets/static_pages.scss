@@ -1166,19 +1166,23 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	hr.noTop{margin-top:0;}
 
 	.menu-opt{@include sec-default(); text-align:center;
-		h5{font-size:25px; margin-bottom: 40px; font-weight: bold;}
+		h5{font-size:25px; margin-bottom: 40px; font-weight: bold;line-height:1.2em;}
 	}
 	.menu-link{display: inline-block; margin: 0px 2%; width:40%;
 		img{border:1px solid rgba($black,.1); margin-top:10px;}
 		&:hover{opacity: .85;}
 	}
-	p.menu-name{font-size:19px; color: $white; font-weight:bold;font-family:$raleway; margin:0px 0 10px; padding:15px 0;
-	 @include sec-bgimage(); background-image:url(image_path("mt-bg.png")); background-position:center center;
+	p.menu-name{font-size:17px;font-style: italic; color: $white; font-family:$raleway; margin:0px 0 10px; padding:15px 0;line-height:1.4em;
+	 @include sec-bgimage(); background-image:url(image_path("mt-bg2.png")); background-position:center center;
+
+	 b{font-size:20px;font-style: normal;}
 	}
 
 	@include bp(xl) {
 		.menu-opt h5{font-size:21px; margin-bottom: 20px;}
-		p.menu-name{font-size:18px;}
+		p.menu-name {font-size:16px;line-height:1.3em;
+			b{font-size:18px;}
+		}
 	}
 
 	@include bp(md) {
@@ -1187,24 +1191,37 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 		.menu-link{margin: 10px 0 0px; width:48%; float:left;}
 		.menu-link.two{float:right;}
-		p.menu-name{font-size:17px;padding:10px 0;}
+	}
+
+	@media (max-width:767px){
+		p.menu-name b{font-size:17px;padding:10px 0;}
 	}
 	
 	@include bp(sm) {
 		.page-content.spec{padding:20px 0;}
 		.page-content.container{max-width: 97% !important;}
 		.menu-opt h5{font-size:17px; margin-bottom: 0; width: 95%; @include center-block();}
-		p.menu-name{font-size:16px;}
+		// p.menu-name{font-size:16px;}
 		.menu-link img{margin-top:0;}
 	}
 
-	@media (max-width:420px) {
-		p.menu-name{padding:6px 5px 7px; margin-bottom:5px;}
+
+	@media (max-width:639px){
+		.menu-opt h5{margin:5px 0;width: 100%;}
+		.menu-opt{@include center-block();max-width:400px;}
+		.menu-link {@include sec-default(); margin:15px 0 0;
+			img{display:none;}
+		}
+		p.menu-name{margin-bottom:0;}
 	}
 
-	@media (max-width:320px) {
-		p.menu-name{background-image:none; background-color: #509bb0;}
-	}
+	// @media (max-width:420px) {
+	// 	p.menu-name{padding:6px 5px 7px; margin-bottom:5px;}
+	// }
+
+	// @media (max-width:320px) {
+	// 	p.menu-name{background-image:none; background-color: #509bb0;}
+	// }
 
 	/////// all except pdf sec. /////////
 
