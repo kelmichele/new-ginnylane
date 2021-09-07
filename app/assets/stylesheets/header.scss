@@ -88,6 +88,9 @@ header {
         &:last-child{margin-right: 5px;}
         &:hover {border-top: 3px solid $blue;}
         a{display:inline-block;font-size: 14px; color: $hcolor; text-transform: uppercase; line-height: 70px; padding-top:10px; }
+
+        &.football{font-weight: bold;}
+        .nav-badge{width:20px;display:inline;margin-top:-2.5px;}
     }
 
     // li.has-child>a:after{font-family:"FontAwesome";content:" \f107"}
@@ -160,6 +163,9 @@ header {
             li ul{padding-left:20px; margin-top:15px;
                 li {padding-left:0;}
             }
+
+            li.football{font-weight: bold;}
+            .nav-badge{width:20px;display:inline;margin-top:-2.5px;}
         }
         p.nav-cat{margin:10px 0 10px -5px; color: $yellow; font-size:16px; padding:0;}
     }

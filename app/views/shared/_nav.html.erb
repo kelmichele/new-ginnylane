@@ -14,7 +14,11 @@
             </div>
         </div>
     </li>
-    <li class="menu-item"><%= link_to "Football", football_season_path %></li>
+    <li class="menu-item football">
+        <%= link_to "/football-season" do %>
+            Football <%= image_tag('football-icon.png', alt: "SEC and Big 10 Network at Ginny Lane, Orange Beach, AL", class: 'nav-badge img-responsive') %>
+        <% end %>
+    </li>
 
     <!-- <li class="menu-item"><= link_to "Specials", specials_path %></li> -->
     <!-- <li class="menu-item"><= link_to "Events", pairing_path %></li> -->
