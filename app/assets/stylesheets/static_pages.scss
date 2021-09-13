@@ -1006,7 +1006,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		h1.shadow-mod,h2, h3.shadow-mod,h4.shadow-mod{text-shadow:none;}
 		h3, h4{font-weight: normal; letter-spacing: .5px}
 		
-		h3 br{display: none;}
+		// h3 br{display: none;}
 		h4{margin-top:5px; line-height: 1.4em;}
 		h4 a{color:inherit; font-weight:600;}
 	}
@@ -1031,8 +1031,8 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	@include bp(oc) {
 		#page-title{
 			.title-container.less h3,.title-container.less h4{letter-spacing: .1px;font-size:16px; line-height: 1.5em;}
-			h3 br{display: block;}
-			h3 span{display: none;}
+			// h3 br{display: block;}
+			// h3 span{display: none;}
 		}
 	}
 }
