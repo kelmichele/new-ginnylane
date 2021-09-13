@@ -167,7 +167,7 @@ header {
             li.football{font-weight: bold;}
             .nav-badge{width:20px;display:inline;margin-top:-2.5px;}
         }
-        p.nav-cat{margin:10px 0 10px -5px; color: $yellow; font-size:16px; padding:0;}
+        p.nav-cat{@include sec-default();margin:10px 0 10px -5px; color: $yellow; font-size:16px; padding:0;}
     }
 }
 

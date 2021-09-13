@@ -586,7 +586,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
  	}
 }
 
-
 .event-lunch-menu, .event-dinner-menu {
 	.title-container {position: relative; z-index: 0; padding: 30px 0;
     h1 {text-shadow: 0px 1px 2px $black;}
@@ -665,8 +664,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	// }
 }
 /***************************************/
-
-
 
 .wine-list {
   // #page-title .title-container { padding: 30px 0;}
@@ -874,12 +871,32 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .pairing, .special-event {
-	h3.burg-text {color: $burg;text-align: center; margin-top: 30px; margin-bottom: 5px;}
-	h3.tmargin0 { margin-top: 0; }
-	h3 a {color:inherit;}
+	#page-title {position: relative;z-index: 0;text-align: center;
+		&::before {content: '';width: 100%;height: 100%;background: rgba($black, .4);position: absolute;top:0;left: 0;z-index: -1;}
 
-	.pairing-1 {
-		border-bottom: 5px solid $lt-blue;
+		.title-container {margin-bottom: 0;
+			.custom-tb{@include sec-default();}
+			h1.shadow-mod,h4.shadow-mod, h3.shadow-mod {text-shadow: 0px 1px 2px rgba($black, .9);}
+			h1.shadow-mod {line-height: 1.3em; margin-bottom: 15px;}
+			h1.shadow-mod, h3.shadow-mod{text-shadow: 0px 2px 2px rgba($black, .9);}
+			h2, h4, h3 {font-weight: bold; }
+			h3 {font-size: 22px; padding-top:0; text-transform: none;
+				span{text-shadow: none; color: white;}
+			}
+			h4 {line-height: 1.1em; margin-top: 20px;}
+		}
+	}
+
+	h3.burg-text {color: $burg;text-align: center; margin-top: 30px; margin-bottom: 5px;}
+	h3.burg-text.text-center{font-weight: bold;}
+	h3.tmargin0{margin-top: 0;}
+	h4 a, h3 a {color:inherit;}
+	h4 {margin-bottom: 0; line-height: 1.6em; font-size: 20px; color: white;}
+	p {margin-top:0px;}
+	
+	.page-content .hr-png-6 {margin: 15px 0;}
+
+	.pairing-1 {border-bottom: 5px solid $lt-blue;
 		.food-menus {
 			h4, h5, p { margin-bottom: 0}
 		}
@@ -890,153 +907,9 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		h5 { font-size: 15px;}
 		h4 { font-size: 17px;}
 	}
-}
-
-.pairing, .special-event {
-	#page-title {
-		position: relative;
-		z-index: 0;
-		&::before {
-			content: '';
-			width: 100%;
-			height: 100%;
-			background: rgba($black, .3);
-			position: absolute;
-			top:0;
-			left: 0;
-			z-index: -1;
-		}
-	}
-	p {margin-top:0px;}
-	h4 {margin-bottom: 0; line-height: 1.6em; font-size: 20px; color: white;}
-	#page-title .title-container h1.shadow-mod,h4.shadow-mod, h3.shadow-mod {text-shadow: 0px 1px 2px rgba($black, .9);}
-
-	h3.burg-text.text-center{font-weight: bold; }
-	.page-content .hr-png-6 {margin: 15px 0;}
 
 	.h2s {text-align: center; @include sec-default();
 		h2{font-size: 19px;}
-	}
-}
-
-.bnb {
-	#pairing-custom1 {
-		@include sec-default ();
-		padding:15px 0;
-		background-image: url(image_path('nyd2.jpg'));
-		background-position: top left;
-	    background-repeat: no-repeat;
-	    background-size: 35%;
-
-	    &.page-content.food-menus {background-color: #f1f2f4;}
-	}
-
-	#pairing-custom1 .title {
-		@include sec-default ();
-		text-align: center;
-		padding: 30px 10px;
-		position: relative;z-index: 5;
-	}
-
-	#pairing-custom1 .title h1, #pairing-custom1 .title h5, #pairing-custom1 .title h4 { font-weight: bold; }
-
-	#pairing-custom1 .title:before {
-		background: $white;
-		float: none;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	    content: "";
-	    height: 100%;
-	    left: 0;
-	    position: absolute;
-	    top: 0;
-	    width: 100%;
-	    opacity: .5;
-	    z-index: -1;
-	}
-
-	#pairing-custom1 h3.burg-text {
-		margin-bottom: 2px;
-		margin-top:25px;
-		font-weight: 700;
-	}
-
-	#pairing-custom1 .service-box-2 { margin-bottom:15px; }
-	#pairing-custom1 .service-box-2 h4,
-	#pairing-custom1 .service-box-2 h5,
-	#pairing-custom1 .service-box-2 p,
-	#pairing-custom1 .service-box-2 h4 strong {margin-bottom: 5px;}
-
-	#pairing-custom1 .service-box-2 p {padding-bottom: 5px;}
-	#pairing-custom1 .service-box-2 h5 {font-size: 16px;}
-	#pairing-custom1 .service-box-2 h4 {font-size: 18px;}
-
-	@media (max-width: 768px) {
-		#pairing-custom1 {
-			padding:0;
-			padding-top:20px;
-		    background-image: url('../img/nyd2-mob.jpg');
-		    background-size: 100%;
-		    background-repeat: no-repeat;
-		}
-		#pairing-custom1 h3.burg-text { margin-bottom: 5px;}
-		#pairing-custom1 .service-box-2 { margin-bottom:5px; }
-		#pairing-custom1 .hr-png-6 {margin-bottom: 0;}
-	}
-}
-
-.Xmenus {
-	#page-title {
-		.overlay {
-			@include sec-default ();
-			background: rgba($silver, .7);
-		}
-		.title-container {padding: 40px 0 0px;
-			// h1 { color: $lt-blue; }
-		}
-	}
-
-	.page-content.menus-list {
-		text-align: center;
-		.menu-list { width: 20%; display: inline-block; margin-right: 40px; padding: 30px 0; text-align: center; margin-bottom: 30px; margin-top: 20px; box-shadow: 0px 5px 5px rgba($black, .6);
-			@include sec-bgimage ();
-			background-image: url(image_path('menus.jpg'));
-			&:nth-child(4n+4) {margin-right: 0;}
-			a {font-size: 25px;  color: $dark; font-weight: 800; font-family: $raleway; text-shadow: 0px 1px $gray;}
-
-			&:hover a {@include ease (); text-decoration: none; color: $white; text-shadow: 1px 2px $dark}
-
-
-			@include bp(tb) {
-				width: 30%; margin-right: 20px;
-				background-position: center center;
-				&:nth-child(4n+4) {margin-right: 20px;}
-			}
-			@include bp(md) { width: 45%; }
-			@include bp(sm) {width: 80%; @include center-block ();
-				&:nth-child(4n+4) {@include center-block (); }
-			}
-		}
-	}
-}
-
-.pairing, .special-event{
-	#page-title {
-		position: relative; z-index: 0;
-		&::before {@include before(); background-color: rgba(black,.4)}
-
-		.title-container {
-			margin-bottom: 0;
-			.custom-tbx{@include sec-default(); }
-			// .custom-tbx{width: 60%; float: right;}
-			h1.shadow-mod {line-height: 1.3em; margin-bottom: 15px;}
-			h1.shadow-mod, h3.shadow-mod{text-shadow: 0px 2px 2px rgba($black, .9);}
-			h2, h4, h3 {font-weight: bold; }
-			h3 {font-size: 22px; padding-top:0; text-transform: none;
-				span{ text-shadow: none; color: white;}}
-			h4 {line-height: 1.1em; margin-top: 20px;}
-		}
 	}
 
 	.solo {width: 80%; @include center-block();}
@@ -1060,7 +933,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		#page-title {
 			&::before { background-color: rgba(black,.5)}
 			.title-container.less { text-align: center; padding:60px 0; margin-bottom: 0;
-				.custom-tbx{@include sec-default(); text-align: center;}
+				.custom-tb{@include sec-default(); text-align: center;}
 				h1 {font-size: 30px;}
 			}
 		}
@@ -1084,7 +957,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 	}
 }
-
 .special-event .service-box-2{padding-bottom: 15px;}
 
 // MOTHER SON VDAY PAGE
@@ -1096,7 +968,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		h5{margin-bottom: 20px;}
 	}
 }
-
 
 .pairing .halloween-dinner {
 	.pt-bkg-image.image-hallo{background-image: url(image_path('halloBg.jpg')); background-position: center center;
@@ -1121,11 +992,11 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 .pairing {.food-menus .service-box-2{padding-bottom: 10px;}}
 // FOR APRIL WINE 2021 -- BUT CAN REUSE FOR ANY PDF WINE MENU
-.pairing .pairing-with-image{background-color:$wine;
-	#page-title{box-shadow: none;
+.pairing .pairing-with-image{background-color:#d0cdcd;
+	#page-title{box-shadow: none;background-color:darken($wine,5%);padding:24px 0 30px;
 		&::before{display:none;}
-		.title-container{padding:50px 0 0;}
-		h1.shadow-mod,h2, h3.shadow-mod{text-shadow:none;}
+		.title-container{padding:0;}
+		h1.shadow-mod,h2, h3.shadow-mod,h4.shadow-mod{text-shadow:none;}
 		h3, h4{font-weight: normal; letter-spacing: .5px}
 		
 		h3 br{display: none;}
@@ -1133,26 +1004,25 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		h4 a{color:inherit; font-weight:600;}
 	}
 
-	.menu-link-img{width:70%; max-width:800px; @include center-block();}
+	.page-content{padding:0px 0 10px;text-align:center;}
+	.menu-link-img{width:70%;max-width:500px;@include center-block();text-align:center;}
 	img.mobile{display: none;}
-	.page-content{padding-bottom: 0;}
 
 	.solo.food-menus{display: none;}
 
 	@include bp(xl) {
-		#page-title .title-container{padding:30px 0 0;}
 		.menu-link-img{width:90%;}
 	}
 
 	@media (max-width:767px) {
+	.page-content{padding:15px 0 10px;}
 		img.fw{display: none;}
-		img.mobile{display: block;}		
+		img.mobile{@include center-block();}
 		.menu-link-img{width:98%;}
 	}
 
 	@include bp(oc) {
 		#page-title{
-			.title-container{padding:15px 0 0;}
 			.title-container.less h3,.title-container.less h4{letter-spacing: .1px;font-size:17px; line-height: 1.5em;}
 			h3 br{display: block;}
 			h3 span{display: none;}
@@ -1303,6 +1173,74 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 			h2{font-size:19px;}
 		}
 		.menu-opt h5{font-size:16px;}
+	}
+}
+
+
+.bnb {
+	#pairing-custom1 {
+		@include sec-default ();
+		padding:15px 0;
+		background-image: url(image_path('nyd2.jpg'));
+		background-position: top left;
+	    background-repeat: no-repeat;
+	    background-size: 35%;
+
+	    &.page-content.food-menus {background-color: #f1f2f4;}
+	}
+
+	#pairing-custom1 .title {
+		@include sec-default ();
+		text-align: center;
+		padding: 30px 10px;
+		position: relative;z-index: 5;
+	}
+
+	#pairing-custom1 .title h1, #pairing-custom1 .title h5, #pairing-custom1 .title h4 { font-weight: bold; }
+
+	#pairing-custom1 .title:before {
+		background: $white;
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	    content: "";
+	    height: 100%;
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	    opacity: .5;
+	    z-index: -1;
+	}
+
+	#pairing-custom1 h3.burg-text {
+		margin-bottom: 2px;
+		margin-top:25px;
+		font-weight: 700;
+	}
+
+	#pairing-custom1 .service-box-2 { margin-bottom:15px; }
+	#pairing-custom1 .service-box-2 h4,
+	#pairing-custom1 .service-box-2 h5,
+	#pairing-custom1 .service-box-2 p,
+	#pairing-custom1 .service-box-2 h4 strong {margin-bottom: 5px;}
+
+	#pairing-custom1 .service-box-2 p {padding-bottom: 5px;}
+	#pairing-custom1 .service-box-2 h5 {font-size: 16px;}
+	#pairing-custom1 .service-box-2 h4 {font-size: 18px;}
+
+	@media (max-width: 768px) {
+		#pairing-custom1 {
+			padding:0;
+			padding-top:20px;
+		    background-image: url('../img/nyd2-mob.jpg');
+		    background-size: 100%;
+		    background-repeat: no-repeat;
+		}
+		#pairing-custom1 h3.burg-text { margin-bottom: 5px;}
+		#pairing-custom1 .service-box-2 { margin-bottom:5px; }
+		#pairing-custom1 .hr-png-6 {margin-bottom: 0;}
 	}
 }
 
