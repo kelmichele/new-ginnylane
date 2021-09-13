@@ -212,6 +212,9 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .home {
+	// .homepage{@include sec-default();position:relative;}
+	.homeSlide{@include sec-default();}
+
 	.intro-title {@include sec-default(); margin:20px 0;
 		h2{font-weight: bold;}
 		h3{width:75%; @include center-block();}

@@ -6,104 +6,114 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
 <% end %>
 
 
+<div class="homepage">
+  <div class="homeSlide">
+    <div class="uk-position-relative uk-visible-toggle home-slideshow" tabindex="-1" uk-slideshow="animation: fade; autoplay:true;">
+      <ul class="uk-slideshow-items">
+        <li><a href="/football-season">
+          <%=image_tag('slide-football.jpg', alt: "SEC and Big Ten Networks at Ginny Lane", class: 'img-responsive')%>
+        </a></li>
 
-  <div class="family-meals">
-      <div class="container">
-          <h1>Open for Inside &amp; Outside Dining,<br class="large"> as well as takeout and delivery!<br>
-            <a href="tel: +12512246500" class="tel">251-224-6500 <span class="ext">ext.</span> 1</a>
-          </h1>
+        <li><a href="/pairing">
+          <%=image_tag('slide-sept-wine.jpg', alt: "View the menu for Ginny Lane's September Wine Dinner", class: 'img-responsive')%>
+        </a></li>
 
-          <div class="deliverySec">
-              <div class="clearfix"></div><hr class="top"/>
-              <a href="https://www.ubereats.com/mobile-al/food-delivery/ginny-lane-bar-%26-grill/Fm9W7NsyTWGHRil1dAD1Wg" target="_blank" rel="noopener noreferrer" class="deliveryLogo narrow">
-                  <%= image_tag('takeout-uber.png', alt: 'Uber Eats logo for Ginny Lane delivery link', class: 'img-responsive fw') %>
-              </a>
+        <li><a href="#family-meals">
+          <%=image_tag('slide-family.jpg', alt: 'Ginny Lane Grille Family Meals, Takeout in Orange Beach, Al', class: 'img-responsive')%>
+        </a></li>
+      </ul>
 
-              <div class="deliveryLogo narrow">
-                  <%= image_tag('takeout-waitr.png', alt: 'Waitr logo for Ginny Lane delivery link', class: 'img-responsive fw') %>
-              </div>
-              <div class="clearfix"></div><hr/>
-          </div>
-          <div class="clearfix"></div>
-
-          <h2>Takeout Family Meals</h2>
-          <h3>Your choice of meal, served with family-sized salad, and bread for four</h3>
-
-          <div class="item"><h4>Shrimp Scampi... $26</h4></div>
-          <div class="item"><h4>Shrimp and Grits... $26</h4></div>
-          <div class="item"><h4>Meatloaf... $26</h4></div>
-          <div class="item"><h4>Lemon Pepper, Blackened or Fried Fish... $30</h4></div>
-         
-          <div class="item">
-            <h4>Shrimp Carbonara... $26</h4>
-            <p>Three-cheese blend, tossed with pasta, peas, and tomatoes. Baked and topped with fried egg.</p>
-          </div>
-          <!-- <div class="item">
-            <h4>Honey Bourbon Salmon... $30</h4>
-            <p>Parmesan risotto, and broccolini.</p>
-          </div> -->
+      <div class="uk-light">
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
       </div>
+    </div>
+  </div>
+
+
+  <div id="family-meals" class="family-meals">
+    <div class="container">
+      <h1>Open for Inside &amp; Outside Dining,<br class="large"> as well as takeout and delivery!<br>
+        <a href="tel: +12512246500" class="tel">251-224-6500 <span class="ext">ext.</span> 1</a>
+      </h1>
+
+      <div class="deliverySec">
+        <div class="clearfix"></div><hr class="top"/>
+        <a href="https://www.ubereats.com/mobile-al/food-delivery/ginny-lane-bar-%26-grill/Fm9W7NsyTWGHRil1dAD1Wg" target="_blank" rel="noopener noreferrer" class="deliveryLogo narrow">
+          <%= image_tag('takeout-uber.png', alt: 'Uber Eats logo for Ginny Lane delivery link', class: 'img-responsive fw') %>
+        </a>
+
+        <div class="deliveryLogo narrow">
+          <%= image_tag('takeout-waitr.png', alt: 'Waitr logo for Ginny Lane delivery link', class: 'img-responsive fw') %>
+        </div>
+        <div class="clearfix"></div><hr/>
+      </div>
+      <div class="clearfix"></div>
+
+      <h2>Takeout Family Meals</h2>
+      <h3>Your choice of meal, served with family-sized salad, and bread for four</h3>
+
+      <div class="item"><h4>Shrimp Scampi... $26</h4></div>
+      <div class="item"><h4>Shrimp and Grits... $26</h4></div>
+      <div class="item"><h4>Meatloaf... $26</h4></div>
+      <div class="item"><h4>Lemon Pepper, Blackened or Fried Fish... $30</h4></div>
+     
+      <div class="item">
+        <h4>Shrimp Carbonara... $26</h4>
+        <p>Three-cheese blend, tossed with pasta, peas, and tomatoes. Baked and topped with fried egg.</p>
+      </div>
+    </div>
   </div>
   <div class="togo-disc"><p>** ToGo orders subject to change, depending on wait times and volume of restaurant.</p></div>
 
+
   <div class="page-content none">
-    <!-- <div class="delivery">
-        <= link_to 'https://www.gulftogo.com/r/151/restaurants/delivery/Southern-Cuisine/Ginny-Lane-Orange-Beach', target: '_blank' do %>
-            <h3>Ginny Lane is Now Available for Delivery!<br> <span>Click Here to Order.</span></h3>
-        < end %>
-    </div> -->
-
     <div class="container">
-        <div class="intro-title centered">
-            <h2>Welcome to Ginny Lane Bar &amp; Grill</h2>
-            <h3>Your appetite might lead you here. But our <strong>sensational food</strong>, <strong>breathtaking view</strong>, and <strong>exciting atmosphere</strong> will keep you coming back!</h3>
+      <div class="intro-title centered">
+        <h2>Welcome to Ginny Lane Bar &amp; Grill</h2>
+        <h3>Your appetite might lead you here. But our <strong>sensational food</strong>, <strong>breathtaking view</strong>, and <strong>exciting atmosphere</strong> will keep you coming back!</h3>
 
-            <%= link_to "https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1", target: "_blank", class: 'resImg' do %>
-                <%= image_tag('yelpRes.png', alt: 'Ginny Lane Yelp reservations link', class: 'img-responsive image-center') %> <span>Reservations</span>
-            <% end %>
-        </div>
-        <hr><div class="clearfix"></div>
-        <hr><div class="clearfix"></div>
+        <%= link_to "https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1", target: "_blank", class: 'resImg' do %>
+          <%= image_tag('yelpRes.png', alt: 'Ginny Lane Yelp reservations link', class: 'img-responsive image-center') %> <span>Reservations</span>
+        <% end %>
+      </div>
+      <hr><div class="clearfix"></div>
+      <hr><div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>
 
 
-
     <div class="container boxes">
-        <div class="row">
-            <div class="col-md-12 clearfix">
-                <ul>
-                    <div class="col-md-4 col-md-offset-2 menus">
-                        <li class="service-box-3">
-                            <%= image_tag( 'book.png', alt: 'Ginny Lane Menus', class: 'img-responsive newcon') %>
-                            <a><h4>Our Menu</h4></a>
-                            <p>
-                                Fresh local seafood, Black Angus beef and much more. Check out our menu!
-                            </p>
-                            <br>
+      <div class="row">
+        <div class="col-md-12 clearfix">
+          <ul>
+            <div class="col-md-4 col-md-offset-2 menus">
+              <li class="service-box-3">
+                <%= image_tag( 'book.png', alt: 'Ginny Lane Menus', class: 'img-responsive newcon') %>
+                <a><h4>Our Menu</h4></a>
+                <p>Fresh local seafood, Black Angus beef and much more. Check out our menu!</p><br>
 
-                            <%= link_to '/daily-menu', class: 'btn btn-small red' do %>
-                                <span>View Menus</span>
-                            <% end %>
-                        </li>
-                    </div>
-
-                    <div class="col-md-4 ent">
-                        <li class="service-box-3">
-                            <%= image_tag( 'book2.png', alt: 'Ginny Lane Entertainment', class: 'img-responsive newcon') %>
-                            <a><h4>Live Entertainment</h4></a>
-                            <p>
-                                Enjoy live music performed by local artists while you drink and dine with us.
-                            </p>
-                            <br>
-                            <%= link_to '/entertainment', class: 'btn btn-small red' do %>
-                                <span>View Schedule</span>
-                            <% end %>
-                        </li>
-                    </div>
-                </ul>
+                <%= link_to '/daily-menu', class: 'btn btn-small red' do %>
+                  <span>View Menus</span>
+                <% end %>
+              </li>
             </div>
+
+            <div class="col-md-4 ent">
+              <li class="service-box-3">
+                <%= image_tag( 'book2.png', alt: 'Ginny Lane Entertainment', class: 'img-responsive newcon') %>
+                <a><h4>Live Entertainment</h4></a>
+                <p>Enjoy live music performed by local artists while you drink and dine with us.</p>
+                <br>
+                <%= link_to '/entertainment', class: 'btn btn-small red' do %>
+                  <span>View Schedule</span>
+                <% end %>
+              </li>
+            </div>
+          </ul>
         </div>
+      </div>
     </div>
   </div>
+</div>
 <div class="clearfix"></div><div class="col-xs-12"><div class="hr-png-6"></div></div>
