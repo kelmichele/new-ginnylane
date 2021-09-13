@@ -299,33 +299,40 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .about {
-	.page-content { border-top: 30px solid $navy; }
+	.page-content{border-top:20px solid $navy;}
+	.row.medDef{display:block;}
+	.image-hlf,.text-hlf{display:inline-block;}
+	.image-hlf{float:left;width:55%;margin-left:1%;}
+	.text-hlf{float:none;width:40%;margin:30px 0 0 3%;}
 
-	@include bp(md) {
-		.page-content {
-			@include sec-bgimage ();
-			background-image: url(image_path('gl-sm.jpg'));
-			position: relative;
-			z-index: 1;
-			padding-bottom: 0;
+	p.sig{font-weight:bold;}
+	p{padding:0;margin-bottom:15px;color:$black;}
 
-			&::before {
-				content: '';
-				width: 100%;
-				height: 100%;
-				background: rgba($white, .7);
-				position: absolute;
-				top:0;
-				left: 0;
-				z-index: 0;
-			}
-		}
-		.fancy-heading.left {margin-bottom: 10px;}
+	@media (max-width:1500px){
+		.text-hlf{width:41%;margin:30px 0 0 2%;}
 	}
-	@include bp(sm) {
-		.page-content {background-image: url(image_path('gl-xs.jpg')); padding-top: 15px;}
-		h1 {font-size: 25px;}
-		.fancy-heading.left {padding-top:15px;}
+
+	@media (max-width:1200px){
+		.page-content {padding:0 0 30px;}//@include sec-bgimage ();background-image: url(image_path('gl-sm.jpg'));
+
+		.fancy-heading{position:relative;z-index:0;margin-bottom:5px;padding:17px 0;
+			@include sec-bgimage ();background-image: url(image_path('gl-sm.jpg'));
+			&::before {content: '';width: 100%;height: 100%;background: rgba($white, .8);position: absolute;top:0;left: 0;z-index:-1;}
+			&::after{display: none;}
+		}
+		h1{font-size:25px;font-weight:bold;}
+
+		.image-hlf,.text-hlf{margin:20px 0 0;}
+		.image-hlf{@include sec-default();margin-left:0;}
+		img{max-height:300px;@include center-block();}
+		.text-hlf{width:90%;max-width:650px;@include center-block();text-align:center;}
+	}
+	@include bp(pl) {
+		.fancy-heading{padding:13px 0;}
+		h1{font-size: 22px;}
+
+		.text-hlf{width:95%;margin-top:15px;}
+		.image-hlf{margin-top:10px;}
 	}
 }
 
@@ -950,8 +957,8 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	@media (max-width: 740px) {
 		#page-title {
 			.title-container.less { padding:30px 0;
-				h1 {font-size: 25px;}
-				h3, h4 {font-size: 19px}
+				h1 {font-size: 22px;}
+				h3, h4 {font-size: 18px}
 			}
 		}
 
@@ -1023,11 +1030,10 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 	@include bp(oc) {
 		#page-title{
-			.title-container.less h3,.title-container.less h4{letter-spacing: .1px;font-size:17px; line-height: 1.5em;}
+			.title-container.less h3,.title-container.less h4{letter-spacing: .1px;font-size:16px; line-height: 1.5em;}
 			h3 br{display: block;}
 			h3 span{display: none;}
 		}
-
 	}
 }
 
