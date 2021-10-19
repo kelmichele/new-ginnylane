@@ -1153,8 +1153,10 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		br{display: none;}
 		.fb-badge{width:100px;display:inline;}
 	}
-	.menu-opt h5{display: none;}
+	// .menu-opt h5{display: none;}
 	
+	.soloImg{width:90%;max-width:700px;@include center-block();}
+
 	@media screen and (max-width: 1200px) {
 		#page-title .title-container{padding:60px 0 40px;margin-bottom:0;}
 	}
