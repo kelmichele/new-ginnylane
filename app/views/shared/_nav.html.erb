@@ -12,10 +12,20 @@
   </div>
 </li>
 
-<li class="menu-item football">
-  <%= link_to "/football-season" do %>
-    Football <%= image_tag('football-icon.png', alt: "SEC and Big 10 Network at Ginny Lane, Orange Beach, AL", class: 'nav-badge img-responsive') %>
-  <% end %>
+<li class="menu-item has-child"><a class="mom" href="#">Specials</a>
+  <div class="dropdown">
+    <div class="dropdown-inner">
+      <ul class="dropdown-items">
+        <li class="menu-item football">
+          <%= link_to "/football-season" do %>
+            Football <%= image_tag('football-icon.png', alt: "SEC and Big 10 Network at Ginny Lane, Orange Beach, AL", class: 'nav-badge img-responsive') %>
+          <% end %>
+        </li>
+
+        <li class="menu-item"><%= link_to "Dinner Specials", specials_path %></li>
+      </ul>
+    </div>
+  </div>
 </li>
 
 <li class="menu-item"><%= link_to "Events", pairing_path %></li>

@@ -340,10 +340,10 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .bar-specials, .specials {
-	h1, h2, h3{text-transform: uppercase;}
+	h1, h2{text-transform: uppercase;}
 	h2.dev{letter-spacing: 2px; font-weight: bold;}
 	h1{margin-bottom: 5px;}
-	h3{color: $burg; font-weight: bold; letter-spacing: .5px;}
+	// h3{color: $burg; font-weight: bold; letter-spacing: .5px;}
 	ul {padding-left: 0;}
 	span{color: inherit;}
 	
@@ -425,6 +425,23 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 			}
 		}
 	}
+}
+
+.specials{
+	.page-title-bar .heading-box{background-color:rgba(255, 255, 255, 0.85);}
+	.heading-box h3{font-size:18px;}
+	.fullMenuImg{width:90%;max-width:800px;@include center-block();}
+
+	@media (max-width:1200px) {.heading-box h3{font-size:17px;}}
+	@include bp(xl) {
+		.page-title-bar .heading-box{@include sec-default();padding:10px 5px 12px;}
+		.heading-box h3{font-size:16px;line-height:1.1em;margin-bottom:0}
+	}
+	@include bp(md) {
+		.heading-box h3{font-size:16px !important;}
+		.fullMenuImg{width:97%;}
+	}
+	@include bp(ph) {.heading-box h3{max-width:250px;@include center-block();}}
 }
 
 .food-specials {

@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   get '/events', to: 'static_pages#events'
   get '/bar-specials', to: 'static_pages#bar-specials'
-  get '/specials', to: 'static_pages#daily-menu'
   get '/food-specials', to: 'static_pages#daily-menu'
-  # get '/specials', to: 'static_pages#specials'
+  get '/specials', to: 'static_pages#specials'
+  # get '/specials', to: 'static_pages#daily-menu'
   # get '/food-specials', to: 'static_pages#food-specials' # this should be hidden anyway.
 
   get '/bnb', to: 'static_pages#bnb'
