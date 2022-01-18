@@ -986,16 +986,20 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
+body.special-event{
+	&,p,li,a{font-family:$raleway;}
+}
 .mardiGras{@include sec-default();text-align:center;padding:40px 0;
 	@include sec-bgimage();background-image:url(image_path('mgBg.jpg'));//background-size:cover;
 	.mgHeader{@include center-block();width:80%;}
-	.overview{@include sec-default();margin-top:30px;}
+	.overview{@include sec-default();margin-top:40px;}
 
 	h1,h2{line-height:1.2em;color:$white;}
 	h1{font-size:21px;margin:0 0 10px;}
 	h2{font-size:40px;font-weight:bold;margin:0 0 10px;}
 	h3{margin:0 0 20px;line-height:1.3em;color:$white;}
-	p,li{font-size:18px;color:$white;line-height:1.4em;text-transform:uppercase;}
+	p,li{font-size:18px;color:$white;line-height:1.5em;}
+	li{margin-bottom:10px;}
 	img{max-width:500px;@include center-block();}
 	.glBtn{background-color:$white;color:$black;font-size:15px;text-transform:uppercase;padding:7px 20px;font-weight:bold;letter-spacing:1px;
 		box-shadow:0px 10px 20px rgba($black,.4);
