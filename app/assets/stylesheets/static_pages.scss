@@ -1020,11 +1020,16 @@ body.special-event{
 	}
 
 	@media (max-width:767px){padding:20px 0;
-		// .overview{margin-top:30px;}
 		h1,h3{font-size:18px;}
-		h2{font-size:25px;}
-		p{font-size:17px;padding-bottom:0;}
+		h1{margin-bottom:5px;}
+		h2{font-size:25px;margin-bottom:5px;}
+		p{font-size:17px;padding-bottom:0;line-height:1.2em;}
 		img{width:100%;max-width:100%;}
+	}
+	@media (max-width:500px){
+		h1,h3{font-size:17px;}
+		h2{font-size:22px;}
+		p{font-size:17px;}
 	}
 }
 
