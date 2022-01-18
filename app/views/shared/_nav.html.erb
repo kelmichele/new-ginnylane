@@ -29,7 +29,18 @@
   </div>
 </li>
 
-<li class="menu-item"><%= link_to "Events", pairing_path %></li>
+<!-- <li class="menu-item"><= link_to "Events", pairing_path %></li> -->
+<li class="menu-item has-child"><a class="mom" href="#">Menus</a>
+  <div class="dropdown">
+    <div class="dropdown-inner">
+      <ul class="dropdown-items">
+        <li class="menu-item"><%= link_to "Wine Dinner", pairing_path %></li>
+        <li class="menu-item"><%= link_to "Mardi Gras", special_event_path %></li>
+      </ul>
+    </div>
+  </div>
+</li>
+
 <li class="menu-item"><%= link_to "Catering", "https://wharfcateringgroup.com/", target: '_blank' %></li>
 
 <li class="menu-item">

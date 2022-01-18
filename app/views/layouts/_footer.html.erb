@@ -119,8 +119,13 @@
               Football <%= image_tag('football-icon.png', alt: "SEC and Big 10 Network at Ginny Lane, Orange Beach, AL", class: 'nav-badge img-responsive') %>
             <% end %>
           </li>
-          <li><%= link_to "Events", pairing_path %></li>
           <li><%= link_to "Dinner Specials", specials_path %></li>
+
+          <p class="nav-cat">Events</p>
+          <li><%= link_to "Wine Dinner", pairing_path %></li>
+          <li><%= link_to "Mardi Gras", special_event_path %></li>
+
+
 
           <p class="nav-cat">Order/Reservations</p>
           <li>
