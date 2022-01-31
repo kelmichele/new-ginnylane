@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   # get '/drink-menu', to: 'static_pages#drink-menu'
   # get '/wine-list', to: 'static_pages#drink-menu'
   get '/mother-son-dinner', to: 'static_pages#mother-son-dinner'
+  get '/super-bowl', to: 'static_pages#superbowl2022'
 
   get '/about', to: 'static_pages#about'
   get '/entertainment', to: 'static_pages#entertainment'

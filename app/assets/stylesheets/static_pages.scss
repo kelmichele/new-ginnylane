@@ -1041,12 +1041,39 @@ body.special-event{
 	h1{color:$pink;font-weight:bold;margin-bottom:3px;
 		br{display: none;}
 	}
-	h3{margin:0 0 7px;line-height:1.2em;}
-	h4{margin-bottom:0px;}
+	h3{margin:0 0 7px;line-height:1.2em;font-size:22px;}
+	h4{margin-bottom:3px;font-size:19px;line-height:1.3em;
+		br{display: none;}
+	}
 	h4 a,p{color:$black;}
 
 	.menu-link{@include center-block();max-width:550px;}
 
+	@media (max-width:1024px){
+		h1{font-size:25px;line-height:1.3em;}
+		h3{font-size:20px;}
+		.menu-link{max-width:500px;}
+	}
+	@media (max-width:1023px){
+		h1{font-size:23px;}
+		h3{font-size:19px;}
+		h4{font-size:17px;}
+		.menu-link{width:90%;}
+	}
+	@media (max-width:767px){padding:15px 0;}
+	@media (max-width:420px){
+		h1 br,h4 br{display:block;}
+		p{font-size:15px;margin-bottom:0;}
+	}
+}
+// SUPER BOWL
+.event.superbowl{@include sec-default();padding:30px 0;text-align:center;background-color:#f7f7f7;
+	.imgRow{@include center-block();width:100%;max-width:700px;}
+
+	@media (max-width:1023px){
+		.imgRow{max-width:500px;}
+	}
+	@media (max-width:767px){padding:15px 0;}
 }
 
 .pairing .halloween-dinner {
