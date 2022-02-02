@@ -6,94 +6,47 @@ The first Thursday of every month, Ginny Lane hosts a different vineyard &amp; c
 <% end %>
 
 <div class="events-page">
-    <div id="page-title" class="pt-bkg-image image-3">
-        <div class="container">
-            <div class="row">
-                <section class="title-container">
-                    <div class="title">
-                        <h1>Special Events</h1>
-                        <h4>At Ginny Lane</h4>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
+  <div class="simpleHeader eventsGen">
+    <h1>Upcoming Events</h1>
+  </div>
+
+
+	<div class="page-content pairing-list">
+	  <div class="container">
+	    <!-- <h3 class="header">Dont miss out on our upcoming events! <br>
+	    	Click on one of the events below for more information.
+	  	</h3> -->
+
+	    <div class="row xXpad">
+	    	<div class="pbox-cst one">
+		      <%= link_to '/mother-son-dinner', class: 'mobile-cst' do %>
+	          <%=image_tag('event-motherSon.jpg', alt: 'Upcoming events at Ginny Lane', class: 'img-responsive borderImg') %>
+		      <% end %>
+		    </div>
+
+		    <div class="pbox-cst two">
+		      <%= link_to '/super-bowl', class: 'mobile-cst' do %>
+	          <%=image_tag('event-superbowl.jpg', alt: 'Upcoming events at The Wharf', class: 'img-responsive borderImg') %>
+		      <% end %>
+		    </div>
+
+		    <div class="pbox-cst one">
+		      <%= link_to '/pairing', class: 'mobile-cst' do %>
+	          <%=image_tag('event-FebWine.png', alt: 'Upcoming events at Ginny Lane', class: 'img-responsive borderImg') %>
+		      <% end %>
+		    </div>
+	    	
+
+		    <!-- <div class="col-md-5 col-xs-12"> -->
+	    	<div class="pbox-cst two">
+		      <%= link_to 'https://alwharf.com/calendar', target: "_blank", class: 'mobile-cst' do %>
+	          <%=image_tag('wharfvents.jpg', alt: 'Upcoming events at The Wharf', class: 'img-responsive borderImg') %>
+		      <% end %>
+		    </div>
+	    </div>
+			
+	  </div>
+	</div>
+
 </div>
 <hr>
-
-
-<div class="page-content pairing-list">
-  <div class="container">
-    <!-- <h3 class="header">Dont miss out on our upcoming events! <br>
-    	Click on one of the events below for more information.
-  	</h3> -->
-
-    <div class="row xpad">
-    	<div class="pbox-cst">
-	      <div class="halloWine">
-          <h3>Halloween Wine Dinner</h3>
-					<h4>Wednesday, October 30th, 6pm<br> $40 per guest
-					<br>
-					Raffle and Costume Contest!<br>Costumes Encouraged!</h4>
-					<div class="clearfix"></div>
-		      <%= link_to "Learn More", pairing_path, class: 'gl-link' %>
-	      </div>
-	    </div>
-
-	    <!-- <div class="col-md-5 col-xs-12"> -->
-    	<div class="pbox-cst two">
-	      <%= link_to 'https://alwharf.com/calendar', target: "_blank", class: 'mobile-cst' do %>
-          <%=image_tag('wharfvents.jpg', alt: 'Upcoming events at The Wharf', class: 'img-responsive borderImg') %>
-	      <% end %>
-	    </div>
-    </div>
-
-		<div class="row">
-      <div class="recipe-sidebar">
-				<div class="col-md-6 col-xs-12">
-					<div class="recipe-title">
-						<h5>As Seen On Studio 10</h5>
-						<h4>Executive Chef John Odom's<br> Crawfish Étouffée</h4>
-						<p>Featured Dish for Alabama Restaurant Week</p>
-					</div>
-
-					<div class="col-md-6 col-xs-12">
-						<div class="recipe-content">
-							<p>½ lb crawfish tail meat<br>
-							½ c green bell pepper (small dice)<br>
-							½ c sweet onion (small dice)<br>
-							¼ c celery (minced)<br>
-							1 tbsp minced garlic<br>
-							1 tbsp minced shallot<br>
-							</p>
-						</div>
-					</div>
-					<div class="col-md-6 col-xs-12">
-						<div class="recipe-content">
-							<p>2 oz sliced green onion<br>
-							Pinch minced herbs<br>
-							Creole seasoning to taste<br>
-							2 c crawfish stock<br>
-							2 tbsp unsalted butter<br>
-							¼ c steamed white rice<br>
-							1 tsp all purpose flour<br>
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-xs-12">
-					<div class="recipe-direct">
-						<h5>Procedure:</h5>
-						<p>Prepare rice according to instructions on package. Season with salt to taste. Set aside.
-						In medium skillet, melt butter until softened (8-10 minutes) over low heat. Add onions, peppers and celery to butter and cook until softened.
-						Next, add crawfish meat, garlic, herbs and Creole seasoning. In separate bowl, combine flour and crawfish stock and whisk so there are no lumps.
-						Allow the crawfish and vegetable mixture time to cook together until all flavors are combined, (5 minutes).
-						Then, add crawfish stock and flour mixture to crawfish mixture.  Reserve some crawfish stock in case sauce becomes too thick. Season with salt and pepper and serve over steamed white rice.</p>
-						<a href="http://www.fox10tv.com/story/32738051/crawfish-touffe-and-shredded-pork-tacos" target="_blank">Click here to watch the chefs cook the Alabama Restaurant Week Special!</a>
-					</div>
-				</div>
-			</div>
-    </div>
-  </div>
-</div>

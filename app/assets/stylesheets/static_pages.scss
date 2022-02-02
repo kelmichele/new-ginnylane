@@ -518,7 +518,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 
 		.row.xpad{padding:40px 0;}
-		.pbox-cst{display: inline-block; float: none; vertical-align: top; width:45%; margin-left: 3%;}
+		.pbox-cst{display: inline-block; float: none; vertical-align: top; width:45%; margin-left: 3%;margin-bottom:30px;}
 
 		.halloWine{@include sec-default(); @include sec-bgimage(); background-image: url(image_path('halloBg4.jpg')); background-size: cover;
 			padding:30px 15px 35px 25px;  
@@ -545,7 +545,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		@include bp(xl) {
 			.row.xpad{padding:10px 0 20px;}
 			.pbox-cst{@include sec-default();margin-left:0;
-				&.two{margin-top:30px;}
+				// &.two{margin-top:30px;}
 			}
 
 			.halloWine, .mobile-cst{@include center-block(); width:75%; }
@@ -584,6 +584,9 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 		@include bp(md) { display: none;}
 	}
+
+
+	// .page-content{padding:15px 0;}
 }
 
 .brunch-menu {
@@ -690,6 +693,12 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	// 		h2{font-size: 20px;}
 	// 	}
 	// }
+}
+
+// SIMPLE HEAD
+.simpleHeader{@include sec-default();text-align:center;}
+.simpleHeader.eventsGen{background-color:#f7f7f7;padding:20px 0;
+	h1{font-weight:bold;margin-bottom:0;}
 }
 /***************************************/
 
@@ -1033,9 +1042,11 @@ body.special-event{
 	}
 }
 
+
+
 // MOTHER SON VDAY PAGE
 .event.vday-ms{@include sec-default();padding:30px 0;background-color:$pinkLt;text-align:center;
-	.simpleHeader{@include sec-default();}
+	// .simpleHeader{@include sec-default();}
 	.page-content{padding:0;}
 
 	h1{color:$pink;font-weight:bold;margin-bottom:3px;
@@ -1099,8 +1110,8 @@ body.special-event{
 
 .pairing {.food-menus .service-box-2{padding-bottom: 10px;}}
 // FOR APRIL WINE 2021 -- BUT CAN REUSE FOR ANY PDF WINE MENU
-.pairing .pairing-with-image{background-color:#d0cdcd;
-	#page-title{box-shadow: none;background-color:darken($wine,5%);padding:24px 0 30px;
+.pairing .pairing-with-image{background-color:$purple;
+	#page-title{box-shadow: none;background-color:$purple;padding:24px 0 30px;
 		&::before{display:none;}
 		.title-container{padding:0;}
 		h1.shadow-mod,h2, h3.shadow-mod,h4.shadow-mod{text-shadow:none;}
@@ -1112,7 +1123,7 @@ body.special-event{
 	}
 
 	.page-content{padding:0px 0 10px;text-align:center;}
-	.menu-link-img{width:70%;max-width:500px;@include center-block();text-align:center;}
+	.menu-link-img{width:70%;max-width:700px;@include center-block();text-align:center;}
 	img.mobile{display: none;}
 
 	.solo.food-menus{display: none;}
