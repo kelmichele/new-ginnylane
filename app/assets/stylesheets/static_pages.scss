@@ -1109,9 +1109,10 @@ body.special-event{
 }
 
 .pairing {.food-menus .service-box-2{padding-bottom: 10px;}}
-// FOR APRIL WINE 2021 -- BUT CAN REUSE FOR ANY PDF WINE MENU
-.pairing .pairing-with-image{background-color:$purple;
-	#page-title{box-shadow: none;background-color:$purple;padding:24px 0 30px;
+// FOR MARCH WINE 2022 -- BUT CAN REUSE FOR ANY PDF WINE MENU
+// fb9e47
+.pairing .pairing-with-image{background-color:#e175b2;
+	#page-title{box-shadow: none;background-color:#e175b2;padding:24px 0 30px;
 		&::before{display:none;}
 		.title-container{padding:0;}
 		h1.shadow-mod,h2, h3.shadow-mod,h4.shadow-mod{text-shadow:none;}
@@ -1122,21 +1123,23 @@ body.special-event{
 		h4 a{color:inherit; font-weight:600;}
 	}
 
-	.page-content{padding:0px 0 10px;text-align:center;}
-	.menu-link-img{width:70%;max-width:700px;@include center-block();text-align:center;}
+	.page-content{padding:0px 0 60px;text-align:center;}
+	.menu-link-img{width:80%;max-width:1000px;@include center-block();text-align:center;}
 	img.mobile{display: none;}
 
 	.solo.food-menus{display: none;}
 
 	@include bp(xl) {
+		#page-title{padding:20px 0;}
 		.menu-link-img{width:90%;}
 	}
+	@media (max-width:1023px){.menu-link-img{max-width:700px;}}
 
 	@media (max-width:767px) {
-	.page-content{padding:15px 0 10px;}
+	.page-content{padding:0px 0 30px;}
 		img.fw{display: none;}
 		img.mobile{@include center-block();}
-		.menu-link-img{width:98%;}
+		.menu-link-img{width:95%;max-width:600px;}
 	}
 
 	@include bp(oc) {
