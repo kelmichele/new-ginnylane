@@ -589,7 +589,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	// .page-content{padding:15px 0;}
 }
 
-.brunch-menu {
+.XXXXX.brunch-menu {
 	.page-content {@include sec-default();padding: 25px 0 15px;}
 
   .btn.red {width: 50%; @include center-block (); color: $white; font-size: 16px; padding: 20px 0;
@@ -686,13 +686,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 			h2{font-size: 21px;}
 		}
 	}
-
-	// @include bp(ph) {
-	// 	&.small-box .title-container.brunch{
-	// 		h1{font-size:22px;}
-	// 		h2{font-size: 20px;}
-	// 	}
-	// }
 }
 
 // SIMPLE HEAD
@@ -1152,21 +1145,28 @@ body.special-event{
 }
 
 
-.daily-menu, .football-season{
+.daily-menu, .football-season, .menuPdfs{
 	hr.noTop{margin-top:0;}
 
 	.menu-opt{@include sec-default(); text-align:center;
-		h5{font-size:25px; margin-bottom: 40px; font-weight: bold;line-height:1.2em;}
+		h5{font-size:25px;margin-bottom:40px;font-weight:bold;line-height:1.2em;}
 		h5 span{font-weight:normal;font-size:21px;color:inherit;}
 		h5 a{color:$burg;font-weight:bold;}
 	}
 	.menu-link{display:inline-block;float:left;width:48%;padding:20px 3% 0;position:relative;z-index:0;
 		&::before{@include before();height:70%;background-color:rgba($lt-blue,.3);z-index:-1;}
+		&.gold::before{background-color:rgba($yellow,.3);}
 		&:hover{opacity: .75;}
 		&.two{float:right;}
 
 		img{border:1px solid rgba($black,.1);}
 	}
+
+	.ml-solo{width:60%;@include center-block();max-width:700px;padding-top:30px;
+		&::before{width:120%;left:-10%;height:40%;}
+	}
+
+	&.brunch .menu-opt h5{font-size:20px;margin-bottom:20px;line-height:1.3em;}
 
 	p.menuTitle{font-size:17px;font-style:italic;color:$black;font-family:$raleway;margin:0px 0 15px;padding:0;line-height:1.4em;
 	 b{font-size:20px;font-style: normal;}
@@ -1181,11 +1181,14 @@ body.special-event{
 		.menu-opt h5{font-size:20px;margin-bottom:20px;line-height:1.4em;
 			span{font-size:inherit;}
 		}
+
+		&.brunch .menu-opt h5{font-size:18px;}
 	}
 
 	@media (max-width:1023px){
 		.menu-opt h5{font-size:19px;}
 		.menu-link{width:49%;padding:20px 2% 0;}
+		.ml-solo{width:70%;}
 
 		p.menuTitle{font-size:16px;
 			b{font-size:18px;}
@@ -1195,18 +1198,30 @@ body.special-event{
 	@include bp(tn) {
 		.page-content.altSize{max-width:500px;}
 		.menu-opt h5{font-size:17px;margin-bottom:10px;}
+		&.brunch .menu-opt h5{font-size:17px;}
 
 		.menu-link{width:100%;padding:15px 20px 0;
 			&.two{margin-top:20px;}
 			img{width:95%;max-width:450px;@include center-block();}
 		}
+		.ml-solo{
+			&::before{width:110%;left:-5%;}
+		}
 	}
 
 	@media (max-width:639px){
-		.menu-link{padding:15px 5px 0;//width:100%;padding:15px 20px 0;
-			img{width:90%;}
+		.menu-opt h5{font-size:16px;}
+		.menu-link{padding:15px 5px 16px;max-width:400px;
+			&,&.two{@include center-block();margin-top:20px;}
+			&::before{height:100%;}
+			img{display:none;}
 		}
-		p.menuTitle b{font-size:17px;}
+		.ml-solo{width:100%;padding:20px 20px 0;
+			&::before{width:100%;left:0;height:30%;}
+			img{display:block;}
+		}
+
+		p.menuTitle {margin-bottom:0;b{font-size:17px;}}
 	}
 
 	/////// all except pdf sec. /////////
