@@ -43,8 +43,9 @@ p{font-size:16px;}
   .deliverySec{@include sec-default(); text-align: center; padding: 15px 0 20px;
 		hr{width: 30%; @include center-block(); margin: 20px auto; border-color: rgba($black,.15); }
 		.deliveryLogo{display:inline-block; width:30%; max-width:175px; margin: 0 1%;
-      &.narrow{margin-bottom: 20px;}
-      &.tall{max-width: 150px}
+			vertical-align:top;
+      &.narrow{margin-top:60px;}
+      &.tall{max-width:150px;}
     }
 	}
 
@@ -57,10 +58,11 @@ p{font-size:16px;}
   	.item{margin-top:12px;}
 
   	.deliverySec{padding:15px 0;
-  		hr{margin: 15px auto;}
-  		.deliveryLogo{max-width: 160px;
-	      &.tall{max-width: 130px;}
-	  }
+  		hr{margin:15px auto;}
+  		.deliveryLogo{max-width:160px;
+	      &.tall{max-width:110px;}
+	     	&.narrow{margin-top:45px;} 
+		  }
   	}
   }
 
@@ -82,6 +84,7 @@ p{font-size:16px;}
   	hr.top, br.large{display:none;}
   	h1{font-size: 21px;}
   	h2{font-size:19px;}
+  	.deliverySec{margin-top:15px;}
   }
 }
 
