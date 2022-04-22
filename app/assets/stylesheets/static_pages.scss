@@ -978,6 +978,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 			}
 		}
 
+		.h2s p{font-size:17px;}
 		.page-content.pairing-1 {padding-top:20px;}
 		.sidebar, .pair-menu {@include center-block(); width:85%;}
 		.pair-menu {margin-top: 20px;}
@@ -994,6 +995,8 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 				h3, h4 {font-size: 18px}
 			}
 		}
+
+		.h2s p{font-size:16px;}
 
 	}
 }
