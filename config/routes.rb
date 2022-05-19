@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	root 'static_pages#home'
 
-  get '/events', to: 'static_pages#events'
+
   get '/bar-specials', to: 'static_pages#bar-specials'
   get '/food-specials', to: 'static_pages#daily-menu'
   get '/specials', to: 'static_pages#specials'
@@ -11,7 +11,11 @@ Rails.application.routes.draw do
 
   get '/bnb', to: 'static_pages#bnb'
   get '/pairing', to: 'static_pages#pairing'
-  get '/special-event', to: 'static_pages#special-event'
+  # KPKP ***** switch these based on listings
+  get '/special-event', to: 'static_pages#pairing'
+  get '/events', to: 'static_pages#pairing'
+  # get '/special-event', to: 'static_pages#special-event'
+  # get '/events', to: 'static_pages#events' 
 
   get '/menus', to: 'static_pages#daily-menu'
   get '/event-lunch-menu', to: 'static_pages#event-lunch-menu'
