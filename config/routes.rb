@@ -10,10 +10,13 @@ Rails.application.routes.draw do
   # get '/food-specials', to: 'static_pages#food-specials' # this should be hidden anyway.
 
   get '/bnb', to: 'static_pages#bnb'
-  get '/pairing', to: 'static_pages#pairing'
   # KPKP ***** switch these based on listings
-  get '/special-event', to: 'static_pages#pairing'
-  get '/events', to: 'static_pages#pairing'
+  get '/special-event', to: 'static_pages#home'
+  get '/events', to: 'static_pages#home'
+  get '/pairing', to: 'static_pages#home'
+  # get '/pairing', to: 'static_pages#pairing'
+  # get '/special-event', to: 'static_pages#pairing'
+  # get '/events', to: 'static_pages#pairing'
   # get '/special-event', to: 'static_pages#special-event'
   # get '/events', to: 'static_pages#events' 
 
