@@ -218,6 +218,31 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	@media (max-width:350px){height:150px !important;}
 }
 
+.simplePt{@include sec-default();text-align:center;padding:30px 0;margin-bottom:15px;
+	.inner{width:90%;@include center-block();}
+
+	h1,h2{letter-spacing:1px;margin-bottom:0;}
+	h1{font-weight:bold;margin-bottom:0;text-transform:uppercase;}
+	h2{font-size:22px;line-height:1em;}
+	p{font-size:17px;margin:15px 0 0;padding-bottom:0;}
+
+	&.red{background-color:$burg;
+		h1,h2,p{color:$white;}
+	}
+
+	@media (max-width:1024px){padding:20px 0;
+		h1{font-size:28px;}
+		h2{font-size:20px;}
+	}
+
+	@media (max-width:767px){padding:10px 0 15px;
+		h1{font-size:24px;}
+		h2{font-size:17px;}
+	}
+}
+
+
+
 .home {
 	// .homepage{@include sec-default();position:relative;}
 	.homeSlide{@include sec-default();}
@@ -347,10 +372,9 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .bar-specials, .specials {
-	h1, h2{text-transform: uppercase;}
-	h2.dev{letter-spacing: 2px; font-weight: bold;}
-	h1{margin-bottom: 5px;}
-	// h3{color: $burg; font-weight: bold; letter-spacing: .5px;}
+	// h1, h2{text-transform: uppercase;}
+	// h2.dev{letter-spacing: 2px; font-weight: bold;}
+	// h1{margin-bottom: 5px;}
 	ul {padding-left: 0;}
 	span{color: inherit;}
 	
@@ -439,6 +463,9 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	.heading-box h3{font-size:18px;}
 	.fullMenuImg{width:90%;max-width:800px;@include center-block();}
 
+	h4.top{@include sec-default();margin-top:20px;}
+
+	.page-content.tpadding0{padding-top:0;}
 	@media (max-width:1200px) {.heading-box h3{font-size:17px;}}
 	@include bp(xl) {
 		.page-title-bar .heading-box{@include sec-default();padding:10px 5px 12px;}
@@ -1292,7 +1319,7 @@ body.special-event{
 
 .football-season{
 	.pt-bkg-image{position:relative;z-index:0;background-image: url(image_path('football-stadium.jpg'));background-position: bottom center;
-		&::before{@include before(); height:100%;background-color:rgba($black,.5);}
+		&::before{@include before(); height:100%;background-color:rgba(0,64,0,.8);}
 	}
 	.title-container{position:relative;z-index:1;text-align:center;
 		h1,h2{text-shadow:0px 1px 2px $black !important;}
@@ -1303,13 +1330,13 @@ body.special-event{
 	}
 	// .menu-opt h5{display: none;}
 	
-	.soloImg{width:90%;max-width:700px;@include center-block();}
+	.soloImg{width:90%;max-width:700px;@include center-block();box-shadow:0px 10px 20px rgba($black,.3);}
 
 	@media screen and (max-width: 1200px) {
 		#page-title .title-container{padding:60px 0 40px;margin-bottom:0;}
 	}
 	@media screen and (max-width: 1024px) {
-		.pt-bkg-image::before{background-color:rgba($black,.6);}
+		// .pt-bkg-image::before{background-color:rgba($green,.6);}
 		#page-title .title-container{padding:40px 0 30px;
 			h1{font-size:28px;}
 			h2{font-size:24px;}

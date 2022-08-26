@@ -107,7 +107,11 @@
       <div class="module-content">
         <ul class=" menu">
           <li><%= link_to "Home", root_path %></li>
-          <!-- <li class="menu-item"><= link_to "Events", pairing_path %></li> -->
+          <li class="emph">
+            <%= link_to "https://waitrapp.com/restaurants/al/orange-beach/ginny-lane-bar-grill/16552", target: '_blank' do %>
+              Order Delivery
+            <% end %>
+          </li>
 
           <p class="nav-cat">Menus</p>
           <li><%= link_to "Daily Menus", daily_menu_path %></li>
@@ -115,16 +119,12 @@
           <li><%= link_to "Kids", kids_menu_path %></li>
           <li><%= link_to "Brunch", brunch_menu_path %></li>
           
-          <li><%= link_to "Dinner Specials", specials_path %></li>
+          <p class="nav-cat">Events &amp; Specials</p>
+          <li><%= link_to "Wine Dinner", pairing_path %></li>
+          <li><%= link_to "Happy Hour", specials_path %></li>
+          <li><%= link_to "Gameday", gameday_path %></li>
           
 
-
-          <!-- <p class="nav-cat">Order</p> -->
-          <li>
-            <%= link_to "https://waitrapp.com/restaurants/al/orange-beach/ginny-lane-bar-grill/16552", target: '_blank' do %>
-              Order Delivery
-            <% end %>
-          </li>
 
           <!-- <li>
             <= link_to "https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1", target: '_blank' do %>

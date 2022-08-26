@@ -1,5 +1,5 @@
 <% content_for :title do %>
-Orange Beach, AL Seafood Restaurant Daily Specials
+Daily Specials at Orange Beach, AL Seafood Restaurant 
 <% end %>
 <% content_for :description do %>
 Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
@@ -8,21 +8,38 @@ Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
 
 <!-- FOOTBALL SEASON STYLE DIV. DELETE class AFTER SEASON FOR RESET -->
 <div class="specialsPage">
-  <section class="page-title-bar">
-  	<div class="col-md-6 col-md-offset-3 col-sm-12">
-  		<div class="heading-box">
-  			<h2 class="dev">Ginny Lane</h2>
-        <h1>Specials</h1>
-        <h3>Click on the menu below to view/download a larger version.</h3>
-	    </div>
+  <section class="simplePt red">
+    <div class="inner">
+      <!-- <h2 class="dev">Ginny Lane</h2> -->
+      <h1>Happy Hour Specials</h1>
+      <h2>Enjoy Daily from 3-6pm</h2>
+      <!-- <p>Click on the menu below to view/download a larger version.</p> -->
     </div>
   </section>
 
-  <div class="page-content altSize">
+  <div class="page-content tpadding0">
     <div class="container">
-      <%= link_to "GL-HappyHour.pdf", target: '_blank', class: 'menu-link' do %>
-        <%= image_tag('menu-happyHour.png', class: 'img-responsive fullMenuImg', alt: "Ginny Lane's Happy Hour Specials") %>
-      <% end %> 
+      <div class="specialsList bar">
+        <h4><span>Bar Specials</span></h4>
+        <ul>
+          <li>Pitchers of Miller and Yuengling ... $10</li>
+          <li>House Wine ... $4</li>
+          <li>Well Drinks ... $3</li>
+        </ul>
+
+        <h4 class="top"><span>Food Specials</span></h4>
+        <ul>
+          <li>BBQ Brisket Sandwich ... $8</li>
+          <li>Spicy Tempura Vegetable Plate ... $9</li>
+          <li>Goat Cheese Croquette with Fruit and Prosciutto ... $8</li>
+          <li>Mako Fries ... $8</li>
+        </ul>
+      </div>
+
+
+      <!-- <= link_to "GL-HappyHour.pdf", target: '_blank', class: 'menu-link' do > -->
+        <!-- <= image_tag('menu-happyHour.png', class: 'img-responsive fullMenuImg', alt: "Ginny Lane's Happy Hour Specials") > -->
+      <!-- < end %  -->
       <div class="border" />
     </div>
   </div>
