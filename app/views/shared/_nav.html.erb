@@ -1,6 +1,17 @@
-<!-- <li class="menu-item"><= link_to "Home", root_path %></li> -->
+<li class="menu-item mobOnly"><%= link_to "Home", root_path %></li>
+<li class="mobOnly">
+  <%= link_to 'https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1', target: '_blank' do %>
+    Reservations
+  <% end %>
+</li>
 
-<li class="menu-item has-child"><a class="mom" href="#">Menus</a>
+<li class="mobOnly">
+  <%= link_to "https://waitrapp.com/restaurants/al/orange-beach/ginny-lane-bar-grill/16552", target: '_blank' do %>
+    Order Delivery
+  <% end %>
+</li>
+
+<li class="menu-item has-child"><a class="mom nav-cat" href="#">Menus</a>
   <div class="dropdown">
     <div class="dropdown-inner">
       <ul class="dropdown-items">
@@ -8,16 +19,17 @@
         <li class="menu-item"><a href="/#family-meals">Takeout Family Meals</a></li>
         <li class="menu-item"><%= link_to "Kids", kids_menu_path %></li>
         <li class="menu-item"><%= link_to "Brunch", brunch_menu_path %></li>
-        <li class="menu-item"><%= link_to "Wine Dinner", pairing_path %></li>
+        <li class="menu-item lgOnly"><%= link_to "Wine Dinner", pairing_path %></li>
       </ul>
     </div>
   </div>
 </li>
 
-<li class="menu-item has-child"><a class="mom" href="#">Specials</a>
+<li class="menu-item has-child"><a class="mom nav-cat" href="#"><span class="mobOnly">Events &amp;</span> Specials</a>
   <div class="dropdown">
     <div class="dropdown-inner">
       <ul class="dropdown-items">
+        <li class="menu-item mobOnly"><%= link_to "Wine Dinner", pairing_path %></li>
         <li class="menu-item"><%= link_to "Happy Hour", specials_path %></li>
         <li class="menu-item"><%= link_to "Gameday", gameday_path %></li>
         <li class="menu-item"><a href="Prime-Rib-Special.pdf" target="_blank">Prime Rib Night</a></li>
@@ -26,26 +38,27 @@
   </div>
 </li>
 
-<li class="menu-item"><%= link_to "Events", pairing_path %></li>
+<li class="menu-item lgOnly"><%= link_to "Events", pairing_path %></li>
 
-<li class="menu-item"><%= link_to "Catering", "https://wharfcateringgroup.com/", target: '_blank' %></li>
+<li class="menu-item lgOnly"><%= link_to "Catering", "https://wharfcateringgroup.com/", target: '_blank' %></li>
 
-<li class="menu-item emph">
+<li class="menu-item emph lgOnly">
   <%= link_to "https://waitrapp.com/restaurants/al/orange-beach/ginny-lane-bar-grill/16552", target: '_blank' do %>
     Delivery
   <% end %>
 </li>
 
-<li class="menu-item">
+<li class="menu-item lgOnly">
   <%= link_to "https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1", target: '_blank', class: 'burg' do %>
     Reservations
   <% end %>
 </li>
 
-<li class="menu-item has-child"><a class="mom" href="#">More</a>
+<li class="menu-item has-child"><a class="mom nav-cat" href="#">More</a>
   <div class="dropdown">
     <div class="dropdown-inner">
       <ul class="dropdown-items">
+        <li class="menu-item mobOnly"><%= link_to "Catering", "https://wharfcateringgroup.com/", target: '_blank' %></li>
         <li class="menu-item"><%= link_to "Entertainment", entertainment_path %></li>
         <li class="menu-item"><%= link_to "About", about_path %></li>
         <li class="menu-item"><%= link_to "Contact", contact_path %></li>

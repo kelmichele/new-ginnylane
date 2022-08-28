@@ -101,10 +101,12 @@
   <div class="offcanvas-inner">
     <div class="module">
       <div class="module-content">
-        <ul class=" menu">
-          <li><%= link_to "Home", root_path %></li>
+        <ul class="menu navSize">
+          <%= render 'shared/nav' %>
 
-          <li class="emph">
+          <!-- <li><%= link_to "Home", root_path %></li>
+
+          <li>
             <%= link_to 'https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1', target: '_blank' do %>
               Reservations
             <% end %>
@@ -133,7 +135,7 @@
           <li><%= link_to "Entertainment", entertainment_path %></li>
           <li><%= link_to "About", about_path %></li>
           <li><%= link_to "Contact", contact_path %></li>
-          <li><a href="https://alwharf.com/calendar/" target="_blank">Events At The Wharf</a></li>
+          <li><a href="https://alwharf.com/calendar/" target="_blank">Events At The Wharf</a></li> -->
         </ul>
       </div>
     </div>
