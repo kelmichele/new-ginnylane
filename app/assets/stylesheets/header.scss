@@ -36,6 +36,7 @@ header {
   li a.tel {font-family: $raleway;}
   #social-links {
     li {float: right; margin-left: 20px;}
+    li.emph a{color:$burg}
   }
 
   .tb-col{display:inline-block;font-size: 16px; color: $white;}
@@ -82,7 +83,9 @@ header {
 
 
 
-
+.header li .em{font-style:italic;}
+.header li .yellow{color:$yellow;}
+.header li .burg{color:$burg;}
 .megamenu-parent {list-style:none;padding:0;margin:0;z-index:9;display:block;float:right;
     li{display:inline-block;position:relative;padding:0;border-top: 3px solid transparent; margin: 0 15px;
         &:last-child{margin-right: 5px;}

@@ -31,7 +31,7 @@
           <div class="col-md-11 col-md-offset-1 col-xs-12">
             <ul class="contact-info-list">
               <h6 class="name">Contact Us</h6>
-              <li><i class="fa fa-phone"></i> <a class="tel" href="tel:+12512246500">251-224-6500 ext. 1</a></li>
+              <li><i class="fa fa-phone"></i> <a class="tel" href="tel:+12512246500">251-224-6500 (ext. 1)</a></li>
               <li><i class="fa fa-envelope-o"></i> <a href="mailto:ginnylanebarandgrill@live.com">ginnylanebarandgrill@live.com</a></li>
               <li><i class="fa fa-home"></i> 4851 Wharf Parkway Suite 106<br> Orange Beach, Al 36561</li>
             </ul>
@@ -55,10 +55,6 @@
           <%= link_to 'http://goo.gl/jQcRe0', target: '_blank', class: 'btn first' do %>
             <span>Get Directions!</span>
           <% end %>
-
-          <!-- <= link_to 'https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1', target: '_blank', class: 'btn' do %>
-            <span>Book A Table!</span>
-          < end %> -->
 
           <div class="signup">
             <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
@@ -107,7 +103,14 @@
       <div class="module-content">
         <ul class=" menu">
           <li><%= link_to "Home", root_path %></li>
+
           <li class="emph">
+            <%= link_to 'https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1', target: '_blank' do %>
+              Reservations
+            <% end %>
+          </li>
+
+          <li>
             <%= link_to "https://waitrapp.com/restaurants/al/orange-beach/ginny-lane-bar-grill/16552", target: '_blank' do %>
               Order Delivery
             <% end %>
@@ -123,15 +126,8 @@
           <li><%= link_to "Wine Dinner", pairing_path %></li>
           <li><%= link_to "Happy Hour", specials_path %></li>
           <li><%= link_to "Gameday", gameday_path %></li>
+          <li class="menu-item"><a href="Prime-Rib-Special.pdf" target="_blank">Prime Rib Night</a></li>
           
-
-
-          <!-- <li>
-            <= link_to "https://www.yelp.com/reservations/ginny-lane-bar-and-grill-orange-beach?from_reserve_now=1", target: '_blank' do %>
-              Book a Table
-            < end %>
-          </li> -->
-
           <p class="nav-cat">More to See</p>
           <li><%= link_to "Catering", "https://wharfcateringgroup.com/", target: '_blank' %></li>
           <li><%= link_to "Entertainment", entertainment_path %></li>
