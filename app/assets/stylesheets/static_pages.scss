@@ -1134,6 +1134,123 @@ body.special-event{
 	@media (max-width:767px){padding:15px 0;}
 }
 
+
+// MARDI GRAS
+.mardiGras{@include sec-default();text-align:center;padding:40px 0;
+	@include sec-bgimage();background-image:url(image_path('mgBg.jpg'));background-size:cover;
+	.mgHeader{@include center-block();width:80%;}
+	.overview{@include sec-default();margin-top:40px;}
+	.imgRow{@include sec-default();margin-top:15px;}
+
+	h1,h2{line-height:1.2em;color:$white;}
+	h1{font-size:21px;margin:0 0 10px;}
+	h2{font-size:40px;font-weight:bold;margin:0 0 10px;}
+	h3{margin:0 0 20px;line-height:1.3em;color:$white;}
+	p,li{font-size:18px;color:$white;line-height:1.5em;}
+	p.bmargin0{padding-bottom:5px;font-size:15px;}
+	li{margin-bottom:10px;}
+	.glBtn{background-color:$white;color:$black;font-size:15px;text-transform:uppercase;padding:7px 20px;font-weight:bold;letter-spacing:1px;
+		box-shadow:0px 10px 20px rgba($black,.4);
+		&:hover{opacity:.8;}
+	}
+	img{max-width:500px;@include center-block();}
+
+
+	@media (max-width:1023px){padding:25px 0;
+		.overview{margin-top:30px;}
+		h1,h3{font-size:19px;}
+		h2{font-size:30px;}
+		p{padding-bottom:5px;}
+		.glBtn{font-size:14px;}
+
+		.imgRow{margin-top:10px;}
+	}
+
+	@media (max-width:767px){padding:20px 0;
+		h1,h3{font-size:18px;}
+		h1{margin-bottom:5px;}
+		h2{font-size:25px;margin-bottom:5px;}
+		p{font-size:17px;padding-bottom:0;line-height:1.2em;}
+		img{width:100%;max-width:100%;}
+	}
+	@media (max-width:500px){
+		h1,h3,p{font-size:17px;}
+		h2{font-size:22px;}
+	}
+}
+
+.mardiGras23{@include sec-default();text-align:center;padding:80px 0;@include sec-bgimage();background-image:url(image_path('mardigras2.jpg'));
+	.fullRow{@include sec-default();}
+	.mgHeader{@include center-block();width:90%;max-width:700px;}
+	.shadow{background:rgba($black,.6);padding:30px 0;border:5px solid $yellow;box-shadow:0px 15px 30px rgba($black,.6);}
+	.mgBody{margin-top:30px;}
+	.btnRow{margin:20px 0;}
+	hr{width:85%;@include center-block();opacity:.5;}
+
+
+	h1,h2,h3,p,span{color:$white;}
+	h1,h2{line-height:1.2em;}
+	h1{font-size:40px;font-weight:bold;margin:0 0 20px;}
+	h2{font-size:19px;margin:0 0 10px;font-weight:normal;}
+	h3{margin:0;line-height:1.7em;}
+	p{font-size:20px;line-height:1.5em;}
+	p.bold, p b{font-weight:bold;color:$yellow;}
+	p.s1 span{font-size:.9em; font-family:inherit;}
+
+	.glBtn{background-color:$white;color:$black;font-size:15px;text-transform:uppercase;padding:7px 20px;font-weight:bold;letter-spacing:1px;box-shadow:0px 10px 20px rgba($black,.4);
+		&:hover{opacity:.8;}
+	}
+	span.dot{padding:0 15px;position:relative;z-index:0;
+		&::before{@include before();width:5px;height:5px;left:10px;top:50%;margin-top:-2.5px;background-color:$white;border-radius:50%;z-index:-1;}
+	}
+
+	@media (max-width:1024px){padding:45px 0 60px;}
+	@media (max-width:991px){background-image:url(image_path('mardigras2m.jpg'));
+		.mgBody{margin-top:15px;}
+
+		h1{font-size:32px;margin-bottom:10px;}
+		h2{font-size:17px;}
+		h3{font-size:21px;}
+		.glBtn{font-size:14px;}
+		p{font-size:18px;}
+
+	}
+
+	@media (max-width:767px){padding:20px 0 30px;background-size:cover;
+		.mgHeader{width:94%;}
+		.shadow{padding:15px 0;background-color:rgba($black,.7);}
+		.mgBody{margin-top:0px;}
+
+		h1{font-size:25px;margin-bottom:5px;}
+		h2{font-size:15px;margin-bottom:5px;}
+		h3{font-size:19px;}
+		p{font-size:17px;}
+		hr{margin-top:15px;}
+		// img{width:100%;max-width:100%;}
+	}
+	@media (max-width:639px){
+		.shadow{padding:15px 10px 10px;}
+		h1{font-size:23px;}
+		h3{font-size:17.5px;}
+		p{font-size:16px;@include center-block();}
+		p.s1{max-width:300px;}
+		.btnRow.b2{margin-top:10px;}
+		span.dot{padding:0 10px;
+			&::before{width:3px;height:3px;left:6px;margin-top:-1.5px;}
+		}
+	}
+
+	@media (max-width:500px){
+		h3{font-size:16.5px;}
+		p{width:90%;max-width:300px;}
+	}
+}
+
+
+
+
+
+
 .pairing .halloween-dinner {
 	.pt-bkg-image.image-hallo{background-image: url(image_path('halloBg.jpg')); background-position: center center;
 		&::before{display: none;}

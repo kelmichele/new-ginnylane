@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get '/events', to: 'static_pages#home'
   # get '/pairing', to: 'static_pages#home'
   get '/pairing', to: 'static_pages#pairing'
-  # get '/special-event', to: 'static_pages#pairing'
+  get '/mardi-gras', to: 'static_pages#special-event'
   # get '/events', to: 'static_pages#pairing'
   # get '/special-event', to: 'static_pages#special-event'
   # get '/events', to: 'static_pages#events' 
