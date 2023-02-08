@@ -386,7 +386,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 			&::before{content: "";position:absolute;top:49%;width:70%;left:15%;z-index:-1;height:2px;background-color:$lt-blue;}
 			span{background-color:$white;padding:0 15px;}
 		}
-		// h4+p
+		
 		p.dets{font-size:18px;color:$green;font-family:$raleway;margin-top:5px;font-weight:600;
 			span{font-style:italic;font-size:.95em;font-weight:normal;}
 		}
