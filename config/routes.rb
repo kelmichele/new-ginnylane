@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   # get '/mother-son-dinner', to: 'static_pages#mother-son-dinner'
   # get '/super-bowl', to: 'static_pages#superbowl2022'
   # get '/bnb', to: 'static_pages#bnb'
-  get '/elvis-dinner', to: 'static_pages#elvis'
+  get '/elvis-dinner', to: 'static_pages#home'
 
 
   get '/about', to: 'static_pages#about'
