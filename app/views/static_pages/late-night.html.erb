@@ -1,0 +1,29 @@
+<% content_for :title do %>
+Late Night Food at Orange Beach, AL Seafood Restaurant 
+<% end %>
+<% content_for :description do %>
+Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
+<% end %>
+
+
+<div class="foodPage">
+  <section class="simplePt red">
+    <div class="inner">
+      <h1>Enjoy Our Late Night Treats!</h1>
+      <!-- <p>Thursday-Sunday 10pm-12am</p> -->
+    </div>
+  </section>
+
+  <div class="foodWrap"><!-- page-contentXXtpadding0 -->
+    <div class="inside fwInner">
+      <div class="menuBox solo">
+        <%= link_to "LateNight.pdf", target: '_blank', class: 'menu-link menuBg' do %>
+          <p class="instr">Click image below to view larger version</p>
+          <%= image_tag('menu-lateNight.png', class: 'img-responsive', alt: "Ginny Lane Late Night Menu, Orange Beach, AL") %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="border"></div>
+  </div>
+</div>

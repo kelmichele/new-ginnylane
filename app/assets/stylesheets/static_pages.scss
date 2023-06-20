@@ -1610,9 +1610,21 @@ body.special-event{
 
 
 // 6/2023 -- WIP new menu setups 
+.foodPage{
+	.simplePt{
+		p{margin-top:10px;font-size:19px;}
+		@media (max-width:1024px){p{margin-top:5px;}}
+		@media (max-width:767px){p{margin-top:0;font-size:17px;}}
+		@media (max-width:639px){
+			h1{font-size:21px;}
+			p{font-size:16px;}
+		}
+	}
+}
+
 .foodWrap{@include sec-default();text-align:center;padding:20px 0 30px;
 	.menuBox{display:inline-block;margin-top:15px;margin-bottom:15px;vertical-align:top;
-		&.solo{@include center-block();}
+		&.solo{width:95%;max-width:800px;@include center-block();}
 		&.il2{width:45%;margin-left:2%;margin-right:2%;}
 		&.il3{width:31%;margin-left:1%;margin-right:1%;}
 	}
@@ -1633,6 +1645,7 @@ body.special-event{
 		.inside{max-width:450px;}
 
 		.menuBox{width:100% !important;}
+		p.instr, span.instr{font-size:15px;}
 	}
 }
 
