@@ -16,18 +16,19 @@ Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
     </div>
   </section>
 
-  <div class="page-content tpadding0">
-    <div class="container">
-      <div class="specialsList bar">
-        <h4><span>Happy Hour Specials</span></h4>
-        <p class="dets">Served Daily from 3-6pm</p>
-        <ul>
-          <li>$3 Pints of Miller and Yuengling</li>
-          <li>$4 House Wine</li>
-          <li>$1 Off Other Alcohol Drinks</li>
-        </ul>
+  <div class="foodWrap"><!-- page-contentXXtpadding0 -->
+    <div class="inside fwInner">
+      <div class="menuBox il2 hh">
+        <%= link_to "HappyHour.pdf", target: '_blank', class: 'menu-link menuBg' do %>
+          <p class="instr">Click image below to view larger version</p>
+          <%= image_tag('menu-happyHour.png', class: 'img-responsive', alt: "Ginny Lane Happy Hour, Orange Beach, AL") %>
+        <% end %>
+      </div>
 
 
+      <!-- <h4><span>Happy Hour Specials</span></h4><p class="dets">Served Daily from 3-6pm</p><ul><li>$3 Pints of Miller and Yuengling</li></ul> -->
+
+      <div class="specialsList menuBox il2 bar">
         <h4 class="top"><span>25¢ Martinis</span></h4>
         <p class="dets">Offered Monday-Friday 11am-4pm<br><span>*1 per person, per day</span></p>
         <ul>
@@ -35,16 +36,9 @@ Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
           <li><b>THE SUNSET</b> ... Rum & Pineapple</li>
           <li><b>BLUE WAVE</b> ... Tequila, Blue Curacao, Sour Mix, Salted Rim</li>
         </ul>
-
-        <!-- <h4 class="top"><span>Food Specials</span></h4>
-        <ul>
-          <li>BBQ Brisket Sandwich ... $8</li>
-          <li>Spicy Tempura Vegetable Plate ... $9</li>
-          <li>Goat Cheese Croquette with Fruit and Prosciutto ... $8</li>
-          <li>Mako Fries ... $8</li>
-        </ul> -->
       </div>
-      <div class="border"></div>
     </div>
+
+    <div class="border"></div>
   </div>
 </div>

@@ -6,7 +6,10 @@
 
 .center-block {@include center-block();}
 .page-content{@include center-block();}
-.medDef{width:90%;max-width:1000px;@include center-block();}
+
+.inside, .insideAlt, .custWrap, .medDef{width:90%;@include center-block();}
+.medDef{max-width:1000px;}
+
 
 p{font-size:16px;}
 
@@ -1603,4 +1606,37 @@ body.special-event{
 		.spec25 h4{font-size:20px;}
 	}
 }
+
+
+
+// 6/2023 -- WIP new menu setups 
+.foodWrap{@include sec-default();text-align:center;padding:20px 0 30px;
+	.menuBox{display:inline-block;margin-top:15px;margin-bottom:15px;vertical-align:top;
+		&.solo{@include center-block();}
+		&.il2{width:45%;margin-left:2%;margin-right:2%;}
+		&.il3{width:31%;margin-left:1%;margin-right:1%;}
+	}
+
+	p{padding:0;}
+	p.instr, span.instr{color:$black;}
+	p.instr{margin-bottom:7px;}
+
+	.menuBox.specialsList{float:none;}
+
+	@include bp(tb) {padding:10px 0 20px;
+		.menuBox.il2{width:48%;margin-left:0;margin-right:0;float:left;
+			&:nth-child(2n+2){float:right;}
+		}
+	}
+
+	@include bp(og) {padding:0;
+		.inside{max-width:450px;}
+
+		.menuBox{width:100% !important;}
+	}
+}
+
+
+
+
 
