@@ -1612,6 +1612,7 @@ body.special-event{
 // 6/2023 -- WIP new menu setups 
 .foodPage{
 	.simplePt{
+		h1{line-height:1.2em;}
 		p{margin-top:10px;font-size:19px;}
 		@media (max-width:1024px){p{margin-top:5px;}}
 		@media (max-width:767px){p{margin-top:0;font-size:17px;}}
