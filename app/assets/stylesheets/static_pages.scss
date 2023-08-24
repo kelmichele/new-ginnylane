@@ -25,14 +25,7 @@ p{font-size:16px;}
 		p{width:90%;font-size:17px;}
 	}
 }
-.family-meals {
-  @include sec-default(); text-align: center; padding: 60px 0;
-  @include sec-bgimage(); background-image: url(image_path('GL-LARGE-3180.jpg')); 
-  background-size:cover;
-  position: relative; z-index: 0;
-  &::before{@include before(); background-color: rgba($white, .8); height:100%; z-index: -2;}
-  &::after{@include before(); background-color: rgba($blue, .5); height:100%; z-index: -1;}
-
+.family-meals {@include sec-default(); text-align: center;background-color:#f8f8f8;
   h1{color: $burg; font-weight: bold; text-transform: uppercase; margin-bottom:0px;
   	a.tel{color: $navy;}
   	a.tel span{text-transform:none; color:inherit;}
@@ -45,8 +38,9 @@ p{font-size:16px;}
   .item{@include sec-default(); margin-top:20px;}
   .item.uno{margin-top:0;}
 
-  .deliverySec{@include sec-default(); text-align: center; padding: 15px 0 20px;
+  .deliverySec{@include sec-default(); text-align: center; padding: 30px 0 35px;
 		hr{width: 30%; @include center-block(); margin: 20px auto; border-color: rgba($black,.15); }
+		hr.btm{margin-bottom:0;}
 		.deliveryLogo{display:inline-block; width:30%; max-width:175px; margin: 0 1%;
 			vertical-align:top;
       &.narrow{margin-top:60px;}
@@ -54,16 +48,19 @@ p{font-size:16px;}
     }
 	}
 
-  @include bp(xl) {padding:25px 0 20px;
+  .fmSec{@include sec-default();padding-bottom:30px;}
+
+  @include bp(xl) {
   	h1{font-size:25px;}
   	h2{font-size:23px;}
-  	h3{font-size:17px; margin-bottom: 0px;}// width:85%; @include center-block();}
+  	h3{font-size:17px; margin-bottom: 0px;}
   	h4{font-size:18px;}
-  	p{font-size: 16px;}//width:85%; @include center-block();}
+  	p{font-size: 16px;}
   	.item{margin-top:12px;}
 
-  	.deliverySec{padding:15px 0;
-  		hr{margin:15px auto;}
+  	.deliverySec{
+  		hr{margin-top:15px;}
+  		hr.top{margin-bottom:15px;}
   		.deliveryLogo{max-width:160px;
 	      &.tall{max-width:110px;}
 	     	&.narrow{margin-top:45px;} 
@@ -71,25 +68,27 @@ p{font-size:16px;}
   	}
   }
 
+  @media (max-width:989px){
+  	.fmSec{padding-bottom:15px;}
+  }
+
   @media screen and (max-width: 823px){
   	h1{font-size:24px; line-height: 1.5em;}
   	h2{font-size:21px;}
   	h4{font-size:17px;}
   	p{font-size: 15px; padding-bottom: 5px;}
-  	.deliverySec{padding:5px 0;}
   }
 
   @media screen and (max-width: 767px){
-  	.container{padding:0; max-width:90%;}
   	h1{font-size:22px;}
   	h2{font-size:20px;}
   }
 
   @media screen and (max-width: 500px){
-  	hr.top, br.large{display:none;}
+  	br.large{display:none;}
   	h1{font-size: 21px;}
   	h2{font-size:19px;}
-  	.deliverySec{margin-top:15px;
+  	.deliverySec{padding:20px 0;
 	  	.deliveryLogo.tall{max-width:100px;}
 	  	.deliveryLogo.narrow{margin-top:35px;}
 	  }
@@ -249,17 +248,22 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 
 .home {
-	// .homepage{@include sec-default();position:relative;}
-	.homeSlide{@include sec-default();}
+	.homeSlide, .homeContent{@include sec-default();}
 
-	.intro-title {@include sec-default(); margin:20px 0;
-		h2{font-weight: bold;}
-		h3{width:75%; @include center-block();}
+	.introSec {@include sec-default();padding:60px 0;
+		.inner{width:94%;max-width:1200px;@include center-block();display:flex;align-items:center;justify-content:space-evenly;}
+
+		.image{width:50%;}
+		.text{padding-left:30px;}
+		h2{font-size:32px;line-height:1.4em;font-weight: bold;margin-bottom:5px;}
+		h3{font-size:20px;max-width:525px;}
+		.introBtn{color:$white;font-size:13px;letter-spacing:.5px;
+			&:hover{color:$white;opacity:.8;}
+		}
 	}
-	.boxes {
-		ul {@include sec-default (); margin-top:30px; margin-bottom: 20px;}
-	}
-	.delivery {
+	.mobileImage{display:none;}
+
+	.delivery { // banner
 		@include sec-default ();
 		background-color: $burg;
 		color: $white;
@@ -273,9 +277,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	.delivery a, .delivery span { color: $nygold; }
 	.delivery:hover span {text-decoration: underline; }
 
-	.service-box-3 {
-		.newcon {@include center-block ();}
-	}
 
 	.resImg {@include sec-default(); text-align:center; padding-top:20px;
 		img, span {display: inline-block;}
@@ -283,20 +284,40 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		span{color: $black;font-size: 26px; font-weight:bold;}
 	}
 
-	@include bp(xl) {
-		.delivery br{display: block;}
 
-		.intro-title {
-			h2{font-size:28px; line-height: 1.5em; margin-bottom: 5px;}
-			h3{width:95%; font-size:20px; line-height: 1.5em;}
+	@media (max-width:1365px){.introSec .inner{justify-content:space-between;}}
+
+	@media (max-width:1200px){
+		.introSec {
+			.image{width:55%;}
+			h2{font-size:26px;}
+			h3{font-size:19px;max-width:450px;}
 		}
+	}
+
+	@include bp(xl) {
+		.introSec{padding:45px 0;
+			h2{font-size:24px;}
+			h3{font-size:18px;}
+		}
+
+		.delivery br{display: block;}
 
 		.resImg { padding-top:20px;
 			img{width:100px;}
 			span{font-size: 22px;}
 		}
+	}
 
-		.col-md-4.col-md-offset-2.menus, .col-md-4.ent{width:45% !important; margin-left:0 !important; float:left;}
+	@media (max-width:989px){
+		.introSec{padding:30px 0;
+			.image{display:none;}
+			.text{width:100%;text-align:center;padding-left:0;}
+			h2{font-size:22px;}
+			h3{font-size:17px;line-height:1.4em;max-width:600px;@include center-block();}
+		}
+
+		.mobileImage{display:block;}
 	}
 
 	@media (max-width: 823px) {
@@ -330,11 +351,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 	}
 	@include bp(iv) {
-		.intro-title .image-center { width: 20%; padding-bottom: 10px;}
-		.boxes {
-			ul {padding-left: 0;}
-		}
-		.service-box-3 p {padding: 0 10px;}
+		.introSec h2{font-size:20px;}
 	}
 }
 
