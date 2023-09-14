@@ -4,9 +4,8 @@
 @import "variables";
 @import "mixins";
 
-.center-block {@include center-block();}
-.page-content{@include center-block();}
-
+.fullSec{@include sec-default();}
+.center-block, .page-content{@include center-block();}
 .inside, .insideAlt, .custWrap, .medDef{width:90%;@include center-block();}
 .medDef{max-width:1000px;}
 
@@ -405,111 +404,78 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
-.bar-specials, .specials{
-	ul {padding-left: 0;}
-	span{color: inherit;}
-	
-	.daily, .evening{display:inline-block; vertical-align: top; width:48%;
-		h3{color:$black; text-align: center;}
+.specialsPage{
+	.foodWrap{padding-top:0;}
+	.mtop{margin-top:40px;}
+	.mbtm{margin-bottom:40px;}
+
+	.fullMenuImg{width:90%;max-width:800px;@include center-block();}
+	h4{font-size:25px;font-weight:bold;color:$burg;position:relative;z-index:0;margin-bottom:0;
+		&::before{content:"";position:absolute;top:49%;width:70%;left:15%;z-index:-1;height:2px;background-color:$lt-blue;}
+		span{background-color:$white;padding:0 15px;}
 	}
-	.evening{float:right;}
-	.specialsList{@include sec-default(); text-align: center; margin-top:30px;
-		h4{font-weight:bold;color:$burg;font-size:25px;position:relative;z-index: 0; margin-bottom:0;
-			&::before{content: "";position:absolute;top:49%;width:70%;left:15%;z-index:-1;height:2px;background-color:$lt-blue;}
-			span{background-color:$white;padding:0 15px;}
-		}
-		
+	h4.top{@include sec-default();margin-top:20px;}
+	ul{padding-left:0;}
+	span{color:inherit;}
+
+	.slWrap{width:100%;max-width:700px;@include center-block();}
+	.specialsList{@include sec-default();text-align:center;
+		&.border{border-bottom:2px solid $lt-blue;}
+
 		p.dets{font-size:18px;color:$green;font-family:$raleway;margin-top:5px;font-weight:600;
 			span{font-style:italic;font-size:.95em;font-weight:normal;}
 		}
-
-		li {color: $navy; font-size: 19px; margin-bottom: 20px; line-height: 1.3em; font-family:'Raleway', sans-serif; font-weight: 500;}
-	}
-	.border{@include sec-default(); height:15px; border-bottom: 2px dotted rgba($navy,.3);margin-top:15px;}
-
-
-	.lunch-mart {
-		h3 { color: $lt-blue; font-weight: bold;}
-		p { color: $navy; font-size:15px; text-align: center; }
-		p.food-menus { font-size: 14px; font-style: italic;}
-		h4 {font-size: 18px; text-align: center; font-weight: bold; line-height:1.2em; margin-bottom:5px; color: $burg;}
+		li{color:$navy;font-size:19px;margin-bottom:20px;line-height:1.3em;font-family:'Raleway', sans-serif;font-weight:500;}
 	}
 
+	.item{width:48%;display:inline-block;}
+	.i1{float:left;}
+	.i2{float:right;}
+	
+	.fullBorder{@include sec-default(); height:15px; border-bottom: 2px dotted rgba($navy,.3);margin-top:15px;}
 
 	@include bp(xl) {
-		.page-title-bar {padding:25px 0 15px;
-			.col-md-6.col-md-offset-3.col-sm-12{width:80%; margin-left:10%;}
-			.heading-box {padding: 0;
-			 	h1 {font-size: 30px; line-height: 1.1em;}
-			 	h2{letter-spacing: 1px;}
-			}
-		}
-
+		h4{font-size:22px;}
 		.specialsList{
-			h4{font-size: 22px;}
 			p.dets{font-size:17px;}
-			li{font-size: 17px; margin-bottom: 15px;}
+			li{font-size:17px;margin-bottom:15px;}
 		}
+	}
+
+	@media (max-width:989px){		
+		.simplePt{margin-bottom:0;}
+		.mtop{margin-top:30px;}
+		.mbtm{margin-bottom:30px;}
+		.insideAlt{width:95%;}
+
+		p.instr{font-size:15px;}
 	}
 
 	@include bp(tn) {
-		.page-content{padding-top:25px;}
-		h3{font-size:20px;}
-		.daily, .evening{width:90%; @include center-block();}
-		.evening h3{@include sec-default(); display:block;margin-top:30px;}
+		h4{font-size:20px;}
 		.specialsList{margin-top:5px;
-			h4{font-size: 20px;}
 			p.dets{font-size:16px;}
-			li{font-size: 16px;}
+			li{font-size:16px;}
 		}
 	}
 
 	@include bp(md) {
-		.page-title-bar {padding:25px 0 10px;
-			.col-md-6.col-md-offset-3.col-sm-12{width:90%; margin-left:5%;}
-			.heading-box {padding: 0;
-			 	h1 {font-size: 25px;}
-			 	h2{letter-spacing: .4px; font-size:19px}
-			 	h3{font-size: 19px;}
-			}
-		}
-
-		.lunch-mart {
-			h4 {font-size: 16px;}
-			p {padding-bottom: 0;}
-		}
-	}
-
-	@media (max-width: 639px) {
-		.page-title-bar {padding:10px 0 0px;
-			.col-md-6.col-md-offset-3.col-sm-12{width:95%; margin-left:2.5%;}
-			.heading-box {
-			 	h1 {font-size: 22px;}
-			 	h2,h3{font-size:18px}
-			}
-		}
-	}
-}
-
-.specials{
-	.page-title-bar .heading-box{background-color:rgba(255, 255, 255, 0.85);}
-	.heading-box h3{font-size:18px;}
-	.fullMenuImg{width:90%;max-width:800px;@include center-block();}
-
-	h4.top{@include sec-default();margin-top:20px;}
-
-	.page-content.tpadding0{padding-top:0;}
-	@media (max-width:1200px) {.heading-box h3{font-size:17px;}}
-	@include bp(xl) {
-		.page-title-bar .heading-box{@include sec-default();padding:10px 5px 12px;}
-		.heading-box h3{font-size:16px;line-height:1.1em;margin-bottom:0}
-	}
-	@include bp(md) {
-		.heading-box h3{font-size:16px !important;}
 		.fullMenuImg{width:97%;}
 	}
-	@include bp(ph) {.heading-box h3{max-width:250px;@include center-block();}}
+
+	@include bp(og) {
+		.simplePt{padding-bottom:10px;}
+
+		.item{width:100%;max-width:380px;}
+		.i1, .i2{@include center-block();}
+		.i2{margin-top:30px;}
+	}
+
+	@include bp(oc) {
+		h1{font-size:21px;line-height:1.4em;}
+	}
 }
+
 
 .food-specials {
 	.page-content {text-align: center;}

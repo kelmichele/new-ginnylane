@@ -6,39 +6,45 @@ Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
 <% end %>
 
 
-<!-- FOOTBALL SEASON STYLE DIV. DELETE class AFTER SEASON FOR RESET -->
-<div class="specialsPage">
+<div class="specialsPage multi">
   <section class="simplePt red">
     <div class="inner">
-      <h1>Enjoy Our Specials</h1>
-      <!-- <h2>Enjoy Daily from 3-6pm</h2> -->
-      <!-- We also offer 25 cent Cocktails Monday-Friday 11-4! -->
+      <h1>Check Out Our Fall Specials!</h1>
     </div>
   </section>
 
-  <div class="foodWrap"><!-- page-contentXXtpadding0 -->
-    <div class="inside fwInner">
-      <div class="menuBox il2 hh">
+  <div class="foodWrap">
+    <div class="insideAlt fwInner">
+      <div class="slWrap">
+        <div class="specialsList drinks border">
+          <h4 class="top"><span>25¢ Martinis</span></h4>
+          <p class="dets">Offered Monday-Friday 11am-4pm<br><span>*1 per person, per day</span></p>
+          <ul>
+            <li><b>COSMO</b> ... Vodka, Triple Sec, Cranberry & Fresh Lime</li>
+            <li><b>THE SUNSET</b> ... Rum & Pineapple</li>
+            <li><b>BLUE WAVE</b> ... Tequila, Blue Curacao, Sour Mix, Salted Rim</li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="fullSec mtop">
+      <div class="item i1 happy">
         <%= link_to "HappyHour.pdf", target: '_blank', class: 'menu-link menuBg' do %>
           <p class="instr">Click image below to view larger version</p>
           <%= image_tag('menu-happyHour.png', class: 'img-responsive', alt: "Ginny Lane Happy Hour, Orange Beach, AL") %>
         <% end %>
       </div>
 
-
-      <!-- <h4><span>Happy Hour Specials</span></h4><p class="dets">Served Daily from 3-6pm</p><ul><li>$3 Pints of Miller and Yuengling</li></ul> -->
-
-      <div class="specialsList menuBox il2 bar">
-        <h4 class="top"><span>25¢ Martinis</span></h4>
-        <p class="dets">Offered Monday-Friday 11am-4pm<br><span>*1 per person, per day</span></p>
-        <ul>
-          <li><b>COSMO</b> ... Vodka, Triple Sec, Cranberry & Fresh Lime</li>
-          <li><b>THE SUNSET</b> ... Rum & Pineapple</li>
-          <li><b>BLUE WAVE</b> ... Tequila, Blue Curacao, Sour Mix, Salted Rim</li>
-        </ul>
+      <div class="item i2 football">
+        <%= link_to "FootballFall.pdf", target: '_blank', class: 'menu-link menuBg' do %>
+          <p class="instr">Click image below to view larger version</p>
+          <%= image_tag('menu-footballFall.png', class: 'img-responsive', alt: "Ginny Lane Fall Specials, Orange Beach, AL") %>
+        <% end %>
       </div>
+
+      
     </div>
 
-    <div class="border"></div>
+    <div class="fullBorder"></div>
   </div>
 </div>
