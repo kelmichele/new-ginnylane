@@ -295,6 +295,20 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		span{color: $black;font-size: 26px; font-weight:bold;}
 	}
 
+	.holiday{padding-bottom:50px;background-color:$white;text-align:center;
+		.hd{padding:30px 0;margin-bottom:20px;background-color:$thanks;
+			&, p, h3{color:$white;}
+		}
+		h3{font-size:30px;line-height:1.2em;margin-bottom:8px;font-weight:bold;}
+		p{font-size:19px;padding-bottom:0;
+			a{color:inherit;text-decoration:underline;font-weight:bold;}
+			a:hover{opacity:.8;}
+		}
+		.inside{width:90%;max-width:750px;}//@include center-block();
+		.menuLink{@include sec-default();box-shadow:0px 10px 30px rgba($black,.15);}
+	}
+	.holiday+.fmSec{padding-top:40px;}
+
 
 	@media (max-width:1365px){.introSec .inner{justify-content:space-between;}}
 
@@ -329,6 +343,14 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		}
 
 		.mobileImage{display:block;}
+
+		.holiday{padding-bottom:30px;
+			.hd{padding:20px 0;}
+			h3{font-size:24px;margin-bottom:5px;}
+			p{font-size:17px;}
+			.inside{width:95%;max-width:750px;}
+		}
+		.holiday+.fmSec{padding-top:20px;}
 	}
 
 	@media (max-width: 823px) {
@@ -363,6 +385,13 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 	@include bp(iv) {
 		.introSec h2{font-size:20px;}
+	}
+
+	@media (max-width:500px){
+		.holiday{
+			h3{font-size:21px;}
+			p{font-size:16px;}
+		}
 	}
 }
 
@@ -1644,6 +1673,53 @@ body.special-event{
 		p.instr, span.instr{font-size:15px;}
 	}
 }
+
+.thanksgiving{
+	.simpleHeader{padding:30px 0 20px;background-color:$thanks;
+		h1, h3, p, a, h4{color:$white;}
+		span{color:inherit;}
+		h1{font-size:40px;margin-bottom:10px;}
+		h3{font-size:25px;margin-bottom:5px;}
+	}
+
+	.page-content{text-align:center;}
+
+	p{font-size:19px;line-height:1.5em;padding-bottom:0;margin-bottom:20px;color:$black;
+		a{color:inherit;font-weight:bold;text-decoration:underline;}
+		a:hover{opacity:.8;}
+	}
+	.inside{width:90%;}
+	.menuLink{@include sec-default();box-shadow:0px 10px 30px rgba($black,.15);}
+
+	@media (max-width: 989px){
+		.simpleHeader{padding:20px 0;
+			h1{font-size:33px;margin-bottom:5px;}
+			h3{font-size:22px;margin-bottom:0;}
+			h4{margin-bottom:0;}
+		}
+	}
+
+	@include bp(og) {
+		.simpleHeader{padding:10px 0;
+			h1{font-size:28px;margin-bottom:0px;}
+			h3, h4{font-size:19px;}
+		}
+
+		.cwrap{padding:0;max-width:100%;}
+		p{font-size:17px;}
+	}
+
+	@media (max-width: 500px) {
+		.simpleHeader{
+			h1{font-size:24px;}
+			h3, h4{font-size:17px;}
+		}
+		p{font-size:16px;}
+	}
+}
+
+
+
 
 
 

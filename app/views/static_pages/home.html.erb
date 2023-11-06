@@ -10,6 +10,12 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
     <!-- 1920x1079 -->
     <div class="uk-position-relative uk-visible-toggle home-slideshow" tabindex="-1" uk-slideshow="animation: fade; autoplay:true;">
       <ul class="uk-slideshow-items">
+        <li>
+          <a href="/thanksgiving">
+            <%=image_tag('slide-thanksgiving.jpg', alt: "Thanksgiving at Ginny Lane", class: 'img-responsive')%>
+          </a>
+        </li>
+
         <li><a href="/pairing">
           <%=image_tag('slide-novWine.png', alt: "Upcoming wine dinner at Ginny Lane", class: 'img-responsive')%>
         </a></li>
@@ -54,7 +60,7 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
     </div>
     <div class="clearfix"></div>
 
-    <div id="family-meals" class="family-meals">
+    <div id="family-mealsXXX" class="family-meals">
       <div class="deliverySec">
         <div class="container">
           <h1>Order for Takeout &amp; Delivery<br>
@@ -84,7 +90,21 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
       </div>
 
 
-      <div class="fmSec">
+      <div class="fullSec holiday">
+        <div class="fullSec hd">
+          <h3>Join Us for Thanksgiving!</h3>
+          <p>Click the menu below to see a larger version. <a class="telx" href="tel:+12512246500">Call today</a> to make reservations!</p>
+        </div>
+
+        <div class="inside">
+          <%= link_to "ThanksgivingMenu.pdf", target: '_blank', class: 'menuLink' do %>
+            <%= image_tag('thanksgivingMenu.png', class: 'img-responsive', alt: 'Thanksgiving meals at Ginny Lane') %>
+          <% end %>
+        </div>
+      </div>
+
+
+      <div id="family-meals" class="fmSec">
         <div class="container">
           <h2>Takeout Family Meals</h2>
           <h3>All Meals Served with House or Caesar Salad and Rolls</h3>
