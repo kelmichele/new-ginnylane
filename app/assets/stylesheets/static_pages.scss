@@ -1,6 +1,4 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// started organizing - unfinished. old/unused at bottom
 @import "variables";
 @import "mixins";
 
@@ -255,7 +253,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		h2{font-size:17px;}
 	}
 }
-
 
 
 .home {
@@ -650,34 +647,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	// .page-content{padding:15px 0;}
 }
 
-.XXXXX.brunch-menu {
-	.page-content {@include sec-default();padding: 25px 0 15px;}
-
-  .btn.red {width: 50%; @include center-block (); color: $white; font-size: 16px; padding: 20px 0;
- 		&:hover {background-color: darken($burg, 10%);}
-  }
-
-  @include bp(md) {
-   	.page-content {padding-bottom: 0;}
-   	#page-title .title-container {//padding: 20px 0 0px;
-	    h1 {font-size: 25px; }
-   	}
-   	.btn.red { width: 70%; }
-   	.service-box-2 {margin-bottom: 15px;
-   		h4{ margin-bottom: 4px;}
-   		p {padding-bottom: 0; margin-bottom: 0px;}
-   	}
- 	}
-
- 	@include bp(sm) {
-   	.btn.red { width: 100%; padding: 15px 5px; font-size: 14px;}
-   	.service-box-2 {
-    	p {margin-bottom: 15px; }
-    	h4 {margin-bottom: 5px; padding-top: 5px;}
-    }
- 	}
-}
-
 .event-lunch-menu, .event-dinner-menu {
 	.title-container {position: relative; z-index: 0; padding: 30px 0;
     h1 {text-shadow: 0px 1px 2px $black;}
@@ -961,7 +930,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
-.pairing, .XXspecial-event {
+.pairing {
 	#page-title {position: relative;z-index: 0;text-align: center;
 		&::before {content: '';width: 100%;height: 100%;background: rgba($black, .5);position: absolute;top:0;left: 0;z-index: -1;}
 
@@ -1056,68 +1025,6 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
-body.special-event{
-	&,p,li,a{font-family:$raleway;}
-}
-.se-layout{@include sec-default();text-align:center;padding:40px 0;
-	background: hsla(169, 76%, 48%, 1);
-	background: linear-gradient(90deg, hsla(169, 76%, 48%, 1) 0%, hsla(67, 87%, 82%, 1) 100%);
-	background: -moz-linear-gradient(90deg, hsla(169, 76%, 48%, 1) 0%, hsla(67, 87%, 82%, 1) 100%);
-	background: -webkit-linear-gradient(90deg, hsla(169, 76%, 48%, 1) 0%, hsla(67, 87%, 82%, 1) 100%);
-	// @include sec-bgimage();background-image:url(image_path('mgBg.jpg'));background-size:cover;
-
-	.mgHeader{@include center-block();width:80%;}
-	.overview{@include sec-default();margin:20px 0 10px;}
-	.link-row{@include sec-default();margin-bottom:30px;}
-	.imgRow{@include sec-default();margin-top:15px;}
-
-	&,p,h1,h3,li{color:#009999;}//color:$white;}
-	h2,h4{color:#005b5b;}
-	h1,h2,h3,h4{@include sec-default();}
-	h3,h4,p,li{line-height:1.5em;}
-	h1,h2{line-height:1.2em;}
-
-	h1{font-size:21px;margin:0 0 10px;}
-	h2{font-size:45px;font-weight:bold;margin:0 0 10px;}
-	h3{margin-bottom:10px;font-size:22px;}
-	h4{margin:0;font-size:19px;font-weight:bold;
-		span{color:inherit;}
-	}
-	p.instr{font-size:15px;padding-bottom:0;}
-	p,li{font-size:19px;margin-bottom:10px;}
-	.overview p{width:90%;max-width:800px;@include center-block();}
-	
-	.glBtn{font-size:15px;text-transform:uppercase;padding:7px 20px;font-weight:bold;letter-spacing:1px;box-shadow:0px 10px 20px rgba($black,.4);
-		background-color:$white;color:$black;
-		&:hover{opacity:.8;}
-	}
-	.imgLink{width:100%;max-width:700px;@include center-block();}
-
-
-	@media (max-width:1023px){padding:25px 0;
-		.mgHeader{width:90%;}
-		h1,h3{font-size:19px;}
-		h2{font-size:40px;}
-		p{padding-bottom:5px;font-size:18px;}
-		.overview p{max-width:100%;}
-		.glBtn{font-size:14px;}
-	}
-
-	@media (max-width:767px){padding:20px 0;
-		h1,h3,h4{font-size:18px;}
-		h2{font-size:35px;}
-		p{font-size:17px;}
-		.overview p{width:100%;}
-		.imgLink{max-width:100%;}
-	}
-	@media (max-width:500px){
-		h1,h3,h4{font-size:17px;}
-		h2{font-size:24px;}
-		.overview{margin-top:10px;}
-	}
-}
-
-
 
 // MOTHER SON VDAY PAGE
 .event.vday-ms{@include sec-default();padding:30px 0;background-color:$pinkLt;text-align:center;
@@ -1163,9 +1070,140 @@ body.special-event{
 }
 
 
-// MARDI GRAS
-.mardiGras23{@include sec-default();text-align:center;padding:80px 0;@include sec-bgimage();background-image:url(image_path('mardigras2.jpg'));
+// *********** SPECIAL EVENTS ************ //
+body.special-event{
+	&,p,li,a{font-family:$raleway;}
+}
+
+// mardi gras was already set up, but tweaking to make universal from this point. still use mg class below for mardi ball. for now.
+.seLayout{@include sec-default();text-align:center;padding:80px 0;@include sec-bgimage();
 	.fullRow{@include sec-default();}
+	.seWrap{@include center-block();width:90%;max-width:700px;}
+	.shadow{padding:30px 0;border:5px solid $white;box-shadow:0px 15px 30px rgba($black,.6);}
+	.seBody{margin-top:15px;}
+
+	h1,h2,h3,h4,h5,p{
+		&.bold, b{font-weight:bold;}
+		span{color:inherit;font-family:inherit;}
+	}
+	h1,h2{line-height:1.2em;}
+	h1{font-size:40px;font-weight:bold;margin:0;}
+	h2{font-size:19px;margin:0 0 10px;font-weight:normal;}
+	h3{margin:0;line-height:1.7em;}
+	p{padding-bottom:0;}
+	p.res{font-size:18px;
+		br{display: none;}
+		a{color:inherit;font-weight:bold;}
+	}
+	hr{width:85%;@include center-block();opacity:.5;}
+	.glBtn{background-color:$white;color:$black;font-size:15px;text-transform:uppercase;padding:7px 20px;font-weight:bold;letter-spacing:1px;box-shadow:0px 10px 20px rgba($black,.4);
+		&:hover{opacity:.8;}
+	}
+	span.dot{padding:0 15px;position:relative;z-index:0;
+		&::before{@include before();width:5px;height:5px;left:10px;top:50%;margin-top:-2.5px;border-radius:50%;z-index:-1;}
+	}
+
+	.course+.course{margin-top:20px;}
+	.course{margin-bottom:20px;
+		h3{text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;}
+		h4{font-size:19px;line-height:1.4em;
+			b{font-size:22px;}
+		}
+		h5{font-size:17px;margin-bottom:0;line-height:1.45em;}
+		h5 b{font-size:20px;}
+		h5+h5{margin-top:10px;}
+		p{font-size:14.5px;text-transform:uppercase;letter-spacing:.5px;
+			width:100%;max-width:150px;@include center-block();padding:4px 0 3px;margin:0px auto 15px; // add bg colors by event
+			// font-weight: bold;margin:0px 0 10px;
+		} 
+	}
+
+	&.ltBg{
+		.shadow{background:rgba($white,.7);}
+		h1,h2,h3,h4,h5,p{color:$black;}
+		span.dot::before{background-color:$black;}
+		hr{border-color:$black;opacity:.3;}
+	}
+	&.dkBg{
+		.shadow{background:rgba($black,.6);}
+		h1,h2,h3,h4,h5,p{color:$white;}
+		span.dot::before{background-color:$white;}
+	}
+
+	@media (max-width:1024px){padding:45px 0 60px;}
+	@media (max-width:991px){
+		h1{font-size:32px;}
+		h2{font-size:17px;}
+		h3{font-size:21px;}
+		p.res{font-size:17px;}
+
+		.course{
+			h4{font-size:18px;
+				b{font-size:20px;}
+			}
+			h5{font-size:16px;}
+			h5 b{font-size:18px;}
+			p{font-size:14px;max-width:135px;}
+		}
+	}
+
+	@media (max-width:767px){padding:20px 0 30px;
+		.seWrap{width:94%;}
+		.shadow{padding:15px 0;background-color:rgba($black,.7);}
+		.seBody{margin-top:0px;}
+
+		h1{font-size:25px;}
+		h2{font-size:15px;}
+		h3{font-size:19px;}
+		p{font-size:17px;}
+		p.res{font-size:16px;}
+		hr{margin-top:15px;}
+
+		.course{
+			h3{font-size:18px;margin-bottom:0;}
+			h4{font-size:16px;
+				b{font-size:18px;}
+			}
+			h5{font-size:15px;}
+			h5 b{font-size:17px;}
+		}
+	}
+	// @media (max-width:639px){
+	// 	.shadow{padding:15px 10px 10px;}
+	// 	h1{font-size:23px;}
+	// 	h3{font-size:17.5px;}
+	// 	p{font-size:16px;@include center-block();}
+	// 	p.s1{max-width:300px;}
+	// span.dot{padding:0 10px;
+	// 	&::before{width:3px;height:3px;left:6px;margin-top:-1.5px;}
+	// }
+	// }
+
+	// @media (max-width:500px){
+	// 	h3{font-size:16.5px;}
+	// 	p{width:90%;max-width:300px;}
+	// }
+}
+
+.holiBeer{background-image:url(image_path('holidayBg1.jpg'));
+	h1{color:#0a6042 !important;}
+	br.br1{display: none;}
+
+	.course{
+		h3{color:$burg;}
+		p{background-color:#0a6042;color:$white;}
+	}
+
+	@media (max-width:1220px){background-size:cover;}
+	@media (max-width:991px){background-image:url(image_path('holidayBg1mob.jpg'));}
+	@media (max-width:767px){
+		.hdWrap h3{line-height:1.3em;margin-bottom:5px;}
+		br.br1{display:block;}
+		span.dot.d2{display:none;}
+	}
+}
+
+.mardiGras23{background-image:url(image_path('mardigras2.jpg'));
 	.mgHeader{@include center-block();width:90%;max-width:700px;}
 	.shadow{background:rgba($black,.6);padding:30px 0;border:5px solid $yellow;box-shadow:0px 15px 30px rgba($black,.6);}
 	.mgBody{margin-top:30px;}
@@ -1233,7 +1271,11 @@ body.special-event{
 		br.five{display:block;}
 	}
 }
+// *********** SPECIAL EVENTS ************ //
 
+
+
+// *********** SPECIFIC PAIRINGS ************ //
 .elvis-dinner{@include sec-default();background-color:#F6E6F6;background-image:url(image_path('partySide.png'));background-size:20%;background-repeat:repeat-y;background-position:top left;
 	padding:60px 30px 30px 25%;
 	.wrap{width:90%;max-width:700px;@include center-block();}
@@ -1284,9 +1326,6 @@ body.special-event{
 	}
 }
 
-
-
-
 .pairing .halloween-dinner {
 	.pt-bkg-image.image-hallo{background-image: url(image_path('halloBg.jpg')); background-position: center center;
 		&::before{display: none;}
@@ -1310,7 +1349,6 @@ body.special-event{
 
 .pairing {.food-menus .service-box-2{padding-bottom: 10px;}}
 // FOR MARCH WINE 2022 -- BUT CAN REUSE FOR ANY PDF WINE MENU
-// fb9e47
 .pairing .pairing-with-image{background-color:#e175b2;
 	#page-title{box-shadow: none;background-color:#e175b2;padding:24px 0 30px;
 		&::before{display:none;}
@@ -1350,8 +1388,11 @@ body.special-event{
 		}
 	}
 }
+// *********** SPECIFIC PAIRINGS ************ //
 
 
+
+// *********** SPEC MENU PAGES ************ //
 .daily-menu, .football-season, .menuPdfs{
 	hr.noTop{margin-top:0;}
 
@@ -1515,7 +1556,6 @@ body.special-event{
 	}
 }
 
-
 .bnb {
 	#pairing-custom1 {
 		@include sec-default ();
@@ -1583,32 +1623,6 @@ body.special-event{
 	}
 }
 
-
-.entertainment {
-	.pt-bkg-image {background-position: center center; position: relative; z-index: 0;
-		&::before{@include before(); height:100%; background-color: rgba($black,.5);}
-	}
-	#page-title .title-container {padding: 30px 0;margin-bottom: 0px;}
-	h2{color: $burg; font-weight: bold;}
-
-	@include bp(xl) {
-		#page-title .title-container h1{font-size: 2.8em;}
-		h2{font-size:2em;}
-		h4{font-size: 1.3em;}
-	}
-
-	@media screen and (max-width: 823px) {
-		#page-title .title-container h1{font-size: 2.5em;}
-		h2{font-size:1.7em;}
-		h4{font-size: 16px;}
-	}
-
-	@include bp(sm) {
-		#page-title .title-container h1{font-size: 2.2em;}
-	}
-}
-
-
 .drink-menu{
 	h6{font-size:16px;}
 	.cbp-caption.special25 .cbp-caption-defaultWrap{background-color:$hcolor;
@@ -1630,7 +1644,6 @@ body.special-event{
 		.spec25 h4{font-size:20px;}
 	}
 }
-
 
 
 // 6/2023 -- WIP new menu setups 
@@ -1717,10 +1730,126 @@ body.special-event{
 		p{font-size:16px;}
 	}
 }
+// *********** SPEC MENU PAGES ************ //
 
 
 
 
+.entertainment {
+	.pt-bkg-image {background-position: center center; position: relative; z-index: 0;
+		&::before{@include before(); height:100%; background-color: rgba($black,.5);}
+	}
+	#page-title .title-container {padding: 30px 0;margin-bottom: 0px;}
+	h2{color: $burg; font-weight: bold;}
+
+	@include bp(xl) {
+		#page-title .title-container h1{font-size: 2.8em;}
+		h2{font-size:2em;}
+		h4{font-size: 1.3em;}
+	}
+
+	@media screen and (max-width: 823px) {
+		#page-title .title-container h1{font-size: 2.5em;}
+		h2{font-size:1.7em;}
+		h4{font-size: 16px;}
+	}
+
+	@include bp(sm) {
+		#page-title .title-container h1{font-size: 2.2em;}
+	}
+}
+
+
+// ************************************ //
+// ***** OLD STYLES, SAVED BUT ******* //
+// ******* PROBABLY UNNEEDED ********* //
+// ************************************ //
+
+.XXXse-layout{@include sec-default();text-align:center;padding:40px 0;
+	background: hsla(169, 76%, 48%, 1);
+	background: linear-gradient(90deg, hsla(169, 76%, 48%, 1) 0%, hsla(67, 87%, 82%, 1) 100%);
+	background: -moz-linear-gradient(90deg, hsla(169, 76%, 48%, 1) 0%, hsla(67, 87%, 82%, 1) 100%);
+	background: -webkit-linear-gradient(90deg, hsla(169, 76%, 48%, 1) 0%, hsla(67, 87%, 82%, 1) 100%);
+	// @include sec-bgimage();background-image:url(image_path('mgBg.jpg'));background-size:cover;
+
+	.mgHeader{@include center-block();width:80%;}
+	.overview{@include sec-default();margin:20px 0 10px;}
+	.link-row{@include sec-default();margin-bottom:30px;}
+	.imgRow{@include sec-default();margin-top:15px;}
+
+	&,p,h1,h3,li{color:#009999;}//color:$white;}
+	h2,h4{color:#005b5b;}
+	h1,h2,h3,h4{@include sec-default();}
+	h3,h4,p,li{line-height:1.5em;}
+	h1,h2{line-height:1.2em;}
+
+	h1{font-size:21px;margin:0 0 10px;}
+	h2{font-size:45px;font-weight:bold;margin:0 0 10px;}
+	h3{margin-bottom:10px;font-size:22px;}
+	h4{margin:0;font-size:19px;font-weight:bold;
+		span{color:inherit;}
+	}
+	p.instr{font-size:15px;padding-bottom:0;}
+	p,li{font-size:19px;margin-bottom:10px;}
+	.overview p{width:90%;max-width:800px;@include center-block();}
+	
+	.glBtn{font-size:15px;text-transform:uppercase;padding:7px 20px;font-weight:bold;letter-spacing:1px;box-shadow:0px 10px 20px rgba($black,.4);
+		background-color:$white;color:$black;
+		&:hover{opacity:.8;}
+	}
+	.imgLink{width:100%;max-width:700px;@include center-block();}
+
+
+	@media (max-width:1023px){padding:25px 0;
+		.mgHeader{width:90%;}
+		h1,h3{font-size:19px;}
+		h2{font-size:40px;}
+		p{padding-bottom:5px;font-size:18px;}
+		.overview p{max-width:100%;}
+		.glBtn{font-size:14px;}
+	}
+
+	@media (max-width:767px){padding:20px 0;
+		h1,h3,h4{font-size:18px;}
+		h2{font-size:35px;}
+		p{font-size:17px;}
+		.overview p{width:100%;}
+		.imgLink{max-width:100%;}
+	}
+	@media (max-width:500px){
+		h1,h3,h4{font-size:17px;}
+		h2{font-size:24px;}
+		.overview{margin-top:10px;}
+	}
+}
+
+.XXXXX.brunch-menu {
+	.page-content {@include sec-default();padding: 25px 0 15px;}
+
+  .btn.red {width: 50%; @include center-block (); color: $white; font-size: 16px; padding: 20px 0;
+ 		&:hover {background-color: darken($burg, 10%);}
+  }
+
+  @include bp(md) {
+   	.page-content {padding-bottom: 0;}
+   	#page-title .title-container {//padding: 20px 0 0px;
+	    h1 {font-size: 25px; }
+   	}
+   	.btn.red { width: 70%; }
+   	.service-box-2 {margin-bottom: 15px;
+   		h4{ margin-bottom: 4px;}
+   		p {padding-bottom: 0; margin-bottom: 0px;}
+   	}
+ 	}
+
+ 	@include bp(sm) {
+   	.btn.red { width: 100%; padding: 15px 5px; font-size: 14px;}
+   	.service-box-2 {
+    	p {margin-bottom: 15px; }
+    	h4 {margin-bottom: 5px; padding-top: 5px;}
+    }
+ 	}
+}
 
 
 

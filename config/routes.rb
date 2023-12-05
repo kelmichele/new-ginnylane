@@ -22,7 +22,8 @@ Rails.application.routes.draw do
   get '/specials', to: 'static_pages#specials'
 
 
-  # SWITCH BASED ON LISTINGS
+  # SWITCH b/w home and link BASED ON LISTINGS (RANDOM EVENTS - temp re-routed to home after, or deleted?)
+  get '/holiday-beer-tasting', to: 'static_pages#special-event'
   get '/special-event', to: 'static_pages#home'
   get '/events', to: 'static_pages#home'
   # get '/pairing', to: 'static_pages#home'
