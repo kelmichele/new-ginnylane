@@ -1149,7 +1149,9 @@ body.special-event{
 
 	@media (max-width:767px){padding:20px 0 30px;
 		.seWrap{width:94%;}
-		.shadow{padding:15px 0;background-color:rgba($black,.7);}
+		.shadow{padding:15px 0;
+			&.dkBg{background-color:rgba($black,.7);}
+		}
 		.seBody{margin-top:0px;}
 
 		h1{font-size:25px;}
@@ -1168,21 +1170,17 @@ body.special-event{
 			h5 b{font-size:17px;}
 		}
 	}
-	// @media (max-width:639px){
-	// 	.shadow{padding:15px 10px 10px;}
-	// 	h1{font-size:23px;}
-	// 	h3{font-size:17.5px;}
-	// 	p{font-size:16px;@include center-block();}
-	// 	p.s1{max-width:300px;}
-	// span.dot{padding:0 10px;
-	// 	&::before{width:3px;height:3px;left:6px;margin-top:-1.5px;}
-	// }
-	// }
 
-	// @media (max-width:500px){
-	// 	h3{font-size:16.5px;}
-	// 	p{width:90%;max-width:300px;}
-	// }
+	@media (max-width:500px){padding:0;
+		.seWrap{width:100%;}
+		.shadow{border:none;}
+		h1{font-size:23px;}
+		h3, .course h3{font-size:17.5px;}
+		p.res br{display:block;}
+		span.dot{padding:0 10px;
+			&::before{width:3px;height:3px;left:6px;margin-top:-1.5px;}
+		}
+	}
 }
 
 .holiBeer{background-image:url(image_path('holidayBg1.jpg'));
