@@ -1,0 +1,41 @@
+<% content_for :title do %>
+Orange Beach Seafood Restaurant Holiday Menus
+<% end %>
+<% content_for :description do %>
+Join us for a lunch, dinner, or just a snack during the holiday season. You'll love our great food with a waterfront view!
+<% end %>
+
+<div id="menupage" class="menuPdfs">
+  <div id="page-title" class="pt-bkg-image image-holi small-box over20XX">
+    <div class="title-container">
+      <h1>Here for the Holidays!</h1>
+        <!-- <h5>Select one of the items below to view the full menu.</h5> -->
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="page-content container XXaltSize">
+      <div class="menu-opt">
+        <h5>Select one of the items below to view the full menu.</h5>
+        <%= link_to "HolidayMenu.pdf", target: '_blank', class: 'menu-link menuBg' do %>
+          <p class="menuTitle">
+            <span>Holiday Menu</span><br>
+            Thursday-Saturday (all day) <br>Sunday 3pm-Close
+          </p>
+          <%= image_tag('menuHoliday.png', class: 'img-responsive', alt: "Ginny Lane Holiday Menu") %>
+        <% end %>
+
+        <%= link_to "HolidayLunch.pdf", target: '_blank', class: 'menu-link menuBg two' do %>
+          <p class="menuTitle">
+            <span>Holiday Brunch</span><br>
+            Sunday &amp; Monday Open-3pm
+          </p>
+          <%= image_tag('menuHolidayBrunch.png', class: 'img-responsive', alt: 'Ginny Lane Holiday Brunch Menu') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="clearfix"></div><div class="col-xs-12"><div class="hr-png-6"></div></div>
+
