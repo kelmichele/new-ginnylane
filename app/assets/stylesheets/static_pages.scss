@@ -1518,7 +1518,16 @@ body.special-event{
 	}
 
 	.menu-opt h5{font-size:21px;}
-	p.menuTitle{
+
+	.menu-group{width:30%;margin:0 1.5%;display:inline-block; 
+		&:hover{opacity: .75;}
+
+		img{border:1px solid rgba($black,.1);}
+		// padding:20px 3% 0;position:relative;z-index:0;
+	// 	&::before{@include before();height:70%;background-color:rgba($lt-blue,.3);z-index:-1;}
+	}
+
+	p.menuTitle{margin-bottom:7px;
 		span{font-size:25px;font-weight:bold;color:inherit;font-family:inherit;font-style:normal;}
 	}
 	a:hover{cursor: pointer;}
