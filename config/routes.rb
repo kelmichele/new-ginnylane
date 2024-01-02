@@ -2,24 +2,22 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#home'
 
-  # **** KPKP 12/28/23 -- ROUTING ALL MENUS TO HOLIDAY MENUS UNTIL AFTER NY DAY!!!
-
-  # get '/menus', to: 'static_pages#daily-menu'
-  # get '/lunch-menu', to: 'static_pages#daily-menu'
-  # get '/daily-menu', to: 'static_pages#daily-menu'
-  # get '/dinner-menu', to: 'static_pages#daily-menu'
+  get '/menus', to: 'static_pages#daily-menu'
+  get '/lunch-menu', to: 'static_pages#daily-menu'
+  get '/daily-menu', to: 'static_pages#daily-menu'
+  get '/dinner-menu', to: 'static_pages#daily-menu'
   get '/kids-menu', to: 'static_pages#kids-menu'
-  # get '/brunch-menu', to: 'static_pages#brunch-menu'
+  get '/brunch-menu', to: 'static_pages#brunch-menu'
   get '/drink-menu', to: 'static_pages#daily-menu'
   get '/wine-list', to: 'static_pages#daily-menu'
 
-  ### UNTIL 1/1/2024
-  get '/holiday-menu', to: 'static_pages#holiday-menu'
-  get '/lunch-menu', to: 'static_pages#holiday-menu'
-  get '/daily-menu', to: 'static_pages#holiday-menu'
-  get '/dinner-menu', to: 'static_pages#holiday-menu'
-  get '/menus', to: 'static_pages#holiday-menu'
-  get '/brunch-menu', to: 'static_pages#holiday-menu'
+  ### when you need temp re-routing for menus
+  get '/holiday-menu', to: 'static_pages#daily-menu'
+  # get '/menus', to: 'static_pages#XXX'
+  # get '/lunch-menu', to: 'static_pages#XXX'
+  # get '/daily-menu', to: 'static_pages#XXX'
+  # get '/dinner-menu', to: 'static_pages#XXX'
+  # get '/brunch-menu', to: 'static_pages#XXX'
 
 
   ### get '/late-night', to: 'static_pages#late-night'
