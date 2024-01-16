@@ -121,6 +121,21 @@ p{font-size:16px;}
 }
 hr.half{ width:50%;@include center-block();}
 
+
+.imageRow{@include sec-default();text-align:center;padding:0 5px;
+	.image{display:inline-block;float:left;border:5px solid $white;
+		width:33.3%;
+	}
+
+	@media (min-width:769px){
+		&.img4 .image{width:25%;}
+		&.img5 .image{width:20%;}
+	}
+	@media (max-width:768px){
+		.hideMd{display:none;}
+	}
+}
+
 /*****************SPECIAL**********************/
 .page-title-bar {
 	@include sec-default ();
