@@ -446,6 +446,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .specialsPage{
+	.simplePt.bmargin0{margin-bottom:0;}
 	.foodWrap{padding-top:0;}
 	.mtop{margin-top:40px;}
 	.mbtm{margin-bottom:40px;}
@@ -461,6 +462,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 	.slWrap{width:100%;max-width:700px;@include center-block();}
 	.specialsList{@include sec-default();text-align:center;
+		margin:20px 0; // when only content
 		&.border{border-bottom:2px solid $lt-blue;}
 
 		p.dets{font-size:18px;color:$green;font-family:$raleway;margin-top:5px;font-weight:600;
