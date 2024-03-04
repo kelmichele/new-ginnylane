@@ -5,10 +5,12 @@
   <% end %>
 </li>
 
-<li class="mobOnly">
-  <%= link_to "https://waitrapp.com/restaurants/al/orange-beach/ginny-lane-bar-grill/16552", target: '_blank' do %>
-    Order Delivery
-  <% end %>
+<li class="mobOnly menu-item">
+  <a href="http://wharfrestaurants.revelup.online/store/2" target="_blank" rel="noopener noreferrer">Order &amp; Pick Up</a>
+</li>
+
+<li class="mobOnly menu-item">
+  <a href="https://www.timetoeatthebeach.com/order/restaurant/ginny-lane-bar--grill-menu/72" target="_blank">Order Delivery</a>
 </li>
 
 <li class="menu-item has-child"><a class="mom nav-cat" href="#">Menus</a>
@@ -50,10 +52,19 @@
 
 <li class="menu-item lgOnly"><%= link_to "Catering", "https://wharfcateringgroup.com/", target: '_blank' %></li>
 
-<li class="menu-item emph lgOnly">
-  <%= link_to "https://waitrapp.com/restaurants/al/orange-beach/ginny-lane-bar-grill/16552", target: '_blank' do %>
-    Delivery
-  <% end %>
+<li class="menu-item has-child lgOnly"><a class="mom nav-cat" href="#">To Go</a>
+  <div class="dropdown">
+    <div class="dropdown-inner">
+      <ul class="dropdown-items">
+        <li class="menu-item">
+          <a href="http://wharfrestaurants.revelup.online/store/2" target="_blank" rel="noopener noreferrer">Order &amp; Pick Up</a>
+        </li>
+        <li class="menu-item">
+          <a href="https://www.timetoeatthebeach.com/order/restaurant/ginny-lane-bar--grill-menu/72" target="_blank">Order Delivery</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </li>
 
 <li class="menu-item lgOnly">
