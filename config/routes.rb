@@ -11,6 +11,13 @@ Rails.application.routes.draw do
   get '/drink-menu', to: 'static_pages#daily-menu'
   get '/wine-list', to: 'static_pages#daily-menu'
 
+
+  # # KPKP ***** dual menus
+  get '/duallunch', to: 'links#dual_lunch'
+  # get '/dualbrunch', to: 'links#dual_brunch'
+  get '/dualdinner', to: 'links#dual_dinner'
+
+
   ### when you need temp re-routing for menus
   get '/holiday-menu', to: 'static_pages#daily-menu'
   # get '/menus', to: 'static_pages#XXX'
