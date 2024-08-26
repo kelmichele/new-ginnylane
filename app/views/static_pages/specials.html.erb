@@ -9,14 +9,14 @@ Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
 <div class="specialsPage multi">
   <section class="simplePt red bmargin0">
     <div class="inner">
-      <h1>Check Out Our Fall Specials!</h1>
+      <h1>Check Out Our New Specials!</h1>
     </div>
   </section>
 
   <div class="foodWrap">
-    <%= image_tag('bannerHappy.jpg', class: 'img-responsive', alt: "Daily Happy Hour at Ginny Lane") %>
+    <%# <= image_tag('bannerHappy.jpg', class: 'img-responsive', alt: "Daily Happy Hour at Ginny Lane") > %>
     <div class="insideAlt fwInner">
-      <div class="slWrap">
+      <%# <div class="slWrap">
         <div class="specialsList drinks border">
           <h4 class="top"><span>$1 Martinis</span></h4>
           <p class="dets">Offered Monday-Friday 11am-4pm<br><span>*1 per person, per day</span></p>
@@ -26,16 +26,17 @@ Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
             <li><b>BLUE WAVE</b> ... Tequila, Blue Curacao, Sour Mix, Salted Rim</li>
           </ul>
         </div>
-      </div>
+      </div> %>
 
-    <%# <div class="fullSec mtop">
-      <div class="item i1 happy">
-        <= link_to "HappyHour.pdf", target: '_blank', class: 'menu-link menuBg' do >
-          <p class="instr">Click image below to view larger version</p>
-          <= image_tag('menu-happyHour.png', class: 'img-responsive', alt: "Ginny Lane Happy Hour, Orange Beach, AL") >
-        < end >
+      <div class="fullSec mtop">
+        <div class="item">
+          <%= link_to "HappyHour.pdf", target: '_blank', class: 'menu-link menuBg' do %>
+            <p class="instr">Click image below to view larger version</p>
+            <%= image_tag('happyHourFall24.png', class: 'img-responsive', alt: "Ginny Lane Happy Hour, Orange Beach, AL") %>
+          <% end %>
+        </div>
       </div>
-    </div> %>
+    </div>
 
     <div class="fullBorder"></div>
   </div>

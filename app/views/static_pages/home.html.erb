@@ -10,9 +10,9 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
     <!-- 1920x1079 -->
     <div class="uk-position-relative uk-visible-toggle home-slideshow" tabindex="-1" uk-slideshow="animation: fade; autoplay:true;">
       <ul class="uk-slideshow-items">
-        <li><a href="/pairing">
-          <%=image_tag('slide-aprilWine.png', alt: "Upcoming wine dinner at Ginny Lane", class: 'img-responsive') %>
-        </a></li>
+        <%# <li><a href="/pairing">
+          <=image_tag('slide-aprilWine.png', alt: "Upcoming wine dinner at Ginny Lane", class: 'img-responsive') >
+        </a></li> %>
 
         <li><a href="/specials">
           <%=image_tag('slide-happy.jpg', alt: "View Ginny Lane's daily happy hour specials", class: 'img-responsive')%>
@@ -67,16 +67,46 @@ Come enjoy amazing food, a great atmosphere, &amp; beautiful, waterfront seating
       </div>
 
       <div id="family-meals" class="fmSec">
-        <div class="container">
+        <div class="med3Def">
           <h2>Takeout Family Meals</h2>
-          <h3>All Meals Served with House or Caesar Salad and Rolls</h3>
+          <h3>Family Meals Feed 4. All Meals Served with House or Caesar Salad and Cornbread with Butter.</h3>
 
-          <div class="item uno"><h4>Shrimp Scampi... $32</h4></div>
-          <div class="item"><h4>Shrimp and Grits... $32</h4></div>
-          <div class="item"><h4>Chicken &amp; Spinach Alfredo ... $32</h4></div>
+          <div class="item uno">
+            <h4>Shrimp Scampi... $38</h4>
+            <p>Andouille sausage, cheddar grits, creole cream sauce with roasted tomatoes</p>
+          </div>
+
+          <div class="item combo">
+            <h4>Meat & Two... $42</h4>
+            
+            <div class="group g1">
+              <p><b class="color">Choose 1 Meat</b></p>
+              <ul>
+                <li>House Meatloaf with Mushroom Gravy</li>
+                <li>Salisbury Steak with Mushroom Gravy</li>
+                <li>Fried Pork Chop</li>
+                <li>Baked Chicken<br/> <span>(Choice of Lemon Pepper, Rosemary, <br class="rules"/> or Honey Garlic)</span></li>
+                <li>Pecan Encrusted Chicken</li>
+                <li>Hand Breaded Chicken Tenders</li>
+              </ul>
+            </div>
+
+            <div class="group g2">
+              <p><b class="color">Choose 2 Sides</b></p>
+              <ul>
+                <li>Green Beans</li>
+                <li>White Cheddar Mac &amp; Cheese</li>
+                <li>Broccoli</li>
+                <li>Sweet Potato Casserole</li>
+                <li>Mashed Potatoes</li>
+                <li>Potato Casserole</li>
+              </ul>
+            </div>
+          </div>
+
           <div class="item">
-            <h4>Meatloaf... $32</h4>
-            <p>Mashed Potatoes, Green Beans</p>
+            <h4>Add a Bottle of Wine for $15</h4>
+            <p>(Select Wines Only)</p>
           </div>
         </div>
       </div>
