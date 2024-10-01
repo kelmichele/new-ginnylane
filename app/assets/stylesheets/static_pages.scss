@@ -472,6 +472,8 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 .specialsPage{
+	h1+p.instr{margin-top:5px;}
+	
 	.simplePt.bmargin0{margin-bottom:0;}
 	.foodWrap{padding-top:0;}
 	.mtop{margin-top:40px;}
@@ -497,7 +499,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		li{color:$navy;font-size:19px;margin-bottom:20px;line-height:1.3em;font-family:'Raleway', sans-serif;font-weight:500;}
 	}
 
-	.item{width:48%;display:inline-block;}
+	.item{width:49%;display:inline-block;}
 	.i1{float:left;}
 	.i2{float:right;}
 	
@@ -526,6 +528,10 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 			p.dets{font-size:16px;}
 			li{font-size:16px;}
 		}
+
+		.item.combo{width:100%;max-width:380px;}
+		.i1, .i2{@include center-block();}
+		.i2{margin-top:30px;}
 	}
 
 	@include bp(md) {
@@ -535,9 +541,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	@include bp(og) {
 		.simplePt{padding-bottom:10px;}
 
-		.item{width:100%;max-width:380px;}
-		.i1, .i2{@include center-block();}
-		.i2{margin-top:30px;}
+		.item:not(.combo){width:100%;max-width:380px;}
 	}
 
 	@include bp(oc) {
