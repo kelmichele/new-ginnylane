@@ -54,7 +54,7 @@ Rails.application.routes.draw do
 
   ### PAST events to home
   get '/mardi-gras', to: 'static_pages#home'
-  get '/thanksgiving', to: 'static_pages#home'
+  get '/thanksgiving', to: 'static_pages#thanksgiving' #thanksgiving
   get '/football-season', to: 'static_pages#home' #gameday
   get '/gameday', to: 'static_pages#home' #gameday
   # get '/mother-son-dinner', to: 'static_pages#mother-son-dinner'
