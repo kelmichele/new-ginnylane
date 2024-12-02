@@ -48,13 +48,12 @@ Rails.application.routes.draw do
   
   # get '/special-event', to: 'static_pages#special-event'
   get '/special-event', to: 'static_pages#home'
-
   get '/holiday-beer-tasting', to: 'static_pages#special-event'
 
 
   ### PAST events to home
   get '/mardi-gras', to: 'static_pages#home'
-  get '/thanksgiving', to: 'static_pages#thanksgiving' #thanksgiving
+  get '/thanksgiving', to: 'static_pages#home' #thanksgiving
   get '/football-season', to: 'static_pages#home' #gameday
   get '/gameday', to: 'static_pages#home' #gameday
   # get '/mother-son-dinner', to: 'static_pages#mother-son-dinner'
