@@ -56,7 +56,7 @@ Rails.application.routes.draw do
   get '/thanksgiving', to: 'static_pages#home' #thanksgiving
   get '/football-season', to: 'static_pages#home' #gameday
   get '/gameday', to: 'static_pages#home' #gameday
-  # get '/mother-son-dinner', to: 'static_pages#mother-son-dinner'
+  get '/mother-son-dinner', to: 'static_pages#mother-son-dinner'
   # get '/bnb', to: 'static_pages#bnb'
 
 

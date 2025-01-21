@@ -97,6 +97,7 @@ header{background-color:$white;
     }
   }
   li.sig{background-color:$burg;}
+  .dropdown li.menu-item.mobOnly{display: none;}
 }
 
 #offcanvas-toggler{background-color:$navy;display:none;
