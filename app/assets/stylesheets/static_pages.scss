@@ -1076,7 +1076,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 // MOTHER SON VDAY PAGE
 .event.vday-ms{@include sec-default();padding:30px 0;background-color:$pinkLt;text-align:center;
 	// .simpleHeader{@include sec-default();}
-	.page-content{padding:0;}
+	.page-content{padding:20px 0 0;}
 
 	h1{color:$pink;font-weight:bold;margin-bottom:3px;
 		br{display: none;}
@@ -1088,7 +1088,9 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	h4 a,p{color:$black;}
 
 	.menu-link{@include center-block();max-width:550px;}
-
+	@media (max-width:1200px){
+		.menu-link+.menu-link{margin-top:20px;}
+	}
 	@media (max-width:1024px){
 		h1{font-size:25px;line-height:1.3em;}
 		h3{font-size:20px;}
@@ -1098,11 +1100,14 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		h1{font-size:23px;}
 		h3{font-size:19px;}
 		h4{font-size:17px;}
-		.menu-link{width:90%;}
+		.menu-link{width:95%;}
 	}
 	@media (max-width:767px){padding:15px 0;}
 	@media (max-width:420px){
 		h1 br,h4 br{display:block;}
+		h1{font-size:21px;}
+		h3{font-size:17px;}
+		h4{font-size:16px;}
 		p{font-size:15px;margin-bottom:0;}
 	}
 }
