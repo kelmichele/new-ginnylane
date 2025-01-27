@@ -1078,7 +1078,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	// .simpleHeader{@include sec-default();}
 	.page-content{padding:20px 0 0;}
 
-	h1{color:$pink;font-weight:bold;margin-bottom:3px;
+	h1{color:#ba0000;font-weight:bold;margin-bottom:3px;
 		br{display: none;}
 	}
 	h3{margin:0 0 7px;line-height:1.2em;font-size:22px;}
@@ -1111,6 +1111,27 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 		p{font-size:15px;margin-bottom:0;}
 	}
 }
+
+// VALENTINES
+.vday{padding:50px 0;text-align:center;background-color:#ff98d0;
+	h1{font-size:40px;letter-spacing:0;font-weight:bold;font-family:$open;text-transform:none;color:#fff;text-shadow:0 1px 2px #ba0000;}
+	p{padding-bottom:0px;color:$black;}
+	img{box-shadow:0px 10px 30px rgba($black,.1);}
+
+	@media (max-width:989px){padding:20px 0 30px;
+		h1{font-size:30px;}
+		p{font-size:15px;}
+		.sectionWrap{max-width:600px;}
+	}
+	@media (max-width:767px){padding-top:15px;
+		h1{font-size:25px;margin-bottom:5px;}
+		.sectionWrap{max-width:450px;}
+	}
+	@media (max-width:500px){
+		h1{font-size:22px;max-width:255px;@include center-block();line-height:1.3em;}
+	}
+}
+
 // SUPER BOWL
 .event.superbowl{@include sec-default();padding:30px 0;text-align:center;background-color:#f7f7f7;
 	.imgRow{@include center-block();width:100%;max-width:700px;}

@@ -1,0 +1,28 @@
+<% content_for :title do %>
+Valentine's Day at Ginny Lane
+<% end %>
+<% content_for :description do %>
+Spend Valentine's Day with us, and enjoy a delicious 4-course dinner!
+<% end %>
+
+
+<div class="fullSec event vday">
+  <div class="titlebox">
+    <div class="inside">
+      <h1>Spend Valentine's Day With Us!</h1>
+      <p class="instr">Click on the menu below to view larger version.</p>
+    </div>
+  </div>
+
+  <div class="fullSec">
+    <div class="sectionWrap med3Def">
+      <div class="item solo i1">
+        <%= link_to "ValentinesDay.pdf", target: '_blank', class: 'menu-link menuBg' do %>
+          <%= image_tag('menuValentines.png', class: 'img-responsive', alt: "Valentine's Menu at Ginny Lane") %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="fullBorder"></div>
+  </div>
+</div>
