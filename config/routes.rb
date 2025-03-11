@@ -44,7 +44,7 @@ Rails.application.routes.draw do
   get '/events', to: 'static_pages#home'
 
   get '/pairing', to: 'static_pages#pairing'
-  get '/valentines', to: 'static_pages#valentines'
+  get '/valentines', to: 'static_pages#home' #valentines
   
   # get '/special-event', to: 'static_pages#special-event'
   get '/special-event', to: 'static_pages#home'
@@ -56,7 +56,7 @@ Rails.application.routes.draw do
   get '/thanksgiving', to: 'static_pages#home' #thanksgiving
   get '/football-season', to: 'static_pages#home' #gameday
   get '/gameday', to: 'static_pages#home' #gameday
-  get '/mother-son-dinner', to: 'static_pages#mother-son-dinner'
+  get '/mother-son-dinner', to: 'static_pages#home' #mother-son-dinner
   # get '/bnb', to: 'static_pages#bnb'
 
 
