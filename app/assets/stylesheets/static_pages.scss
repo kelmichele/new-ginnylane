@@ -162,6 +162,16 @@ hr.half{ width:50%;@include center-block();}
 	}
 }
 
+
+.borderSimple{border:1px solid rgba($black, .1);}
+.boxShadow{box-shadow:0px 10px 30px rgba($black, .1);}
+// .hasSticky{position:relative;}
+.stickyCol{position:-webkit-sticky;position:sticky;top:40px;}
+@media (min-width:768px){.stickyMd{position:-webkit-sticky;position:sticky;top:40px;}}
+@media (min-width:823px){.stickyTn{position:-webkit-sticky;position:sticky;top:40px;}}
+@media (min-width:990px){.stickyNn{position:-webkit-sticky;position:sticky;top:40px;}}
+
+
 /*****************SPECIAL**********************/
 .page-title-bar {
 	@include sec-default ();

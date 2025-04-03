@@ -17,26 +17,16 @@ Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
   <div class="foodWrap">
     <%# <= image_tag('bannerHappy.jpg', class: 'img-responsive', alt: "Daily Happy Hour at Ginny Lane") > %>
     <div class="insideAlt fwInner">
-      <%# <div class="slWrap">
-        <div class="specialsList drinks border">
-          <h4 class="top"><span>$1 Martinis</span></h4>
-          <p class="dets">Offered Monday-Friday 11am-4pm<br><span>*1 per person, per day</span></p>
-          <ul>
-            <li><b>COSMO</b> ... Vodka, Triple Sec, Cranberry & Fresh Lime</li>
-            <li><b>THE SUNSET</b> ... Rum & Pineapple</li>
-            <li><b>BLUE WAVE</b> ... Tequila, Blue Curacao, Sour Mix, Salted Rim</li>
-          </ul>
-        </div>
-      </div> %>
 
-      <div class="fullSec mtop">
-        <div class="item combo i1">
+      <div class="fullSec mtop hasSticky">
+        <div class="item combo i1 boxShadow">
           <%= link_to "HappyHour.pdf", target: '_blank', class: 'menu-link menuBg' do %>
-            <%= image_tag('happyHourWinter.png', class: 'img-responsive', alt: "Ginny Lane Happy Hour, Orange Beach, AL") %>
+            <%= image_tag('happyFood.png', class: 'img-responsive', alt: "Ginny Lane Happy Hour Food") %>
+            <%= image_tag('happyDrinks.png', class: 'img-responsive', alt: "Ginny Lane Happy Hour Drinks") %>
           <% end %>
         </div>
 
-        <div class="item combo i2">
+        <div class="item combo i2 stickyTn">
           <%= link_to "WeeklySpecials.pdf", target: '_blank', class: 'menu-link menuBg' do %>
             <%= image_tag('weeklySpecials.png', class: 'img-responsive', alt: "Ginny Lane Happy Hour, Orange Beach, AL") %>
           <% end %>
