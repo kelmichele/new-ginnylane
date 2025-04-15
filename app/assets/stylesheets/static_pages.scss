@@ -2,7 +2,7 @@
 @import "variables";
 @import "mixins";
 
-.fullSec{@include sec-default();}
+.fullSec{@include sec-default();display:block;}
 .center-block, .page-content, .med2Def, .med3Def, .insideNrw{@include center-block();}
 .inside, .insideAlt, .custWrap, .medDef, .med2Def, .med3Def, .insideNrw{width:90%;@include center-block();}
 .medDef{max-width:1000px;}
@@ -987,7 +987,8 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
-.pairing {
+.pairing{
+	.pageWrap{padding-bottom:40px;border-bottom: 5px solid $lt-blue;}
 	#page-title {position: relative;z-index: 0;text-align: center;
 		&::before {content: '';width: 100%;height: 100%;background: rgba($black, .5);position: absolute;top:0;left: 0;z-index: -1;}
 
@@ -1013,7 +1014,7 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	
 	.page-content .hr-png-6 {margin: 15px 0;}
 
-	.pairing-1 {border-bottom: 5px solid $lt-blue;
+	.pairing-1 {//border-bottom: 5px solid $lt-blue;
 		.food-menus {
 			h4, h5, p { margin-bottom: 0}
 		}
@@ -1081,7 +1082,42 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 
 	}
 }
+.pairing .hasImage{
+	#page-title, .h2s{background-color:#88C5E4;}
 
+	#page-title{padding:20px 0 10px;box-shadow:none;background-image:none;
+		&::before{display:none;}
+		.title-container{padding:0;}
+		h1.shadow-mod, h3.shadow-mod{text-shadow:none;}
+		h1.shadow-mod{margin-bottom:5px;}
+		h3{letter-spacing:0px;font-weight:normal;}
+	}
+
+	.page-content{padding-top:0;}
+	.h2s{padding:0 0 25px;margin-bottom:40px;
+		p{font-size:17px;margin-bottom:0;padding:0;color:$white;}
+		hr{display:none;}
+	}
+
+	p.instr{font-size:16px;font-style:italic;text-transform:none;}
+
+	.solo.food-menus{text-align:center;}
+	img{box-shadow:0px 10px 25px rgba($black, .1);}
+
+	@media (min-width:768px) and (max-width:1025px){
+		#page-title h1.shadow-mod{font-size:35px;}
+	}
+
+	@media (max-width:989px){
+		.h2s{margin-bottom:20px;}
+	}
+	@media (max-width:767px){
+		#page-title{padding-top:15px;
+			h3{font-size:19px;}
+		}
+		.h2s{padding-bottom:15px;}
+	}
+}
 
 // MOTHER SON VDAY PAGE
 .event.vday-ms{@include sec-default();padding:30px 0;background-color:$pinkLt;text-align:center;
@@ -1430,45 +1466,45 @@ body.special-event{
 
 .pairing {.food-menus .service-box-2{padding-bottom: 10px;}}
 // FOR MARCH WINE 2022 -- BUT CAN REUSE FOR ANY PDF WINE MENU
-.pairing .pairing-with-image{background-color:#e175b2;
-	#page-title{box-shadow: none;background-color:#e175b2;padding:24px 0 30px;
-		&::before{display:none;}
-		.title-container{padding:0;}
-		h1.shadow-mod,h2, h3.shadow-mod,h4.shadow-mod{text-shadow:none;}
-		h3, h4{font-weight: normal; letter-spacing: .5px}
+// .pairing .pairing-with-image{background-color:#e175b2;
+// 	#page-title{box-shadow: none;background-color:#e175b2;padding:24px 0 30px;
+// 		&::before{display:none;}
+// 		.title-container{padding:0;}
+// 		h1.shadow-mod,h2, h3.shadow-mod,h4.shadow-mod{text-shadow:none;}
+// 		h3, h4{font-weight: normal; letter-spacing: .5px}
 		
-		// h3 br{display: none;}
-		h4{margin-top:5px; line-height: 1.4em;}
-		h4 a{color:inherit; font-weight:600;}
-	}
+// 		// h3 br{display: none;}
+// 		h4{margin-top:5px; line-height: 1.4em;}
+// 		h4 a{color:inherit; font-weight:600;}
+// 	}
 
-	.page-content{padding:0px 0 60px;text-align:center;}
-	.menu-link-img{width:80%;max-width:1000px;@include center-block();text-align:center;}
-	img.mobile{display: none;}
+// 	.page-content{padding:0px 0 60px;text-align:center;}
+// 	.menu-link-img{width:80%;max-width:1000px;@include center-block();text-align:center;}
+// 	img.mobile{display: none;}
 
-	.solo.food-menus{display: none;}
+// 	.solo.food-menus{display: none;}
 
-	@include bp(xl) {
-		#page-title{padding:20px 0;}
-		.menu-link-img{width:90%;}
-	}
-	@media (max-width:1023px){.menu-link-img{max-width:700px;}}
+// 	@include bp(xl) {
+// 		#page-title{padding:20px 0;}
+// 		.menu-link-img{width:90%;}
+// 	}
+// 	@media (max-width:1023px){.menu-link-img{max-width:700px;}}
 
-	@media (max-width:767px) {
-	.page-content{padding:0px 0 30px;}
-		img.fw{display: none;}
-		img.mobile{@include center-block();}
-		.menu-link-img{width:95%;max-width:600px;}
-	}
+// 	@media (max-width:767px) {
+// 	.page-content{padding:0px 0 30px;}
+// 		img.fw{display: none;}
+// 		img.mobile{@include center-block();}
+// 		.menu-link-img{width:95%;max-width:600px;}
+// 	}
 
-	@include bp(oc) {
-		#page-title{
-			.title-container.less h3,.title-container.less h4{letter-spacing: .1px;font-size:16px; line-height: 1.5em;}
-			// h3 br{display: block;}
-			// h3 span{display: none;}
-		}
-	}
-}
+// 	@include bp(oc) {
+// 		#page-title{
+// 			.title-container.less h3,.title-container.less h4{letter-spacing: .1px;font-size:16px; line-height: 1.5em;}
+// 			// h3 br{display: block;}
+// 			// h3 span{display: none;}
+// 		}
+// 	}
+// }
 // *********** SPECIFIC PAIRINGS ************ //
 
 
