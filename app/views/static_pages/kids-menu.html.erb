@@ -5,8 +5,19 @@ Kid's Menu
 Ginny Lane Bar &amp; Grill loves kids! We have a great kids' menu, and an awesome view for them to enjoy!
 <% end %>
 
-<div id="menupage" class="text-center">
-	<div class="col-md-8 col-md-offset-2 col-sm-12">
-		<%=image_tag('kidsMenu.png', alt: "Orange Beach, AL, kid's seafood and meals", class: 'img-responsive') %>
+<section class="simplePt gray bmargin0">
+  <div class="inner">
+    <h1>Kid's Menu</h1>
+    <p class="instr">Click the image below to view larger version</p>
+  </div>
+</section>
+<div id="menupage" class="menuPdfs">
+	<div class="sectionWrap inside">
+		<%= link_to "KidsMenu.pdf", target: '_blank', class: 'menuImage' do %>
+		  <%= image_tag('menu-kids.png', class: 'img-responsive', alt: "Ginny Lane Kid's Menu, Orange Beach, AL restaurant") %>
+		<% end %>
+
+		<div class="fullSec"><hr/></div>
+
 	</div>
 </div>
