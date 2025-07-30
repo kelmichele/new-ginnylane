@@ -945,19 +945,25 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 .pairing .hasImage{
-	#page-title, .h2s{background-color:#88C5E4;}
+	#page-title, .h2s{background-color:#f7f7f7;
+		h1, h3, p, a{
+			&, span{color:$dark;}
+		}
+	}
 
 	#page-title{padding:20px 0 10px;box-shadow:none;background-image:none;
 		&::before{display:none;}
 		.title-container{padding:0;}
 		h1.shadow-mod, h3.shadow-mod{text-shadow:none;}
 		h1.shadow-mod{margin-bottom:5px;}
-		h3{letter-spacing:0px;font-weight:normal;}
+		h1{font-size:28px;}
+		h1, h3{letter-spacing:0px;font-weight:normal;}
+		br.rules{display:none;}
 	}
 
 	.page-content{padding-top:0;}
 	.h2s{padding:0 0 25px;margin-bottom:40px;
-		p{font-size:17px;margin-bottom:0;padding:0;color:$white;}
+		p{font-size:17px;margin-bottom:0;padding:0;}
 		hr{display:none;}
 	}
 
@@ -967,18 +973,30 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	img{box-shadow:0px 10px 25px rgba($black, .1);}
 
 	@media (min-width:768px) and (max-width:1025px){
-		#page-title h1.shadow-mod{font-size:35px;}
+		#page-title h1.shadow-mod{font-size:24px;}
 	}
+
 
 	@media (max-width:989px){
 		.h2s{margin-bottom:20px;}
 	}
 	@media (max-width:767px){
 		#page-title{padding-top:15px;
+			h1.shadow-mod{font-size:20px;}
 			h3{font-size:19px;}
 		}
-		.h2s{padding-bottom:15px;}
+		.h2s{padding-bottom:15px;
+			p{font-size:16px;}
+		}
 		p.instr{font-size:15px;}
+	}
+	@media (max-width:430px){
+		#page-title{
+			.wrap{max-width:300px;@include center-block();}
+			.span2{display:none;}
+			br.br2{display:block;}
+		}
+
 	}
 }
 
@@ -1787,7 +1805,6 @@ body.special-event{
 }
 // *********** SPEC MENU PAGES ************ //
 
-
 .entertainment {
 	.pt-bkg-image {background-position: center center; position: relative; z-index: 0;
 		&::before{@include before(); height:100%; background-color: rgba($black,.5);}
@@ -1811,152 +1828,3 @@ body.special-event{
 		#page-title .title-container h1{font-size: 2.2em;}
 	}
 }
-
-
-
-// .XXX____new {
-// 	#page-title .title-container {
-// 		h3, a {
-// 			color: $white;
-// 			text-shadow: 2px 2px 2px $black;
-// 			font-size: 35px;
-// 		}
-// 	}
-// 	.required {
-// 	    font-weight: bold;
-// 	    color: $burg !important;
-// 	}
-
-// 	p.xs-m { margin-bottom: 10px; padding-bottom: 0;}
-
-// 	.form-group {
-// 	    width: 100%;
-// 	    margin-bottom: 15px;
-// 	    color: $black;
-// 	    position: relative;
-// 	    display: block;
-// 	}
-// 	input,
-//  	textarea {
-// 	    background-color: $white;
-// 	    border: 1px solid #ddd;
-// 	    border-radius: 3px;
-// 	    padding: 6px 10px 6px 40px;
-// 	    width: 90%;
-// 	}
-// 	input.text {min-height: 36px;}
-// 	textarea { height: 80px; }
-// 	.form-group.email, .form-group.phone, .form-group.date, .form-group.guest {width: 45%; display: inline-block;
-// 		input {width: 95%;}
-// 	}
-// 	.form-group::before {
-// 	    font-family: 'FontAwesome';
-// 	    position: absolute;
-// 	    display: block;
-// 	    font-size: 13px;
-// 	    top: 23px;
-// 	    left: 1px;
-// 	    width: 32px;
-// 	    height: 33px;
-// 	    padding-left: 10px;
-// 	    background-color: #f6fcfe;
-// 	    padding-top: 7px;
-// 	    border-radius: 3px;
-// 	}
-// 	.form-group.submit {
-// 		width: 30%;
-// 		input { text-align: center; padding:10px 0; background-color: $blue; text-transform: uppercase;color: $white;font-size: 12px;}
-// 	    font-weight: 700;
-// 	    position: relative;
-// 	    -webkit-transition: all 0.2s ease 0s;
-// 	    -moz-transition: all 0.2s ease 0s;
-// 	    -o-transition: all 0.2s ease 0s;
-// 	    -ms-transition: all 0.2s ease 0s;
-// 	    transition: all 0.2s ease 0s;
-// 	    border: none;
-// 	    float: left;
-// 	}
-// 	.form-group.name::before { content: '\f040'; }
-// 	.form-group.email::before { content: "\f0ac"; }
-// 	.form-group.phone::before { content: "\f095"; }
-// 	.form-group.message::before { content: "\f003"; z-index: 1; margin-bottom: 0;}
-// 	.form-group.date::before { content: "\f073"; }
-// 	.form-group.guest::before { content: "\f2c0"; }
-
-// 	input:focus,
-// 	textarea:focus {
-// 	    border-color: #ccc;
-// 	    outline: none;
-// 	}
-
-// 	@include bp(md) {
-// 		input, textarea { width: 100%; }
-// 		.form-group.email, .form-group.phone, .form-group.date, .form-group.guest  {width: 100%; display: block;
-// 			input {width: 100%;}
-// 		}
-// 		.form-group.message {margin-bottom: 0;}
-// 		.form-group::before {height:30px; top:25px;}
-// 	}
-
-// 	.cater-menus.tabs {
-// 		padding-top: 50px;
-// 		font-family: $raleway;
-// 		.fancy-heading p {font-size: 15px; color: $black; margin-bottom: 0; padding-bottom: 5px;}
-// 	}
-// 	h3.menu-head { margin-bottom: 0; padding-left:20px; font-weight: 700; }
-// 	.cater-menus .menu-info{
-// 		color: $black;
-// 		font-size: 15px;
-// 		padding-bottom: 20px;
-// 		margin-left: 20px;
-// 	}
-// 	.cater-menus .menu-info span {
-// 		font-weight: bold;
-// 		color: $navy;
-// 	}
-// 	.cater-menus .menu-items {
-// 		font-weight: normal;
-// 		font-size: 15px;
-// 		color: $burg;
-// 		font-weight: bold;
-// 		padding-left: 20px;
-// 	}
-// 	.cater-menus .menu-items span {
-// 		color: $black;
-// 		font-weight: normal;
-// 	}
-// 	ul.items {
-// 		list-style-type: none;
-// 		padding-left: 0;
-// 		li {padding-bottom: 10px;}
-// 	}
-
-// 	.hdv-items {
-// 		font-weight: normal;
-// 		font-size: 14px;
-// 		color: $burg;
-// 		font-weight: bold;
-// 		span {
-// 			color: $black;
-// 			font-weight: normal;
-// 		}
-// 		.fancy-heading {
-// 			margin-top: 20px;
-// 			margin-bottom: 10px;
-
-// 			h4 {font-size: 18px}
-// 		}
-// 	}
-// 	.mobile-menu-link {display: none;}
-// 	@include bp(md) {
-// 		.mobile-menu-link {display: block; width:25%; font-weight: bold; background-color: $burg; color:$white; @include center-block (); padding: 10px 0; text-align: center; border: 1px solid $lt-burg;}
-// 		.cater-menus.tabs { padding-top: 20px;
-// 			.container {padding-left: 0; padding-right: 0;}
-// 			.fancy-heading p { line-height: 1.3em;}
-// 		}
-// 		.cbp-l-caption-body {padding-left: 0;}
-// 	}
-// 	@include bp(sm) {
-// 		.mobile-menu-link {width:50%;}
-// 	}
-// }
