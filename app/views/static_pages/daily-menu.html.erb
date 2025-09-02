@@ -1,33 +1,32 @@
 <% content_for :title do %>
-Orange Beach Seafood Restaurant Menus
+Waterfront Seafood Restaurant in Orange Beach
 <% end %>
 <% content_for :description do %>
 Join us for a lunch, dinner, or just a snack. You'll love our great food with a waterfront view!
 <% end %>
 
-<div id="menupage">
-  <div id="page-title" class="pt-bkg-image image-lunch small-box over20">
-    <div class="title-container">
-      <h1>Daily Menus</h1>
+<div class="dailyMenusPage">
+  <div class="fullSec pageHd">
+    <div class="sectionWrap medDef">
+      <h1>Amazing Food <span>&middot;</span><br> Waterfront View</h1>
+      <h4>Select one of the items below to view the full menu.</h4>
+      <h5 class="fam"><a href="/#family-meals"><b>Click here</b> to view our takeout family meals.</a></h5>
     </div>
   </div>
 
-  <div class="tabs">
-    <div class="page-content container altSize">
-      <div class="menu-opt">
-        <h5>Select one of the items below to view the full menu.<br>
-         <span><a href="/#family-meals">Click here</a> to view our takeout family meals.</span>
-        </h5>
-        <%= link_to "LunchMenu.pdf", target: '_blank', class: 'menu-link menuBg' do %>
-          <p class="menuTitle"><b>Lunch</b><br>Food &amp; Bar Menu</p>
-          <%= image_tag('menu-lunch.png', class: 'img-responsive', alt: "Ginny Lane Lunch Menu, Orange Beach, AL restaurant") %>
-        <% end %>
+  <div class="fullSec menuSec">
+    <div class="sectionWrap medDef">
+      <%= link_to "LunchMenu.pdf", target: '_blank', class: 'menuItem i1' do %>
+        <p class="menuTitle">Lunch Menu</p>
+        <%= image_tag('menu-lunch.png', class: 'img-responsive imageFw', alt: "Ginny Lane Lunch Menu, Orange Beach, AL restaurant") %>
+        <%= image_tag('menu-lunchM.png', class: 'img-responsive imageMob', alt: "Ginny Lane Lunch Menu, Orange Beach, AL restaurant") %>
+      <% end %>
 
-        <%= link_to "DinnerMenu.pdf", target: '_blank', class: 'menu-link menuBg two' do %>
-          <p class="menuTitle"><b>Dinner</b><br> Food &amp; Bar Menu</p>
-          <%= image_tag('menu-dinner.png', class: 'img-responsive', alt: 'Ginny Lane Dinner Menu, seafood restaurant at The Wharf') %>
-        <% end %>
-      </div>
+      <%= link_to "DinnerMenu.pdf", target: '_blank', class: 'menuItem i2' do %>
+        <p class="menuTitle">Dinner Menu</p>
+        <%= image_tag('menu-dinner.png', class: 'img-responsive imageFw', alt: 'Ginny Lane Dinner Menu, seafood restaurant at The Wharf') %>
+        <%= image_tag('menu-dinnerM.png', class: 'img-responsive imageMob', alt: 'Ginny Lane Dinner Menu, seafood restaurant at The Wharf') %>
+      <% end %>
     </div>
   </div>
 </div>

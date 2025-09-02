@@ -1,29 +1,27 @@
 <% content_for :title do %>
-Brunch Menu
+Waterfront Sunday Brunch at The Wharf
 <% end %>
 <% content_for :description do %>
-Come enjoy an amazing brunch at Ginny Lane at The Wharf! Classic brunch items, seafood dishes, and a waterfront view you can't beat the view!
+Come enjoy an amazing Sunday brunch at Ginny Lane at The Wharf! Classic brunch items, seafood dishes, and a waterfront view!
 <% end %>
-
-<div class="menuPdfs brunch">
-  <div id="page-title" class="pt-bkg-image image-lunch small-box over20">
-    <div class="title-container brunch">
-      <h1>Sunday Brunch Menu</h1>
-      <h2>10am - 3pm</h2>
+    
+<div class="brunchPage">
+  <div class="fullSec pageHd">
+    <div class="sectionWrap medDef">
+      <h1><span>Join Us For</span><br> Brunch on the Water</h1>
+      <h2>Sundays <span class="dot">&middot;</span> 10am-3pm</h2>
     </div>
   </div>
 
-  <div class="page-content container altSize">
-    <div class="menu-opt">
-      <h5>Click on the menu below to view/download a larger version.</h5>
-
-      <%= link_to "BrunchMenu.pdf", target: '_blank', class: 'menu-link menuBg ml-solo gold' do %>
-        <!-- <p class="menuTitle"><b>Lunch</b><br> Food &amp; Bar Menu</p> -->
-        <%= image_tag('menu-brunch.png', class: 'img-responsive', alt: "Ginny Lane Lunch Menu, Orange Beach, AL restaurant") %>
+  <div class="fullSec menuSec">
+    <div class="sectionWrap med2Def">
+      <p class="instr">Click on the menu below to view/download a larger version.</p>
+      <%= link_to "BrunchMenu.pdf", target: '_blank', class: 'imageLink' do %>
+        <%= image_tag('menu-brunch.png', class: 'img-responsive imageFw', alt: "Ginny Lane Waterfront Brunch Menu") %>
+        <%= image_tag('menu-brunchM.png', class: 'img-responsive imageMob', alt: "Brunch Menu - Ginny Lane") %>
       <% end %>
     </div>
   </div>
 </div>
-
 
 <div class="clearfix"></div><div class="col-xs-12"><div class="hr-png-6"></div></div>
