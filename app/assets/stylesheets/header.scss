@@ -83,7 +83,7 @@ header{background-color:$white;
     .nav-badge{width:20px;display:inline;margin-top:-2.5px;}
   }
 
-  .dropdown{width:auto;margin:0;margin-top:-1px;position:absolute;z-index:999;display:none;}
+  .dropdown{width:auto;margin:0;margin-top:-1px;position:absolute;z-index:999;display:none;text-align:left;}
   .has-child:hover >.dropdown{display:block;width:200px;}
   .has-child.longer:hover >.dropdown{width:300px;}
 
@@ -99,6 +99,9 @@ header{background-color:$white;
   li.sig{background-color:$burg;}
   .dropdown li.menu-item.mobOnly{display: none;}
 }
+
+li.thanks a{color:$thanks;}
+.mainNav li.thanksBg{background-color:$thanks;}
 
 #offcanvas-toggler{background-color:$navy;display:none;
   h5,span{display:inline-block;vertical-align:top;margin:0 2px;}
@@ -121,7 +124,10 @@ header{background-color:$white;
     ul.menu{padding-left:25px;}
     ul{margin:0 -20px;width:100%;float:left;
       li{width:100%;float:left;margin-bottom:20px;padding-bottom:3px;padding-left:0;border-bottom:1px solid rgba($white, .1);//display:block;
-        a{-webkit-transition:300ms;-o-transition:300ms;transition:300ms;padding:0;color:$white;font-size:16px;line-height:1.5em;}
+        a{
+          font-size:16px;padding:0;line-height:1.5em;color:$white;
+          -webkit-transition:300ms;-o-transition:300ms;transition:300ms;
+        }
         a:hover{background:transparent;}
       }
       li.has-child{border-bottom:none;margin-bottom:0;}
@@ -132,6 +138,7 @@ header{background-color:$white;
 
       li.football{font-weight:bold;}
       .nav-badge{width:20px;display:inline;margin-top:-2.5px;}
+      li.thanksBg a{color:$orange;}
     }
     // p.nav-cat{@include sec-default();margin:10px 0 10px -5px;color:$yellow;font-size:16px;padding:0;}
     a.nav-cat{@include sec-default();margin-left:-5px;margin-top:7px;color:$yellow;font-size:16px;padding:0;

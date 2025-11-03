@@ -1811,7 +1811,7 @@ body.special-event{
 	.simpleHeader{padding:30px 0 20px;background-color:$thanks;
 		h1, h3, p, a, h4{color:$white;}
 		span{color:inherit;}
-		h1{font-size:40px;margin-bottom:10px;}
+		h1{font-size:37px;margin-bottom:10px;}
 		h1 br{display:none;}
 		h3{font-size:25px;margin-bottom:5px;}
 	}
@@ -1826,7 +1826,7 @@ body.special-event{
 	.inside{width:90%;}
 	.menuLink{@include sec-default();box-shadow:0px 10px 30px rgba($black,.15);}
 
-	@media (max-width: 1200px){
+	@media (max-width:1200px){
 		.simpleHeader{padding:20px 0;
 			h1{font-size:33px;margin-bottom:5px;}
 			h3{font-size:22px;margin-bottom:0;}
@@ -1846,14 +1846,21 @@ body.special-event{
 		p{font-size:17px;}
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width:500px){
 		.simpleHeader{
-			h1{font-size:21px;}
+			h1{font-size:20px;}
 			h3, h4{font-size:17px;}
 		}
 		p{font-size:15px;width:98%;max-width:300px;@include center-block();}
 		p br.one{display:none;}
 		p br.two{display:block;}
+	}
+
+	@media (max-width:300px){
+		.simpleHeader{
+			h1{font-size:18.5px;}
+			h3, h4{font-size:16px;}
+		}
 	}
 }
 // *********** SPEC MENU PAGES ************ //
