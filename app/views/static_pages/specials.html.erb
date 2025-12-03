@@ -6,7 +6,7 @@ Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
 <% end %>
 
 
-<div class="specialsPage multi__XX">
+<div class="specialsPage multi">
   <section class="simplePt red bmargin0">
     <div class="inner">
       <h1>Check Out Our New Specials!</h1>
@@ -17,9 +17,15 @@ Keep up with Ginny Lane's specials, &amp; never miss one of our great deals.
   <div class="foodWrap">
     <div class="insideAlt fwInner">
       <div class="fullSec mtop hasSticky">
-        <div class="item combo__XX__i1 boxShadow">
+        <div class="item combo i1 boxShadow">
           <%= link_to "HappyHour.pdf", target: '_blank', class: 'menu-link menuBg' do %>
             <%= image_tag('happyHour.png', class: 'img-responsive', alt: "Ginny Lane Happy Hour Menu") %>
+          <% end %>
+        </div>
+
+        <div class="item combo i2 boxShadow">
+          <%= link_to "WeeklySpecials.pdf", target: '_blank', class: 'menu-link menuBg' do %>
+            <%= image_tag('menu-specials.png', class: 'img-responsive', alt: "Ginny Lane Weekly Specials") %>
           <% end %>
         </div>
       </div>

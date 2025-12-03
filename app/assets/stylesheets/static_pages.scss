@@ -548,9 +548,9 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 			li{font-size:16px;}
 		}
 
-		.item.combo{width:100%;max-width:380px;}
+		.item.combo{width:95%;max-width:450px;}
 		.i1, .i2{@include center-block();}
-		.i2{margin-top:30px;}
+		.i2{margin-top:20px;}
 	}
 
 	@include bp(md) {
