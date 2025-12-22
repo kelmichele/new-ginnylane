@@ -1003,6 +1003,43 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 	}
 }
 
+
+.nye{
+	.simpleHeader{padding:20px 0 25px;background-color:$gold;}
+	h1, p, .cta a{color:#000;}
+	h1{margin-bottom:5px;line-height:1.3em;font-family:$open;font-weight:bold;}
+	.cta{margin-bottom:0;}
+	p{padding-bottom:0;}
+
+	.instr{font-size:14px;font-style:italic;text-transform:none;}
+	.menuLink img{box-shadow:0px 10px 30px rgba(0,0,0, 0.1);}
+
+	@media (min-width:501px){
+		h1 br, .cta br, h1 .e3{display:none;}
+	}
+
+	@media (max-width:989px){
+		.simpleHeader{padding-bottom:20px;}
+		h1{font-size:25px;}
+		.cta{font-size:15px;}
+		.page-content{padding-top:25px;}
+	}
+	@media (max-width:500px){
+		.simpleHeader{padding:15px 0;}
+		h1{font-size:21px;}
+		.cta{font-size:14px;}
+		h1 .e1, h1 br.br1{display:none;}
+		.page-content{padding-top:20px;}
+	}
+	@media (max-width:369px){
+		// .simpleHeader{padding:15px 0;}
+		// h1{font-size:22px;}
+		h1 br.br1{display:block;}
+		h1 br.br2{display:none;}
+	}
+}
+
+
 // MOTHER SON VDAY PAGE
 .event.vday-ms{@include sec-default();padding:30px 0;background-color:$pinkLt;text-align:center;
 	// .simpleHeader{@include sec-default();}
@@ -1348,7 +1385,7 @@ body.special-event{
 	}
 }
 
-.pairing {.food-menus .service-box-2{padding-bottom: 10px;}}
+.pairing{.food-menus .service-box-2{padding-bottom: 10px;}}
 // AT BOTTOM: FOR MARCH WINE 2022 -- BUT CAN REUSE FOR ANY PDF WINE MENU 
 
 

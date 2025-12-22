@@ -1,0 +1,29 @@
+<% content_for :title do %>
+New Year's Eve Celebration
+<% end %>
+<% content_for :description do %>
+Ring in the New Year at Ginny Lane!
+<% end %>
+
+<div class="fullSec pageWrap">
+  <div class="simpleHeader">
+    <div class="headWrap insideXl">
+      <h1><span class="e1">🎉</span> New Year's Eve<br class="br1"> Celebration <br class="br2"><span class="e2">🎉</span><span class="e3">🎉</span></h1>
+      <p class="cta">Call For Reservations: <br class="rules brCta" /><a class="tel" href="tel:+12512246500">251-224-6500 (ext. 1)</a></p>
+    </div>
+  </div>
+
+  <div class="fullSec page-content pairing-1 mainSec">
+    <div class="food-menus text-center">
+      <div class="sectionWrap insideNrw">     
+        <p class="instr">Click on the menu below to view a larger version.</p>
+        <%= link_to "NewYearsEve.pdf", target: '_blank', class: 'menuLink' do %>
+          <%= image_tag('menu-ny1.png', alt: "New Year's Eve Menu") %>
+          <%= image_tag('menu-ny2.png', alt: "New Year's Eve Drink Menu") %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-xs-12"><div class="hr-png-6"></div></div>
+<div class="clearfix"></div>

@@ -51,13 +51,14 @@ Rails.application.routes.draw do
   get '/holiday-beer-tasting', to: 'static_pages#special-event'
 
 
-  ### PAST events to home
+  ### PAST events to home when not live
   get '/mardi-gras', to: 'static_pages#home'
   get '/thanksgiving', to: 'static_pages#thanksgiving'
   get '/football-season', to: 'static_pages#home' #gameday
   get '/gameday', to: 'static_pages#home' #gameday
   get '/mother-son-dinner', to: 'static_pages#home' #mother-son-dinner
   # get '/bnb', to: 'static_pages#bnb'
+  get '/new-years-eve', to: 'static_pages#nye'
 
 
   get '/about', to: 'static_pages#about'
