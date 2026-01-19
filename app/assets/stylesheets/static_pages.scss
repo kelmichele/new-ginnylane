@@ -1080,15 +1080,16 @@ ul.barspecials { list-style-type: none; padding-left: 0;
 }
 
 // VALENTINES
-.vday{padding:50px 0;text-align:center;background-color:#ff98d0;
-	h1{font-size:40px;letter-spacing:0;font-weight:bold;font-family:$open;text-transform:none;color:#fff;text-shadow:0 1px 2px #ba0000;}
+.vday{padding:50px 0;text-align:center;background-color:rgba(237, 205, 217, 0.3);
+	.sectionWrap{max-width:600px;}
+	h1{font-size:40px;letter-spacing:0;font-weight:bold;font-family:$open;text-transform:none;color:#AB2D39;}//text-shadow:0 1px 2px #ba0000;}
 	p{padding-bottom:0px;color:$black;}
 	img{box-shadow:0px 10px 30px rgba($black,.1);}
 
 	@media (max-width:989px){padding:20px 0 30px;
 		h1{font-size:30px;}
 		p{font-size:15px;}
-		.sectionWrap{max-width:600px;}
+		// .sectionWrap{max-width:600px;}
 	}
 	@media (max-width:767px){padding-top:15px;
 		h1{font-size:25px;margin-bottom:5px;}

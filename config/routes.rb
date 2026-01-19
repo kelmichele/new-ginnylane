@@ -40,25 +40,20 @@ Rails.application.routes.draw do
 
 
   ### SWITCH b/w home and link BASED ON LISTINGS
-  # get '/events', to: 'static_pages#events'
-  get '/events', to: 'static_pages#home'
-
   get '/pairing', to: 'static_pages#pairing'
-  get '/valentines', to: 'static_pages#home' #valentines
-  
-  # get '/special-event', to: 'static_pages#special-event'
-  get '/special-event', to: 'static_pages#home'
-  get '/holiday-beer-tasting', to: 'static_pages#special-event'
-
 
   ### PAST events to home when not live
+  get '/events', to: 'static_pages#home' #events
+  get '/special-event', to: 'static_pages#home' #special-event'
   get '/mardi-gras', to: 'static_pages#home'
-  get '/thanksgiving', to: 'static_pages#thanksgiving'
+  get '/thanksgiving', to: 'static_pages#home' #thanksgiving
   get '/football-season', to: 'static_pages#home' #gameday
   get '/gameday', to: 'static_pages#home' #gameday
-  get '/mother-son-dinner', to: 'static_pages#home' #mother-son-dinner
+  get '/mother-son-dinner', to: 'static_pages#mother-son-dinner' #mother-son-dinner
+  get '/valentines', to: 'static_pages#valentines' #valentines
+  get '/holiday-beer-tasting', to: 'static_pages#special-event'
   # get '/bnb', to: 'static_pages#bnb'
-  get '/new-years-eve', to: 'static_pages#nye'
+  get '/new-years-eve', to: 'static_pages#home' #nye
 
 
   get '/about', to: 'static_pages#about'

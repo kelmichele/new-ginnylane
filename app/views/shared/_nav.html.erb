@@ -30,24 +30,24 @@
     <div class="dropdown-inner">
       <ul class="dropdown-items">
         <li class="menu-item"><%= link_to "Food & Drink Specials", specials_path %></li>
-        <li class="menu-item"><%= link_to "New Year’s Eve", new_years_eve_path %></li>
-        <%# <li class="menu-item mobOnly"></li> %>
+        <li class="menu-item mobOnly"><%= link_to "Valentine's Menus", valentines_path %></li>
+        <li class="menu-item mobOnly"><%= link_to "Mother + Son Dinner", mother_son_dinner_path %></li>
       </ul>
     </div>
   </div>
 </li>
-<li class="menu-item lgOnly"><%= link_to "New Year’s Eve", new_years_eve_path, class: 'burg' %></li>
-<%# <li class="menu-item has-child lgOnly"><a class="mom nav-cat" href="#">Events</a>
+
+<li class="menu-item has-child lgOnly"><a class="mom nav-cat burg" href="#">Valentine's</a>
   <div class="dropdown">
     <div class="dropdown-inner">
       <ul class="dropdown-items">
-        <li class="menu-item"><%= link_to "Wine Pairing", pairing_path ></li>
+        <%# <li class="menu-item"><%= link_to "Wine Pairing", pairing_path ></li> %>
+        <li class="menu-item"><%= link_to "Valentine's Menus", valentines_path %></li>
+        <li class="menu-item"><%= link_to "Mother + Son Dinner", mother_son_dinner_path %></li>
       </ul>
     </div>
   </div>
-</li> %>
-
-
+</li>
 
 <li class="menu-item lgOnly"><%= link_to "Catering", "https://wharfcateringgroup.com/", target: '_blank' %></li>
 
